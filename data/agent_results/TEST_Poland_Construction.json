@@ -1,0 +1,97 @@
+{
+  "region": "Poland",
+  "category": "Construction Management",
+  "research_summary": "Poland's construction management software market is a mix of international platforms with Polish language support and homegrown Polish solutions. The market is experiencing strong digitalization driven by EU standards and BIM adoption. Key players include both global leaders (PlanRadar, Procore, Fieldwire) and successful Polish companies (Hustro, ArCADiasoft, GanttPRO). Pricing ranges from 149 PLN/month for local solutions to $790/month for enterprise platforms.",
+  "products": [
+    {
+      "product_name": "PlanRadar",
+      "url": "https://www.planradar.com/",
+      "reviews_mentions": 93,
+      "rating": 4.3,
+      "adoption_level": "high",
+      "pricing": "$35-179/user/month (Basic to Pro)",
+      "is_local": false,
+      "key_features": "Real-time task/defect recording on blueprints, mobile app for smartphone/tablet, document management, 30-day free trial, operates in 60+ countries",
+      "source": "G2, Software Advice, ITKeyMedia - PlanRadar expanded to Poland with local Warsaw team in 2020"
+    },
+    {
+      "product_name": "Hustro",
+      "url": "https://www.hustro.com/",
+      "reviews_mentions": 180,
+      "rating": 4.5,
+      "adoption_level": "high",
+      "pricing": "149 PLN/user/month (~$37 USD)",
+      "is_local": true,
+      "key_features": "Quality, health & safety management, task management, defect tracking, 300-500% financial efficiency increase, reduces on-site decision time by 47%",
+      "source": "Company website, LinkedIn, Construction Tech Review - Founded 2019 in Wrocław, member Polish Construction Employers' Association, 180+ sites across 4 countries, Top 10 Construction Tech Startup Europe"
+    },
+    {
+      "product_name": "Archdesk",
+      "url": "https://archdesk.com/",
+      "reviews_mentions": 50,
+      "rating": 4.2,
+      "adoption_level": "medium",
+      "pricing": "Starting at $790/month",
+      "is_local": false,
+      "key_features": "All-in-one ERP platform, bidding to handover management, financial dashboards, document control with version management, workflow automation, procurement",
+      "source": "Company website - UK-based with operations in Kraków, Poland; biggest customer base in UK, serves customers across Europe and Middle East"
+    },
+    {
+      "product_name": "BrickControl",
+      "url": "https://www.brickcontrol.com/",
+      "reviews_mentions": 42,
+      "rating": 4.6,
+      "adoption_level": "medium",
+      "pricing": "$25-79/user/month",
+      "is_local": false,
+      "key_features": "Cloud-based ERP, project estimates, Gantt planning, certifications, timesheets, warehouse management, REST API integration, available in Polish language",
+      "source": "Software Advice, Capterra, GetApp - Available in Polish and 6 other languages, named Best Cloud-Based Construction Management Software 2022"
+    },
+    {
+      "product_name": "ArCADia BIM",
+      "url": "https://arcadiabimsystem.com/",
+      "reviews_mentions": 25,
+      "rating": 4.0,
+      "adoption_level": "medium",
+      "pricing": "Not publicly disclosed",
+      "is_local": true,
+      "key_features": "Comprehensive BIM system, architectural modeling, structural analysis, MEP design, parametric 3D models, IFC export, CAD integration",
+      "source": "Company website, IntelliCAD case study - ArCADiasoft founded 1997 in Łódź, Poland, available in 19 languages, leading Polish BIM software producer"
+    },
+    {
+      "product_name": "Fieldwire by Hilti",
+      "url": "https://www.fieldwire.com/",
+      "reviews_mentions": 4000000,
+      "rating": 4.4,
+      "adoption_level": "high",
+      "pricing": "Not publicly disclosed",
+      "is_local": false,
+      "key_features": "Jobsite management, real-time collaboration, task tracking, document management, mobile-first design, blueprint markup",
+      "source": "Company website, LinkedIn - Acquired by Hilti in 2021 for ~$300M, has dedicated Market Leader in Poland (Piotr Gębski), powers 4M+ projects globally"
+    },
+    {
+      "product_name": "GanttPRO",
+      "url": "https://ganttpro.com/",
+      "reviews_mentions": 350000,
+      "rating": 4.3,
+      "adoption_level": "high",
+      "pricing": "Not specified in search",
+      "is_local": true,
+      "key_features": "Gantt chart planning, task dependencies, resource allocation, progress tracking, Excel import/export, Polish language interface, construction templates",
+      "source": "Company website, LinkedIn - Poland-based company, 350,000+ project managers globally, dedicated Polish construction management page"
+    },
+    {
+      "product_name": "Procore",
+      "url": "https://www.procore.com/",
+      "reviews_mentions": 150,
+      "rating": 4.5,
+      "adoption_level": "medium",
+      "pricing": "Enterprise pricing (typically $1200+/month)",
+      "is_local": false,
+      "key_features": "Document management, contract tracking, vendor/subcontractor management, project financials, operates in 150+ countries, Polish language support",
+      "source": "Company website, market reports - Leader in construction management, supports Polish language, Central Europe operations from Germany"
+    }
+  ],
+  "total_products_found": 8,
+  "market_observations": "Poland's construction software market shows strong domestic innovation alongside international competition. Local players like Hustro (founded 2019) and ArCADiasoft (since 1997) demonstrate the country's software development strength. The market is characterized by: (1) EU compliance driving BIM adoption, (2) Price sensitivity favoring affordable local solutions (149 PLN/month) over premium international platforms ($790+/month), (3) Strong preference for Polish language interfaces, (4) Growing digitalization with construction sector valued at $121.59B in 2025 growing 4.62% CAGR. International vendors (PlanRadar, Fieldwire, Archdesk) establish local presence with Polish teams. GanttPRO and Hustro represent successful Polish SaaS exports competing globally. The market splits between: enterprise solutions (Procore, Archdesk) for large contractors, mid-market cloud platforms (BrickControl, PlanRadar), and specialized BIM tools (ArCADia). Mobile-first and real-time collaboration features are increasingly standard."
+}
