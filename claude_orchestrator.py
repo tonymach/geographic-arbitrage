@@ -15,9 +15,17 @@ import asyncio
 import json
 import yaml
 import sqlite3
+import os
 from pathlib import Path
 from datetime import datetime
 import logging
+
+# Try to import Turso client (optional)
+try:
+    from libsql_client import create_client
+    TURSO_AVAILABLE = True
+except ImportError:
+    TURSO_AVAILABLE = False
 
 logger = logging.getLogger(__name__)
 
@@ -29,34 +37,71 @@ class ClaudeOrchestrator:
     Each agent is a TRUE Claude instance with full reasoning capabilities
     """
 
-    def __init__(self, config_path: str = 'config.yaml', db_path: str = 'data/arbitrage.db'):
+    def __init__(self, config_path: str = 'config.yaml', db_path: str = 'data/arbitrage.db', use_turso: bool = None):
         with open(config_path) as f:
             self.config = yaml.safe_load(f)
 
         self.test_mode = self.config.get('test_mode', {}).get('enabled', False)
         self.test_regions = self.config.get('test_mode', {}).get('test_regions', [])
 
-        # Database connection
-        self.db_path = db_path
-        self._init_database()
+        # Determine database mode
+        turso_url = os.getenv('TURSO_URL')
+        turso_token = os.getenv('TURSO_TOKEN')
+
+        if use_turso is None:
+            # Auto-detect: use Turso if credentials available
+            use_turso = TURSO_AVAILABLE and turso_url and turso_token
+
+        self.use_turso = use_turso
+        self.db_path = db_path  # Fallback to local SQLite
+        self.turso_client = None
+
+        if self.use_turso:
+            if not TURSO_AVAILABLE:
+                raise RuntimeError("Turso requested but libsql-client not installed. Run: pip install libsql-client")
+            if not turso_url or not turso_token:
+                raise RuntimeError("TURSO_URL and TURSO_TOKEN environment variables required")
+
+            logger.info(f"Using Turso database: {turso_url}")
+            # Turso client will be initialized async in _init_turso()
+            self.turso_url = turso_url
+            self.turso_token = turso_token
+        else:
+            logger.info(f"Using local SQLite: {self.db_path}")
+            self._init_local_database()
 
         # Results tracking
         self.results_dir = Path('data/claude_results')
         self.results_dir.mkdir(parents=True, exist_ok=True)
 
         logger.info("Claude Orchestrator initialized")
-        logger.info(f"Database: {self.db_path}")
         logger.info(f"Test mode: {self.test_mode}")
 
-    def _init_database(self):
-        """Initialize database if needed"""
+    def _init_local_database(self):
+        """Initialize local SQLite database"""
         Path(self.db_path).parent.mkdir(parents=True, exist_ok=True)
         conn = sqlite3.connect(self.db_path)
         # Database already has tables from our earlier script
         conn.close()
 
-    def _save_platform_to_db(self, platform_data: dict):
+    async def _init_turso(self):
+        """Initialize Turso client (async)"""
+        if not self.turso_client:
+            self.turso_client = create_client(
+                url=self.turso_url,
+                auth_token=self.turso_token
+            )
+            logger.info("✅ Turso client initialized")
+
+    async def _save_platform_to_db(self, platform_data: dict):
         """Save a platform discovery to the database"""
+        if self.use_turso:
+            await self._save_platform_to_turso(platform_data)
+        else:
+            self._save_platform_to_local(platform_data)
+
+    def _save_platform_to_local(self, platform_data: dict):
+        """Save platform to local SQLite"""
         conn = sqlite3.connect(self.db_path)
         cursor = conn.cursor()
 
@@ -76,11 +121,34 @@ class ClaudeOrchestrator:
                 'claude_agent_live'
             ))
             conn.commit()
-            logger.debug(f"Saved platform to DB: {platform_data.get('name')}")
+            logger.debug(f"Saved platform to local DB: {platform_data.get('name')}")
         except Exception as e:
-            logger.error(f"Failed to save platform to DB: {e}")
+            logger.error(f"Failed to save platform to local DB: {e}")
         finally:
             conn.close()
+
+    async def _save_platform_to_turso(self, platform_data: dict):
+        """Save platform to Turso"""
+        await self._init_turso()
+
+        try:
+            await self.turso_client.execute("""
+                INSERT INTO local_platforms
+                (region, country, name, url, type, language, description, data_source)
+                VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+            """, [
+                platform_data.get('region'),
+                platform_data.get('country'),
+                platform_data.get('name'),
+                platform_data.get('url'),
+                platform_data.get('type'),
+                platform_data.get('language'),
+                platform_data.get('description', ''),
+                'claude_agent_live'
+            ])
+            logger.debug(f"✅ Saved platform to Turso: {platform_data.get('name')}")
+        except Exception as e:
+            logger.error(f"❌ Failed to save platform to Turso: {e}")
 
     async def discover_opportunities(self, regions: list = None, target_count: int = 100):
         """

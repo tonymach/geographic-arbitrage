@@ -1,65 +1,14 @@
 # Core dependencies
-python>=3.9
-
-# Web scraping
-requests>=2.31.0
-beautifulsoup4>=4.12.0
-lxml>=4.9.0
-selenium>=4.15.0
-playwright>=1.40.0
-
-# Async support
-aiohttp>=3.9.0
-asyncio>=3.4.3
-
-# Data processing
-pandas>=2.1.0
-numpy>=1.24.0
-
-# Database
-sqlite3  # Built-in
-
-# Configuration
 pyyaml>=6.0
 python-dotenv>=1.0.0
 
-# Logging
-colorlog>=6.7.0
+# Database
+libsql-client>=0.3.0
 
-# Rate limiting
-ratelimit>=2.2.1
-
-# Text processing
-nltk>=3.8.0
-spacy>=3.7.0
-
-# HTTP client with retry logic
-tenacity>=8.2.0
-
-# Browser automation
-webdriver-manager>=4.0.0
-
-# Data validation
-pydantic>=2.5.0
-
-# API clients (if needed)
-anthropic  # For Claude API if running agents with API
-
-# Utilities
-python-dateutil>=2.8.0
-pytz>=2023.3
-tqdm>=4.66.0  # Progress bars
-
-# Testing (optional)
+# Testing
 pytest>=7.4.0
 pytest-asyncio>=0.21.0
+pytest-cov>=4.1.0
 
-# Scraping helpers
-fake-useragent>=1.4.0
-cloudscraper>=1.2.71  # For bypassing Cloudflare
-
-# Optional: for tech stack detection
-builtwith>=1.3.7
-
-# Optional: for better JSON handling
-orjson>=3.9.0
+# Optional: For local development
+ipython>=8.12.0
