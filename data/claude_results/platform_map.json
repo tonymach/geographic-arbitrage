@@ -1,0 +1,45 @@
+{
+  "generated_at": "2025-11-14T19:42:16.903968",
+  "total_regions": 1,
+  "total_platforms": 6,
+  "platforms_by_region": {
+    "Romania": [
+      {
+        "name": "G2",
+        "url": "https://www.g2.com",
+        "type": "software_reviews",
+        "language": "English"
+      },
+      {
+        "name": "Capterra",
+        "url": "https://www.capterra.com",
+        "type": "software_reviews",
+        "language": "English"
+      },
+      {
+        "name": "Product Hunt",
+        "url": "https://www.producthunt.com",
+        "type": "product_directory",
+        "language": "English"
+      },
+      {
+        "name": "AlternativeTo",
+        "url": "https://alternativeto.net",
+        "type": "software_alternatives",
+        "language": "English"
+      },
+      {
+        "name": "Trustpilot",
+        "url": "https://www.trustpilot.com",
+        "type": "business_reviews",
+        "language": "English"
+      },
+      {
+        "name": "Lista Firmelor",
+        "url": "https://www.listafirme.ro",
+        "type": "business_directory",
+        "language": "Romanian"
+      }
+    ]
+  }
+}
