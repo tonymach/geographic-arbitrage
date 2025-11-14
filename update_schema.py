@@ -10,7 +10,20 @@ Adds:
 import asyncio
 import os
 from dotenv import load_dotenv
-from libsql_client import create_client
+
+# Try WebSocket client first
+try:
+    from libsql_client import create_client as create_ws_client
+    WS_AVAILABLE = True
+except ImportError:
+    WS_AVAILABLE = False
+
+# Import HTTP client as fallback
+try:
+    from utils.turso_http_client import create_http_client
+    HTTP_AVAILABLE = True
+except ImportError:
+    HTTP_AVAILABLE = False
 
 # Load environment variables
 load_dotenv()
@@ -22,15 +35,33 @@ client = None
 
 
 async def init_client():
-    """Initialize Turso client"""
+    """Initialize Turso client (WebSocket or HTTP fallback)"""
     global client
     if not TURSO_URL or not TURSO_TOKEN:
         print("❌ Error: TURSO_URL and TURSO_TOKEN not set")
         print("   Run: cp .env.example .env")
         return False
 
-    client = create_client(url=TURSO_URL, auth_token=TURSO_TOKEN)
-    return True
+    # Try WebSocket first
+    if WS_AVAILABLE:
+        try:
+            client = create_ws_client(url=TURSO_URL, auth_token=TURSO_TOKEN)
+            # Test connection
+            await client.execute("SELECT 1")
+            print("✅ Using Turso WebSocket client")
+            return True
+        except Exception as e:
+            print(f"⚠️  WebSocket failed ({e}), trying HTTP...")
+            client = None
+
+    # Fall back to HTTP
+    if HTTP_AVAILABLE:
+        client = create_http_client(url=TURSO_URL, auth_token=TURSO_TOKEN)
+        print("✅ Using Turso HTTP client (fallback)")
+        return True
+
+    print("❌ Error: No Turso client available")
+    return False
 
 
 async def run_turso_sql(sql):

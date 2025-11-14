@@ -27,6 +27,13 @@ try:
 except ImportError:
     TURSO_AVAILABLE = False
 
+# Import HTTP client as fallback
+try:
+    from utils.turso_http_client import create_http_client
+    HTTP_CLIENT_AVAILABLE = True
+except ImportError:
+    HTTP_CLIENT_AVAILABLE = False
+
 logger = logging.getLogger(__name__)
 
 
@@ -87,11 +94,30 @@ class ClaudeOrchestrator:
     async def _init_turso(self):
         """Initialize Turso client (async)"""
         if not self.turso_client:
-            self.turso_client = create_client(
-                url=self.turso_url,
-                auth_token=self.turso_token
-            )
-            logger.info("✅ Turso client initialized")
+            # Try WebSocket client first
+            if TURSO_AVAILABLE:
+                try:
+                    self.turso_client = create_client(
+                        url=self.turso_url,
+                        auth_token=self.turso_token
+                    )
+                    # Test the connection with a simple query
+                    await self.turso_client.execute("SELECT 1")
+                    logger.info("✅ Turso WebSocket client initialized")
+                    return
+                except Exception as e:
+                    logger.warning(f"⚠️ WebSocket client failed ({e}), falling back to HTTP...")
+                    self.turso_client = None
+
+            # Fall back to HTTP client
+            if HTTP_CLIENT_AVAILABLE:
+                self.turso_client = create_http_client(
+                    url=self.turso_url,
+                    auth_token=self.turso_token
+                )
+                logger.info("✅ Turso HTTP client initialized (fallback)")
+            else:
+                raise RuntimeError("No Turso client available (neither WebSocket nor HTTP)")
 
     async def _save_platform_to_db(self, platform_data: dict):
         """Save a platform discovery to the database"""
