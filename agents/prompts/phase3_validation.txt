@@ -1,0 +1,193 @@
+PHASE 3: VALIDATION & UNIT ECONOMICS AGENT
+
+MISSION:
+Validate opportunity and calculate PE-grade unit economics
+
+OPPORTUNITY TO VALIDATE:
+{opportunity_data}
+
+YOUR RESEARCH TASKS:
+
+1. DEMAND VALIDATION (Find Pain Signals)
+
+   Search {target_region} forums/platforms:
+   {local_platforms}
+
+   Search queries:
+   - "{category} {native_language}"
+   - "Alternative to {source_product}"
+   - Pain keywords in native language
+
+   Find 10-20 pain signals:
+   - Forum posts asking for solutions
+   - Complaints about existing tools
+   - Questions about international products
+   - Feature requests
+
+   For each signal:
+   - Source (platform name)
+   - URL
+   - Quote (in English)
+   - Upvotes/engagement
+   - Pain intensity (0-10)
+
+2. MARKET SIZING
+
+   Calculate TAM (Total Addressable Market):
+   - How many companies in {target_region} could use this?
+   - What's average spend per company on {category}?
+   - TAM = # companies * avg spend
+
+   Research:
+   - Industry reports
+   - Government statistics
+   - Comparable markets
+
+   Example calculation:
+   - 15,000 construction companies in Poland
+   - Average $3,000/year software spend
+   - TAM = $45M
+
+3. UNIT ECONOMICS CALCULATION
+
+   Based on source product pricing: {source_pricing}
+   Adjust for target market purchasing power
+
+   Calculate:
+   a) ACV (Annual Contract Value)
+      - Recommended pricing for {target_region}
+      - Usually 40-60% of US pricing
+
+   b) CAC (Customer Acquisition Cost)
+      - Digital marketing in {target_region}
+      - Estimate: $500-1500 depending on ACV
+      - Use CAC = ACV * 0.3 as baseline
+
+   c) LTV (Lifetime Value)
+      - Churn assumption: 20% annual (5-year avg lifetime)
+      - Gross margin: 85% (SaaS standard)
+      - LTV = (ACV * 0.85) / 0.20 = ACV * 4.25
+
+   d) Metrics:
+      - LTV:CAC ratio (should be >3:1)
+      - Payback period (should be <18 months)
+      - Magic Number (should be >0.75)
+
+4. FINANCIAL MODEL (3-Year)
+
+   Assumptions:
+   - Start with 10 customers (design partners)
+   - Growth: 300% Y1-Y2, 200% Y2-Y3
+   - Gross margin: 85%
+   - S&M spend: 40% of revenue (Y1), 30% (Y2), 25% (Y3)
+   - R&D spend: 25% throughout
+   - G&A spend: 15% throughout
+
+   Calculate:
+   Year 1: customers=30, revenue=$90k, EBITDA=-$30k
+   Year 2: customers=120, revenue=$360k, EBITDA=$40k
+   Year 3: customers=360, revenue=$1.1M, EBITDA=$250k
+
+5. RISK ANALYSIS
+
+   Identify top 3-5 risks:
+   - Competitive (Could source product enter market?)
+   - Economic (Is target region stable?)
+   - Execution (Do we have right team?)
+   - Regulatory (Any barriers?)
+
+   For each risk:
+   - Probability: low|medium|high
+   - Impact: low|medium|high
+   - Mitigation strategy
+
+6. MOAT ANALYSIS
+
+   Assess defensibility:
+   - Network effects: 0-10
+   - Switching costs: 0-10
+   - Regulatory moat: 0-10
+   - Brand/trust: 0-10
+
+   Overall moat_score = average
+   Window to build moat: X months
+
+OUTPUT FORMAT (JSON):
+{{
+  "opportunity_id": {opportunity_id},
+  "validation_status": "VALIDATED|REJECTED",
+  "demand_score": 8.9,
+
+  "pain_signals": [
+    {{
+      "source": "Wykop.pl",
+      "url": "https://...",
+      "quote": "Does a Polish alternative to Procore exist?",
+      "upvotes": 47,
+      "pain_intensity": 8.5
+    }}
+  ],
+
+  "market_size": {{
+    "tam": "$45M",
+    "target_customers": 15000,
+    "avg_contract_value": "$3000"
+  }},
+
+  "unit_economics": {{
+    "acv": 3000,
+    "cac": 900,
+    "ltv": 12750,
+    "ltv_cac_ratio": 14.2,
+    "payback_period_months": 3.6,
+    "gross_margin_pct": 85
+  }},
+
+  "financial_model": {{
+    "year_1_revenue": 90000,
+    "year_2_revenue": 360000,
+    "year_3_revenue": 1080000,
+    "year_3_ebitda": 250000,
+    "capital_required": 120000,
+    "breakeven_month": 18
+  }},
+
+  "exit_strategy": {{
+    "exit_value_base": 5400000,
+    "exit_value_bull": 12000000,
+    "roi_multiple": 45,
+    "likely_acquirers": ["Procore", "Local PE firms", "European strategic"],
+    "comparable_transactions": "FieldWire->Hilti: $120M at 8x ARR"
+  }},
+
+  "risks": [
+    {{
+      "risk": "Procore enters Poland directly",
+      "probability": "medium",
+      "impact": "high",
+      "mitigation": "Speed to market, local focus, 60% lower pricing"
+    }}
+  ],
+
+  "moat": {{
+    "network_effects": 7,
+    "switching_costs": 9,
+    "regulatory": 6,
+    "brand": 5,
+    "overall_score": 6.75,
+    "window_months": 24
+  }},
+
+  "recommendation": "BUILD NOW|VALIDATE MORE|REJECT",
+  "confidence": "high|medium|low"
+}}
+
+IMPORTANT:
+- Be conservative in estimates
+- Use real data when possible
+- If you can't find data, clearly state assumptions
+- Recommendation "BUILD NOW" only if:
+  - demand_score >= 8.0
+  - LTV:CAC >= 3:1
+  - TAM >= $20M
+  - Clear moat potential

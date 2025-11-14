@@ -1,0 +1,87 @@
+PHASE 2: GAP DETECTION AGENT
+
+MISSION:
+Analyze software ecosystems and identify arbitrage opportunities
+
+You have been provided with software product data from multiple regions.
+Your job is to find GAPS where successful products in one region are MISSING in another.
+
+INPUT DATA:
+{ecosystem_data}
+
+ANALYSIS CRITERIA:
+
+1. IDENTIFY SOURCE MARKETS (Mature)
+   - Products with >200 reviews
+   - Average rating >4.3
+   - Clear product-market fit
+   - Micro-SaaS pricing ($50-300/month)
+
+2. IDENTIFY TARGET MARKETS (Gaps)
+   - Same category has <50 total reviews
+   - Few competitors (< 5 products)
+   - OR no products with >100 reviews
+
+3. CALCULATE GAP SCORE (0-10):
+   gap_score = (
+       (source_reviews / 100) * 0.3 +           # Source strength
+       (source_rating - 3) * 2 * 0.2 +          # Source quality
+       (10 - target_competition_level) * 0.3 +   # Target weakness
+       localization_opportunity * 0.2            # Localization need
+   )
+
+   Where:
+   - source_reviews: review count of strongest source product
+   - source_rating: rating of strongest source product
+   - target_competition_level: 0-10 scale (10 = saturated, 0 = empty)
+   - localization_opportunity: 0-10 (10 = highly local, like HR/Payroll)
+
+4. PRIORITIZE CATEGORIES:
+   Best categories for arbitrage:
+   - Construction Management (local regulations)
+   - HR/Payroll (country-specific laws)
+   - Field Service (local workflows)
+   - Restaurant/Hospitality (local preferences)
+   - Real Estate Management (local market)
+
+   Avoid:
+   - Pure cloud tools (Notion, Slack - global by nature)
+   - Developer tools (globally distributed)
+
+OUTPUT FORMAT (JSON):
+{{
+  "opportunities": [
+    {{
+      "source_region": "United States",
+      "source_product": "Procore",
+      "source_category": "Construction Management",
+      "source_reviews": 1200,
+      "source_rating": 4.7,
+      "source_pricing": "$375/month",
+      "target_region": "Poland",
+      "target_competition": "2 products, 18 total reviews",
+      "target_best_product": "BudowaPlus (12 reviews)",
+      "gap_score": 9.2,
+      "reasoning": "Massive gap. US has billion-dollar companies with 1000+ reviews. Poland has minimal solutions despite growing construction sector ($45B market). Local regulations favor localized solution."
+    }}
+  ],
+  "total_gaps_found": 15,
+  "high_confidence_gaps": 8,
+  "categories_analyzed": 12
+}}
+
+REASONING TEMPLATE:
+For each opportunity, explain:
+- Why source market is strong
+- Why target market is weak
+- Why the gap exists (not just lack of awareness)
+- Why localization would work
+- Any risks (e.g., "Procore could enter Poland anytime")
+
+FILTERS:
+- Only return gaps with gap_score >= 7.0
+- Must have target market TAM > $10M
+- Source product must have proven PMF (>200 reviews, >4.3 rating)
+- Target region must show economic growth signals
+
+Return JSON array of opportunities, sorted by gap_score DESC.

@@ -1,0 +1,78 @@
+PHASE 1: SOFTWARE ECOSYSTEM MAPPING AGENT
+
+MISSION:
+Map the software ecosystem in {region} for category: {category}
+
+You are analyzing: {region}
+Category: {category}
+Available platforms: {platforms}
+
+RESEARCH TASKS:
+
+1. SEARCH GLOBAL PLATFORMS (G2, Capterra)
+   - Query: "{category} {region}"
+   - Query: "{category} {native_language_term}"
+   - Filter results by region: {region}
+   - Find top 10-20 products
+   - Capture: reviews, ratings, pricing
+
+2. SEARCH LOCAL PLATFORMS
+   {platform_list}
+   - Search for {category} discussions
+   - Find mentioned products
+   - Capture adoption signals
+
+3. ANALYZE EACH PRODUCT:
+   For each product found:
+   - Product name
+   - Review count
+   - Average rating (out of 5)
+   - Estimated pricing
+   - Target customer segment
+   - Key features
+   - Adoption signals (forum mentions, job postings)
+
+4. CALCULATE ADOPTION SCORE:
+   adoption_score = (reviews * 0.6) + (rating * 20) + (forum_mentions * 0.3)
+
+   This gives weight to:
+   - Review volume (social proof)
+   - Quality (rating)
+   - Local adoption (forums)
+
+OUTPUT FORMAT (JSON):
+{{
+  "region": "{region}",
+  "category": "{category}",
+  "products": [
+    {{
+      "product_name": "ExampleSaaS",
+      "url": "https://example.com",
+      "reviews": 450,
+      "rating": 4.6,
+      "adoption_score": 362.0,
+      "source_platforms": "G2,Capterra,LocalForum",
+      "estimated_revenue": "$50M ARR",
+      "pricing": "$99/month",
+      "target_customer": "Mid-market (50-500 employees)",
+      "key_features": "Project tracking, Collaboration, Mobile app"
+    }}
+  ],
+  "market_maturity": "high|medium|low",
+  "total_products_found": 15,
+  "top_3_products_by_reviews": ["Product1", "Product2", "Product3"]
+}}
+
+SEARCH STRATEGY:
+1. Start with English searches on G2/Capterra
+2. Then search in native language: {native_language}
+3. Cross-reference with local platforms
+4. Validate product exists and is real
+5. Don't include enterprise solutions (>$500/month)
+6. Focus on micro-SaaS sweet spot ($50-300/month)
+
+IMPORTANT:
+- Only include REAL products with actual review counts
+- If you can't find review data, estimate conservatively
+- Market maturity: high (>10 products, >1000 reviews), medium (5-10 products), low (<5 products)
+- Return JSON only, no extra commentary
