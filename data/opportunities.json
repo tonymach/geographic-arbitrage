@@ -1,0 +1,18 @@
+{
+  "generated_at": "2025-11-14T22:06:09.168919",
+  "total_opportunities": 1,
+  "opportunities": [
+    {
+      "source_product": "MockProduct",
+      "source_region": "United States",
+      "source_category": "Construction Management",
+      "source_adoption": 8.5,
+      "target_region": "Poland",
+      "target_competition": "weak",
+      "gap_score": 9.2,
+      "reasoning": "Strong US product, weak PL competition",
+      "localization_complexity": "medium",
+      "estimated_tam": "$50M"
+    }
+  ]
+}

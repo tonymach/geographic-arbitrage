@@ -1,0 +1,40 @@
+{
+  "generated_at": "2025-11-14T22:06:09.169554",
+  "total_validated": 1,
+  "opportunities": [
+    {
+      "source_product": "MockProduct",
+      "source_region": "United States",
+      "source_category": "Construction Management",
+      "source_adoption": 8.5,
+      "target_region": "Poland",
+      "target_competition": "weak",
+      "gap_score": 9.2,
+      "reasoning": "Strong US product, weak PL competition",
+      "localization_complexity": "medium",
+      "estimated_tam": "$50M",
+      "demand_score": 8.5,
+      "pain_signals_found": 12,
+      "unit_economics": {
+        "acv": 3000,
+        "cac": 900,
+        "ltv": 12750,
+        "ltv_cac_ratio": 14.2,
+        "payback_months": 3.6
+      },
+      "financial_model": {
+        "year_1_revenue": 180000,
+        "year_2_revenue": 540000,
+        "year_3_revenue": 1080000,
+        "year_3_ebitda": 324000
+      },
+      "exit_strategy": {
+        "exit_value_base": 5400000,
+        "exit_value_bull": 10800000,
+        "roi_multiple": 18.0
+      },
+      "recommendation": "BUILD NOW",
+      "confidence": "high"
+    }
+  ]
+}

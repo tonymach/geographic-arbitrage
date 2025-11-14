@@ -1,0 +1,278 @@
+{
+  "generated_at": "2025-11-14T22:06:09.167879",
+  "total_products": 9,
+  "products": [
+    {
+      "product_name": "Mock-Construction Management-Poland",
+      "region": "Poland",
+      "category": "Construction Management",
+      "url": "https://example.com",
+      "reviews": 50,
+      "rating": 4.0,
+      "adoption_score": 5.0,
+      "pricing": "$99/month",
+      "target_customer": "SMB",
+      "key_features": "Feature 1, Feature 2",
+      "is_local": false,
+      "source": "Mock data"
+    },
+    {
+      "product_name": "Mock-HR & Payroll-Poland",
+      "region": "Poland",
+      "category": "HR & Payroll",
+      "url": "https://example.com",
+      "reviews": 50,
+      "rating": 4.0,
+      "adoption_score": 5.0,
+      "pricing": "$99/month",
+      "target_customer": "SMB",
+      "key_features": "Feature 1, Feature 2",
+      "is_local": false,
+      "source": "Mock data"
+    },
+    {
+      "product_name": "Mock-Field Service Management-Poland",
+      "region": "Poland",
+      "category": "Field Service Management",
+      "url": "https://example.com",
+      "reviews": 50,
+      "rating": 4.0,
+      "adoption_score": 5.0,
+      "pricing": "$99/month",
+      "target_customer": "SMB",
+      "key_features": "Feature 1, Feature 2",
+      "is_local": false,
+      "source": "Mock data"
+    },
+    {
+      "product_name": "Mock-Construction Management-Romania",
+      "region": "Romania",
+      "category": "Construction Management",
+      "url": "https://example.com",
+      "reviews": 50,
+      "rating": 4.0,
+      "adoption_score": 5.0,
+      "pricing": "$99/month",
+      "target_customer": "SMB",
+      "key_features": "Feature 1, Feature 2",
+      "is_local": false,
+      "source": "Mock data"
+    },
+    {
+      "product_name": "Mock-HR & Payroll-Romania",
+      "region": "Romania",
+      "category": "HR & Payroll",
+      "url": "https://example.com",
+      "reviews": 50,
+      "rating": 4.0,
+      "adoption_score": 5.0,
+      "pricing": "$99/month",
+      "target_customer": "SMB",
+      "key_features": "Feature 1, Feature 2",
+      "is_local": false,
+      "source": "Mock data"
+    },
+    {
+      "product_name": "Mock-Field Service Management-Romania",
+      "region": "Romania",
+      "category": "Field Service Management",
+      "url": "https://example.com",
+      "reviews": 50,
+      "rating": 4.0,
+      "adoption_score": 5.0,
+      "pricing": "$99/month",
+      "target_customer": "SMB",
+      "key_features": "Feature 1, Feature 2",
+      "is_local": false,
+      "source": "Mock data"
+    },
+    {
+      "product_name": "Mock-Construction Management-Czech Republic",
+      "region": "Czech Republic",
+      "category": "Construction Management",
+      "url": "https://example.com",
+      "reviews": 50,
+      "rating": 4.0,
+      "adoption_score": 5.0,
+      "pricing": "$99/month",
+      "target_customer": "SMB",
+      "key_features": "Feature 1, Feature 2",
+      "is_local": false,
+      "source": "Mock data"
+    },
+    {
+      "product_name": "Mock-HR & Payroll-Czech Republic",
+      "region": "Czech Republic",
+      "category": "HR & Payroll",
+      "url": "https://example.com",
+      "reviews": 50,
+      "rating": 4.0,
+      "adoption_score": 5.0,
+      "pricing": "$99/month",
+      "target_customer": "SMB",
+      "key_features": "Feature 1, Feature 2",
+      "is_local": false,
+      "source": "Mock data"
+    },
+    {
+      "product_name": "Mock-Field Service Management-Czech Republic",
+      "region": "Czech Republic",
+      "category": "Field Service Management",
+      "url": "https://example.com",
+      "reviews": 50,
+      "rating": 4.0,
+      "adoption_score": 5.0,
+      "pricing": "$99/month",
+      "target_customer": "SMB",
+      "key_features": "Feature 1, Feature 2",
+      "is_local": false,
+      "source": "Mock data"
+    }
+  ],
+  "by_region_category": {
+    "Poland_Construction Management": [
+      {
+        "product_name": "Mock-Construction Management-Poland",
+        "region": "Poland",
+        "category": "Construction Management",
+        "url": "https://example.com",
+        "reviews": 50,
+        "rating": 4.0,
+        "adoption_score": 5.0,
+        "pricing": "$99/month",
+        "target_customer": "SMB",
+        "key_features": "Feature 1, Feature 2",
+        "is_local": false,
+        "source": "Mock data"
+      }
+    ],
+    "Poland_HR & Payroll": [
+      {
+        "product_name": "Mock-HR & Payroll-Poland",
+        "region": "Poland",
+        "category": "HR & Payroll",
+        "url": "https://example.com",
+        "reviews": 50,
+        "rating": 4.0,
+        "adoption_score": 5.0,
+        "pricing": "$99/month",
+        "target_customer": "SMB",
+        "key_features": "Feature 1, Feature 2",
+        "is_local": false,
+        "source": "Mock data"
+      }
+    ],
+    "Poland_Field Service Management": [
+      {
+        "product_name": "Mock-Field Service Management-Poland",
+        "region": "Poland",
+        "category": "Field Service Management",
+        "url": "https://example.com",
+        "reviews": 50,
+        "rating": 4.0,
+        "adoption_score": 5.0,
+        "pricing": "$99/month",
+        "target_customer": "SMB",
+        "key_features": "Feature 1, Feature 2",
+        "is_local": false,
+        "source": "Mock data"
+      }
+    ],
+    "Romania_Construction Management": [
+      {
+        "product_name": "Mock-Construction Management-Romania",
+        "region": "Romania",
+        "category": "Construction Management",
+        "url": "https://example.com",
+        "reviews": 50,
+        "rating": 4.0,
+        "adoption_score": 5.0,
+        "pricing": "$99/month",
+        "target_customer": "SMB",
+        "key_features": "Feature 1, Feature 2",
+        "is_local": false,
+        "source": "Mock data"
+      }
+    ],
+    "Romania_HR & Payroll": [
+      {
+        "product_name": "Mock-HR & Payroll-Romania",
+        "region": "Romania",
+        "category": "HR & Payroll",
+        "url": "https://example.com",
+        "reviews": 50,
+        "rating": 4.0,
+        "adoption_score": 5.0,
+        "pricing": "$99/month",
+        "target_customer": "SMB",
+        "key_features": "Feature 1, Feature 2",
+        "is_local": false,
+        "source": "Mock data"
+      }
+    ],
+    "Romania_Field Service Management": [
+      {
+        "product_name": "Mock-Field Service Management-Romania",
+        "region": "Romania",
+        "category": "Field Service Management",
+        "url": "https://example.com",
+        "reviews": 50,
+        "rating": 4.0,
+        "adoption_score": 5.0,
+        "pricing": "$99/month",
+        "target_customer": "SMB",
+        "key_features": "Feature 1, Feature 2",
+        "is_local": false,
+        "source": "Mock data"
+      }
+    ],
+    "Czech Republic_Construction Management": [
+      {
+        "product_name": "Mock-Construction Management-Czech Republic",
+        "region": "Czech Republic",
+        "category": "Construction Management",
+        "url": "https://example.com",
+        "reviews": 50,
+        "rating": 4.0,
+        "adoption_score": 5.0,
+        "pricing": "$99/month",
+        "target_customer": "SMB",
+        "key_features": "Feature 1, Feature 2",
+        "is_local": false,
+        "source": "Mock data"
+      }
+    ],
+    "Czech Republic_HR & Payroll": [
+      {
+        "product_name": "Mock-HR & Payroll-Czech Republic",
+        "region": "Czech Republic",
+        "category": "HR & Payroll",
+        "url": "https://example.com",
+        "reviews": 50,
+        "rating": 4.0,
+        "adoption_score": 5.0,
+        "pricing": "$99/month",
+        "target_customer": "SMB",
+        "key_features": "Feature 1, Feature 2",
+        "is_local": false,
+        "source": "Mock data"
+      }
+    ],
+    "Czech Republic_Field Service Management": [
+      {
+        "product_name": "Mock-Field Service Management-Czech Republic",
+        "region": "Czech Republic",
+        "category": "Field Service Management",
+        "url": "https://example.com",
+        "reviews": 50,
+        "rating": 4.0,
+        "adoption_score": 5.0,
+        "pricing": "$99/month",
+        "target_customer": "SMB",
+        "key_features": "Feature 1, Feature 2",
+        "is_local": false,
+        "source": "Mock data"
+      }
+    ]
+  }
+}
