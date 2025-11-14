@@ -7,27 +7,44 @@ Adds:
 2. Extended fields to arbitrage_opportunities (unit economics, financials)
 """
 
-import subprocess
-import sys
+import asyncio
+import os
+from dotenv import load_dotenv
+from libsql_client import create_client
 
-DB_NAME = "geographic-arbitrage"
+# Load environment variables
+load_dotenv()
+
+TURSO_URL = os.getenv('TURSO_URL')
+TURSO_TOKEN = os.getenv('TURSO_TOKEN')
+
+client = None
 
 
-def run_turso_sql(sql):
-    """Execute SQL via turso CLI"""
-    result = subprocess.run(
-        ["turso", "db", "shell", DB_NAME, sql],
-        capture_output=True,
-        text=True
-    )
-    if result.returncode != 0:
-        print(f"❌ Error: {result.stderr}")
+async def init_client():
+    """Initialize Turso client"""
+    global client
+    if not TURSO_URL or not TURSO_TOKEN:
+        print("❌ Error: TURSO_URL and TURSO_TOKEN not set")
+        print("   Run: cp .env.example .env")
         return False
-    print(result.stdout)
+
+    client = create_client(url=TURSO_URL, auth_token=TURSO_TOKEN)
     return True
 
 
-def create_software_products_table():
+async def run_turso_sql(sql):
+    """Execute SQL via Python client"""
+    try:
+        result = await client.execute(sql)
+        print(f"✓ SQL executed successfully")
+        return True
+    except Exception as e:
+        print(f"❌ Error: {e}")
+        return False
+
+
+async def create_software_products_table():
     """Create software_products table for Phase 1 output"""
 
     print("📋 Creating software_products table...")
@@ -51,20 +68,16 @@ def create_software_products_table():
         );
     """
 
-    if run_turso_sql(sql):
+    if await run_turso_sql(sql):
         print("✅ software_products table created")
         return True
     return False
 
 
-def extend_arbitrage_opportunities():
+async def extend_arbitrage_opportunities():
     """Add PE-grade fields to arbitrage_opportunities table"""
 
     print("\n📋 Extending arbitrage_opportunities table...")
-
-    # Check if columns already exist first
-    check_sql = "SELECT * FROM arbitrage_opportunities LIMIT 0;"
-    run_turso_sql(check_sql)
 
     fields = [
         ("tam_estimate", "TEXT"),
@@ -92,13 +105,16 @@ def extend_arbitrage_opportunities():
     for field_name, field_type in fields:
         sql = f"ALTER TABLE arbitrage_opportunities ADD COLUMN {field_name} {field_type};"
         # This might fail if column exists, that's OK
-        run_turso_sql(sql)
+        try:
+            await run_turso_sql(sql)
+        except:
+            pass  # Column already exists
 
     print("✅ arbitrage_opportunities table extended")
     return True
 
 
-def create_indexes():
+async def create_indexes():
     """Create indexes for better query performance"""
 
     print("\n📋 Creating indexes...")
@@ -112,13 +128,13 @@ def create_indexes():
     ]
 
     for idx_sql in indexes:
-        run_turso_sql(idx_sql)
+        await run_turso_sql(idx_sql)
 
     print("✅ Indexes created")
     return True
 
 
-def verify_schema():
+async def verify_schema():
     """Verify all tables exist"""
 
     print("\n🔍 Verifying schema...")
@@ -131,33 +147,42 @@ def verify_schema():
     ]
 
     for table in tables:
-        sql = f"SELECT COUNT(*) FROM {table};"
-        print(f"\n{table}:")
-        run_turso_sql(sql)
+        try:
+            result = await client.execute(f"SELECT COUNT(*) as count FROM {table};")
+            count = result.rows[0]['count']
+            print(f"  ✓ {table}: {count} rows")
+        except Exception as e:
+            print(f"  ✗ {table}: {e}")
 
     print("\n✅ Schema verification complete")
 
 
-def main():
+async def main():
     print("=" * 80)
     print("TURSO SCHEMA UPDATE")
     print("=" * 80)
     print()
 
+    # Initialize client
+    if not await init_client():
+        return
+
+    print(f"Connected to: {TURSO_URL}\n")
+
     # Create new tables
-    if not create_software_products_table():
+    if not await create_software_products_table():
         print("⚠️  Warning: Could not create software_products table")
 
     # Extend existing tables
-    if not extend_arbitrage_opportunities():
+    if not await extend_arbitrage_opportunities():
         print("⚠️  Warning: Could not extend arbitrage_opportunities table")
 
     # Create indexes
-    if not create_indexes():
+    if not await create_indexes():
         print("⚠️  Warning: Could not create indexes")
 
     # Verify
-    verify_schema()
+    await verify_schema()
 
     print()
     print("=" * 80)
@@ -165,11 +190,9 @@ def main():
     print("=" * 80)
     print()
     print("Next: Run agents to populate data")
-    print("  python -m agents.phase1_ecosystem_mapping")
-    print("  python -m agents.phase2_gap_detection")
-    print("  python -m agents.phase3_validation")
+    print("  python run_complete_flow.py")
     print()
 
 
 if __name__ == "__main__":
-    main()
+    asyncio.run(main())
