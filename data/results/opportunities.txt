@@ -2,54 +2,99 @@
 GEOGRAPHIC ARBITRAGE OPPORTUNITIES
 ================================================================================
 
-Total opportunities found: 5
-Generated: 2025-11-14 19:23:02
+Total opportunities found: 159
+Generated: 2025-11-14 19:28:16
 
 TOP 10 OPPORTUNITIES:
 ================================================================================
 
-1. Nexudus - Coworking & Space Management
-   United Kingdom → Japan
+1. Asana - Project Management
+   United States → United Kingdom
    Opportunity Score: 9.0/10
    Gap Score: 10/10
-   Source: 847 reviews, 4.6/5
+   Source: 12500 reviews, 4.4/5
    Target Competition: Level 0/5
    Market: emerging
-   Nexudus dominates Coworking & Space Management in United Kingdom with 847 reviews and 4.6/5 rating. Japan has NO existing solutions. Market appears emerging. 
+   Asana dominates Project Management in United States with 12500 reviews and 4.4/5 rating. United Kingdom has NO existing solutions. Market appears emerging. 
 
-2. Nexudus - Coworking & Space Management
-   Romania → Japan
+2. Monday.com - Project Management
+   United States → United Kingdom
    Opportunity Score: 9.0/10
    Gap Score: 10/10
-   Source: 847 reviews, 4.6/5
+   Source: 9800 reviews, 4.6/5
    Target Competition: Level 0/5
    Market: emerging
-   Nexudus dominates Coworking & Space Management in Romania with 847 reviews and 4.6/5 rating. Japan has NO existing solutions. Market appears emerging. 
+   Monday.com dominates Project Management in United States with 9800 reviews and 4.6/5 rating. United Kingdom has NO existing solutions. Market appears emerging. 
 
-3. OfficeRnD - Coworking & Space Management
-   United Kingdom → Japan
-   Opportunity Score: 8.5/10
+3. ClickUp - Project Management
+   United States → United Kingdom
+   Opportunity Score: 9.0/10
    Gap Score: 10/10
-   Source: 234 reviews, 4.5/5
+   Source: 7200 reviews, 4.7/5
    Target Competition: Level 0/5
    Market: emerging
-   OfficeRnD dominates Coworking & Space Management in United Kingdom with 234 reviews and 4.5/5 rating. Japan has NO existing solutions. Market appears emerging. 
+   ClickUp dominates Project Management in United States with 7200 reviews and 4.7/5 rating. United Kingdom has NO existing solutions. Market appears emerging. 
 
-4. OfficeRnD - Coworking & Space Management
-   Romania → Japan
-   Opportunity Score: 8.5/10
+4. BambooHR - HR & Payroll
+   United States → United Kingdom
+   Opportunity Score: 9.0/10
    Gap Score: 10/10
-   Source: 234 reviews, 4.5/5
+   Source: 5600 reviews, 4.6/5
    Target Competition: Level 0/5
    Market: emerging
-   OfficeRnD dominates Coworking & Space Management in Romania with 234 reviews and 4.5/5 rating. Japan has NO existing solutions. Market appears emerging. 
+   BambooHR dominates HR & Payroll in United States with 5600 reviews and 4.6/5 rating. United Kingdom has NO existing solutions. Market appears emerging. 
 
-5. Cobot - Coworking & Space Management
-   United Kingdom → Japan
-   Opportunity Score: 7.5/10
+5. Gusto - HR & Payroll
+   United States → United Kingdom
+   Opportunity Score: 9.0/10
    Gap Score: 10/10
-   Source: 156 reviews, 4.4/5
+   Source: 4200 reviews, 4.7/5
    Target Competition: Level 0/5
    Market: emerging
-   Cobot dominates Coworking & Space Management in United Kingdom with 156 reviews and 4.4/5 rating. Japan has NO existing solutions. Market appears emerging. 
+   Gusto dominates HR & Payroll in United States with 4200 reviews and 4.7/5 rating. United Kingdom has NO existing solutions. Market appears emerging. 
+
+6. Procore - Construction Management
+   United States → United Kingdom
+   Opportunity Score: 9.0/10
+   Gap Score: 10/10
+   Source: 3400 reviews, 4.5/5
+   Target Competition: Level 0/5
+   Market: emerging
+   Procore dominates Construction Management in United States with 3400 reviews and 4.5/5 rating. United Kingdom has NO existing solutions. Market appears emerging. 
+
+7. Buildertrend - Construction Management
+   United States → United Kingdom
+   Opportunity Score: 9.0/10
+   Gap Score: 10/10
+   Source: 2100 reviews, 4.3/5
+   Target Competition: Level 0/5
+   Market: emerging
+   Buildertrend dominates Construction Management in United States with 2100 reviews and 4.3/5 rating. United Kingdom has NO existing solutions. Market appears emerging. 
+
+8. Asana - Project Management
+   United States → Germany
+   Opportunity Score: 9.0/10
+   Gap Score: 10/10
+   Source: 12500 reviews, 4.4/5
+   Target Competition: Level 0/5
+   Market: emerging
+   Asana dominates Project Management in United States with 12500 reviews and 4.4/5 rating. Germany has NO existing solutions. Market appears emerging. 
+
+9. Monday.com - Project Management
+   United States → Germany
+   Opportunity Score: 9.0/10
+   Gap Score: 10/10
+   Source: 9800 reviews, 4.6/5
+   Target Competition: Level 0/5
+   Market: emerging
+   Monday.com dominates Project Management in United States with 9800 reviews and 4.6/5 rating. Germany has NO existing solutions. Market appears emerging. 
+
+10. ClickUp - Project Management
+   United States → Germany
+   Opportunity Score: 9.0/10
+   Gap Score: 10/10
+   Source: 7200 reviews, 4.7/5
+   Target Competition: Level 0/5
+   Market: emerging
+   ClickUp dominates Project Management in United States with 7200 reviews and 4.7/5 rating. Germany has NO existing solutions. Market appears emerging. 
 

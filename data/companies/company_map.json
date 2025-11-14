@@ -1,9 +1,11 @@
 {
-  "generated_at": "2025-11-14T19:23:02.810237",
-  "total_regions": 3,
+  "generated_at": "2025-11-14T19:28:16.418301",
+  "total_regions": 12,
   "total_companies": 6,
   "companies_by_region": {
+    "United States": [],
     "United Kingdom": [],
+    "Germany": [],
     "Romania": [
       {
         "name": "UiPath",
@@ -23,14 +25,14 @@
         "confidence_score": 0.9,
         "tech_stack": {},
         "inferred_software_needs": [
-          "DevOps & Development Tools",
-          "Customer Support & Helpdesk",
-          "Accounting & Finance",
-          "Workflow Automation",
           "Cybersecurity",
           "HR & Payroll",
-          "CRM & Sales",
+          "Customer Support & Helpdesk",
+          "Workflow Automation",
           "Project Management",
+          "DevOps & Development Tools",
+          "CRM & Sales",
+          "Accounting & Finance",
           "Business Intelligence & Analytics"
         ]
       },
@@ -50,14 +52,14 @@
         "confidence_score": 0.85,
         "tech_stack": {},
         "inferred_software_needs": [
-          "DevOps & Development Tools",
-          "Customer Support & Helpdesk",
-          "Accounting & Finance",
-          "Workflow Automation",
           "Cybersecurity",
           "HR & Payroll",
-          "CRM & Sales",
+          "Customer Support & Helpdesk",
+          "Workflow Automation",
           "Project Management",
+          "DevOps & Development Tools",
+          "CRM & Sales",
+          "Accounting & Finance",
           "Business Intelligence & Analytics"
         ]
       },
@@ -77,16 +79,19 @@
         "confidence_score": 0.7,
         "tech_stack": {},
         "inferred_software_needs": [
-          "Customer Support & Helpdesk",
-          "Accounting & Finance",
-          "Workflow Automation",
           "HR & Payroll",
-          "CRM & Sales",
+          "Customer Support & Helpdesk",
+          "Workflow Automation",
           "Project Management",
+          "CRM & Sales",
+          "Accounting & Finance",
           "Business Intelligence & Analytics"
         ]
       }
     ],
+    "Poland": [],
+    "Czech Republic": [],
+    "Singapore": [],
     "Japan": [
       {
         "name": "Rakuten",
@@ -105,15 +110,15 @@
         "tech_stack": {},
         "inferred_software_needs": [
           "E-commerce Platform",
-          "Inventory Management",
-          "Customer Support & Helpdesk",
-          "Accounting & Finance",
-          "Workflow Automation",
           "HR & Payroll",
-          "CRM & Sales",
+          "Customer Support & Helpdesk",
+          "Workflow Automation",
           "Project Management",
-          "Marketing Automation",
-          "Business Intelligence & Analytics"
+          "Inventory Management",
+          "CRM & Sales",
+          "Accounting & Finance",
+          "Business Intelligence & Analytics",
+          "Marketing Automation"
         ]
       },
       {
@@ -133,15 +138,15 @@
         "tech_stack": {},
         "inferred_software_needs": [
           "E-commerce Platform",
-          "Inventory Management",
-          "Customer Support & Helpdesk",
-          "Accounting & Finance",
-          "Workflow Automation",
           "HR & Payroll",
-          "CRM & Sales",
+          "Customer Support & Helpdesk",
+          "Workflow Automation",
           "Project Management",
-          "Marketing Automation",
-          "Business Intelligence & Analytics"
+          "Inventory Management",
+          "CRM & Sales",
+          "Accounting & Finance",
+          "Business Intelligence & Analytics",
+          "Marketing Automation"
         ]
       },
       {
@@ -161,17 +166,21 @@
         "confidence_score": 0.85,
         "tech_stack": {},
         "inferred_software_needs": [
-          "DevOps & Development Tools",
-          "Customer Support & Helpdesk",
-          "Accounting & Finance",
-          "Workflow Automation",
           "Cybersecurity",
           "HR & Payroll",
-          "CRM & Sales",
+          "Customer Support & Helpdesk",
+          "Workflow Automation",
           "Project Management",
+          "DevOps & Development Tools",
+          "CRM & Sales",
+          "Accounting & Finance",
           "Business Intelligence & Analytics"
         ]
       }
-    ]
+    ],
+    "South Korea": [],
+    "Thailand": [],
+    "Indonesia": [],
+    "India": []
   }
 }

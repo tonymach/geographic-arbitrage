@@ -428,6 +428,16 @@ class CompanyMapperAgent:
             'Asia': 'Japan',
             'United Kingdom': 'United Kingdom',
             'Western Europe': 'United Kingdom',
+            'United States': 'United States',
+            'North America': 'United States',
+            'Germany': 'Germany',
+            'Poland': 'Poland',
+            'Czech Republic': 'Czech Republic',
+            'Singapore': 'Singapore',
+            'South Korea': 'South Korea',
+            'India': 'India',
+            'Thailand': 'Thailand',
+            'Indonesia': 'Indonesia',
         }
         return region_map.get(region, region)
 
@@ -439,6 +449,13 @@ class CompanyMapperAgent:
             'Germany': 'German',
             'United States': 'English',
             'United Kingdom': 'English',
+            'Poland': 'Polish',
+            'Czech Republic': 'Czech',
+            'Singapore': 'English',
+            'South Korea': 'Korean',
+            'India': 'English',
+            'Thailand': 'Thai',
+            'Indonesia': 'Indonesian',
         }
         return language_map.get(country, 'English')
 

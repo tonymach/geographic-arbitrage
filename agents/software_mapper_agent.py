@@ -126,8 +126,17 @@ class SoftwareMapperAgent:
         # Limit categories in test mode
         categories = self.categories
         if self.test_mode:
-            # Include specific categories that demonstrate gaps
-            categories = categories[:5] + ["Coworking & Space Management"]
+            # Include diverse categories that demonstrate gaps across regions
+            categories = [
+                "Project Management",
+                "CRM & Sales",
+                "HR & Payroll",
+                "Accounting & Finance",
+                "Coworking & Space Management",
+                "Construction Management",
+                "Manufacturing & Supply Chain",
+                "Healthcare Management"
+            ]
             logger.info(f"  TEST MODE: Testing {len(categories)} categories")
 
         # Map products for each category
@@ -342,37 +351,119 @@ class SoftwareMapperAgent:
                 }
             ]
 
-        elif category == "Project Management" and country.lower() == "japan":
-            products = [
-                {
-                    "name": "Backlog",
-                    "category": category,
-                    "region": region,
-                    "country": country,
-                    "platform_name": "ITreview",
-                    "review_count": 1200,
-                    "rating": 4.4,
-                    "pricing": "$35-$175/month",
-                    "pricing_min": 35,
-                    "pricing_max": 175,
-                    "url": "https://backlog.com",
-                    "language": "Japanese"
-                },
-                {
-                    "name": "Asana",
-                    "category": category,
-                    "region": region,
-                    "country": country,
-                    "platform_name": "G2",
-                    "review_count": 890,
-                    "rating": 4.3,
-                    "pricing": "$10.99-$24.99/user/month",
-                    "pricing_min": 10.99,
-                    "pricing_max": 24.99,
-                    "url": "https://www.asana.com",
-                    "language": "English/Japanese"
-                }
-            ]
+        # === PROJECT MANAGEMENT ===
+        elif category == "Project Management":
+            if country.lower() == "united states":
+                products = [
+                    {"name": "Asana", "category": category, "region": region, "country": country,
+                     "platform_name": "G2", "review_count": 12500, "rating": 4.4,
+                     "pricing": "$10.99-$24.99/user/month", "pricing_min": 10.99, "pricing_max": 24.99,
+                     "url": "https://www.asana.com", "language": "English"},
+                    {"name": "Monday.com", "category": category, "region": region, "country": country,
+                     "platform_name": "G2", "review_count": 9800, "rating": 4.6,
+                     "pricing": "$8-$16/user/month", "pricing_min": 8, "pricing_max": 16,
+                     "url": "https://monday.com", "language": "English"},
+                    {"name": "ClickUp", "category": category, "region": region, "country": country,
+                     "platform_name": "G2", "review_count": 7200, "rating": 4.7,
+                     "pricing": "$5-$19/user/month", "pricing_min": 5, "pricing_max": 19,
+                     "url": "https://clickup.com", "language": "English"}
+                ]
+            elif country.lower() == "japan":
+                products = [
+                    {"name": "Backlog", "category": category, "region": region, "country": country,
+                     "platform_name": "ITreview", "review_count": 1200, "rating": 4.4,
+                     "pricing": "$35-$175/month", "pricing_min": 35, "pricing_max": 175,
+                     "url": "https://backlog.com", "language": "Japanese"},
+                    {"name": "Asana", "category": category, "region": region, "country": country,
+                     "platform_name": "G2", "review_count": 890, "rating": 4.3,
+                     "pricing": "$10.99-$24.99/user/month", "pricing_min": 10.99, "pricing_max": 24.99,
+                     "url": "https://www.asana.com", "language": "English/Japanese"}
+                ]
+            elif country.lower() in ["poland", "czech republic", "thailand", "indonesia"]:
+                # Emerging markets with weak PM software
+                products = [
+                    {"name": "Asana", "category": category, "region": region, "country": country,
+                     "platform_name": "G2", "review_count": 45, "rating": 4.2,
+                     "pricing": "$10.99-$24.99/user/month", "pricing_min": 10.99, "pricing_max": 24.99,
+                     "url": "https://www.asana.com", "language": "English"}
+                ]
+
+        # === CONSTRUCTION MANAGEMENT ===
+        elif category == "Construction Management":
+            if country.lower() == "united states":
+                products = [
+                    {"name": "Procore", "category": category, "region": region, "country": country,
+                     "platform_name": "G2", "review_count": 3400, "rating": 4.5,
+                     "pricing": "$375-$950/user/month", "pricing_min": 375, "pricing_max": 950,
+                     "url": "https://www.procore.com", "language": "English"},
+                    {"name": "Buildertrend", "category": category, "region": region, "country": country,
+                     "platform_name": "G2", "review_count": 2100, "rating": 4.3,
+                     "pricing": "$299-$699/month", "pricing_min": 299, "pricing_max": 699,
+                     "url": "https://buildertrend.com", "language": "English"}
+                ]
+            elif country.lower() == "germany":
+                products = [
+                    {"name": "PlanRadar", "category": category, "region": region, "country": country,
+                     "platform_name": "OMR Reviews", "review_count": 1200, "rating": 4.6,
+                     "pricing": "$39-$199/user/month", "pricing_min": 39, "pricing_max": 199,
+                     "url": "https://www.planradar.com", "language": "German/English"}
+                ]
+            elif country.lower() in ["poland", "romania", "india", "thailand"]:
+                # Huge gap in construction software
+                products = []
+
+        # === MANUFACTURING & SUPPLY CHAIN ===
+        elif category == "Manufacturing & Supply Chain":
+            if country.lower() == "germany":
+                products = [
+                    {"name": "SAP S/4HANA", "category": category, "region": region, "country": country,
+                     "platform_name": "G2", "review_count": 850, "rating": 4.2,
+                     "pricing": "Enterprise", "pricing_min": 10000, "pricing_max": 50000,
+                     "url": "https://www.sap.com", "language": "German/English"},
+                    {"name": "Siemens Opcenter", "category": category, "region": region, "country": country,
+                     "platform_name": "G2", "review_count": 320, "rating": 4.4,
+                     "pricing": "Enterprise", "pricing_min": 5000, "pricing_max": 25000,
+                     "url": "https://www.siemens.com", "language": "German/English"}
+                ]
+            elif country.lower() == "south korea":
+                products = [
+                    {"name": "Infor CloudSuite", "category": category, "region": region, "country": country,
+                     "platform_name": "G2", "review_count": 180, "rating": 4.1,
+                     "pricing": "Enterprise", "pricing_min": 8000, "pricing_max": 30000,
+                     "url": "https://www.infor.com", "language": "Korean/English"}
+                ]
+            elif country.lower() in ["poland", "romania", "thailand", "indonesia"]:
+                # Minimal manufacturing software
+                products = []
+
+        # === HR & PAYROLL ===
+        elif category == "HR & Payroll":
+            if country.lower() == "united states":
+                products = [
+                    {"name": "BambooHR", "category": category, "region": region, "country": country,
+                     "platform_name": "G2", "review_count": 5600, "rating": 4.6,
+                     "pricing": "$6-$12/employee/month", "pricing_min": 6, "pricing_max": 12,
+                     "url": "https://www.bamboohr.com", "language": "English"},
+                    {"name": "Gusto", "category": category, "region": region, "country": country,
+                     "platform_name": "G2", "review_count": 4200, "rating": 4.7,
+                     "pricing": "$40-$80/month + $6/user", "pricing_min": 40, "pricing_max": 80,
+                     "url": "https://gusto.com", "language": "English"}
+                ]
+            elif country.lower() == "singapore":
+                products = [
+                    {"name": "Employment Hero", "category": category, "region": region, "country": country,
+                     "platform_name": "G2", "review_count": 890, "rating": 4.5,
+                     "pricing": "$5-$10/employee/month", "pricing_min": 5, "pricing_max": 10,
+                     "url": "https://employmenthero.com", "language": "English"}
+                ]
+            elif country.lower() in ["india", "thailand", "indonesia"]:
+                # Weak HR software penetration
+                products = [
+                    {"name": "Zoho People", "category": category, "region": region, "country": country,
+                     "platform_name": "G2", "review_count": 120, "rating": 4.0,
+                     "pricing": "$1-$3/user/month", "pricing_min": 1, "pricing_max": 3,
+                     "url": "https://www.zoho.com/people", "language": "English"}
+                ]
 
         return products
 
@@ -510,6 +601,16 @@ class SoftwareMapperAgent:
             'Asia': 'Japan',
             'United Kingdom': 'United Kingdom',
             'Western Europe': 'United Kingdom',
+            'United States': 'United States',
+            'North America': 'United States',
+            'Germany': 'Germany',
+            'Poland': 'Poland',
+            'Czech Republic': 'Czech Republic',
+            'Singapore': 'Singapore',
+            'South Korea': 'South Korea',
+            'India': 'India',
+            'Thailand': 'Thailand',
+            'Indonesia': 'Indonesia',
         }
         return region_map.get(region, region)
 
@@ -519,6 +620,14 @@ class SoftwareMapperAgent:
             'Japan': 'Japanese',
             'Germany': 'German',
             'United Kingdom': 'English',
+            'United States': 'English',
+            'Poland': 'Polish',
+            'Czech Republic': 'Czech',
+            'Singapore': 'English',
+            'South Korea': 'Korean',
+            'India': 'English',
+            'Thailand': 'Thai',
+            'Indonesia': 'Indonesian',
         }
         return language_map.get(country, 'English')
 

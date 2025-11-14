@@ -1,16 +1,16 @@
 {
-  "generated_at": "2025-11-14T19:23:02.790948",
-  "total_regions": 3,
-  "total_platforms": 18,
+  "generated_at": "2025-11-14T19:28:16.390991",
+  "total_regions": 12,
+  "total_platforms": 64,
   "platforms_by_region": {
-    "United Kingdom": [
+    "United States": [
       {
         "name": "G2",
         "url": "https://www.g2.com",
         "type": "software_reviews",
         "language": "English",
-        "region": "Japan",
-        "country": "Japan",
+        "region": "India",
+        "country": "India",
         "discovery_source": "seed_global",
         "validation_status": "passed",
         "validation_checks": {
@@ -23,8 +23,8 @@
         "url": "https://www.capterra.com",
         "type": "software_reviews",
         "language": "English",
-        "region": "Japan",
-        "country": "Japan",
+        "region": "India",
+        "country": "India",
         "discovery_source": "seed_global",
         "validation_status": "passed",
         "validation_checks": {
@@ -37,8 +37,8 @@
         "url": "https://www.producthunt.com",
         "type": "product_directory",
         "language": "English",
-        "region": "Japan",
-        "country": "Japan",
+        "region": "India",
+        "country": "India",
         "discovery_source": "seed_global",
         "validation_status": "passed",
         "validation_checks": {
@@ -51,8 +51,8 @@
         "url": "https://alternativeto.net",
         "type": "software_alternatives",
         "language": "English",
-        "region": "Japan",
-        "country": "Japan",
+        "region": "India",
+        "country": "India",
         "discovery_source": "seed_global",
         "validation_status": "passed",
         "validation_checks": {
@@ -65,9 +65,167 @@
         "url": "https://www.trustpilot.com",
         "type": "business_reviews",
         "language": "English",
-        "region": "Japan",
-        "country": "Japan",
+        "region": "India",
+        "country": "India",
         "discovery_source": "seed_global",
+        "validation_status": "passed",
+        "validation_checks": {
+          "is_seed": true,
+          "assumed_valid": true
+        }
+      }
+    ],
+    "United Kingdom": [
+      {
+        "name": "G2",
+        "url": "https://www.g2.com",
+        "type": "software_reviews",
+        "language": "English",
+        "region": "India",
+        "country": "India",
+        "discovery_source": "seed_global",
+        "validation_status": "passed",
+        "validation_checks": {
+          "is_seed": true,
+          "assumed_valid": true
+        }
+      },
+      {
+        "name": "Capterra",
+        "url": "https://www.capterra.com",
+        "type": "software_reviews",
+        "language": "English",
+        "region": "India",
+        "country": "India",
+        "discovery_source": "seed_global",
+        "validation_status": "passed",
+        "validation_checks": {
+          "is_seed": true,
+          "assumed_valid": true
+        }
+      },
+      {
+        "name": "Product Hunt",
+        "url": "https://www.producthunt.com",
+        "type": "product_directory",
+        "language": "English",
+        "region": "India",
+        "country": "India",
+        "discovery_source": "seed_global",
+        "validation_status": "passed",
+        "validation_checks": {
+          "is_seed": true,
+          "assumed_valid": true
+        }
+      },
+      {
+        "name": "AlternativeTo",
+        "url": "https://alternativeto.net",
+        "type": "software_alternatives",
+        "language": "English",
+        "region": "India",
+        "country": "India",
+        "discovery_source": "seed_global",
+        "validation_status": "passed",
+        "validation_checks": {
+          "is_seed": true,
+          "assumed_valid": true
+        }
+      },
+      {
+        "name": "Trustpilot",
+        "url": "https://www.trustpilot.com",
+        "type": "business_reviews",
+        "language": "English",
+        "region": "India",
+        "country": "India",
+        "discovery_source": "seed_global",
+        "validation_status": "passed",
+        "validation_checks": {
+          "is_seed": true,
+          "assumed_valid": true
+        }
+      }
+    ],
+    "Germany": [
+      {
+        "name": "G2",
+        "url": "https://www.g2.com",
+        "type": "software_reviews",
+        "language": "English",
+        "region": "India",
+        "country": "India",
+        "discovery_source": "seed_global",
+        "validation_status": "passed",
+        "validation_checks": {
+          "is_seed": true,
+          "assumed_valid": true
+        }
+      },
+      {
+        "name": "Capterra",
+        "url": "https://www.capterra.com",
+        "type": "software_reviews",
+        "language": "English",
+        "region": "India",
+        "country": "India",
+        "discovery_source": "seed_global",
+        "validation_status": "passed",
+        "validation_checks": {
+          "is_seed": true,
+          "assumed_valid": true
+        }
+      },
+      {
+        "name": "Product Hunt",
+        "url": "https://www.producthunt.com",
+        "type": "product_directory",
+        "language": "English",
+        "region": "India",
+        "country": "India",
+        "discovery_source": "seed_global",
+        "validation_status": "passed",
+        "validation_checks": {
+          "is_seed": true,
+          "assumed_valid": true
+        }
+      },
+      {
+        "name": "AlternativeTo",
+        "url": "https://alternativeto.net",
+        "type": "software_alternatives",
+        "language": "English",
+        "region": "India",
+        "country": "India",
+        "discovery_source": "seed_global",
+        "validation_status": "passed",
+        "validation_checks": {
+          "is_seed": true,
+          "assumed_valid": true
+        }
+      },
+      {
+        "name": "Trustpilot",
+        "url": "https://www.trustpilot.com",
+        "type": "business_reviews",
+        "language": "English",
+        "region": "India",
+        "country": "India",
+        "discovery_source": "seed_global",
+        "validation_status": "passed",
+        "validation_checks": {
+          "is_seed": true,
+          "assumed_valid": true
+        }
+      },
+      {
+        "name": "OMR Reviews",
+        "url": "https://www.omr.com/en/reviews",
+        "type": "software_reviews",
+        "language": "German/English",
+        "region": "Germany",
+        "country": "Germany",
+        "discovery_source": "seed_regional",
         "validation_status": "passed",
         "validation_checks": {
           "is_seed": true,
@@ -81,8 +239,8 @@
         "url": "https://www.g2.com",
         "type": "software_reviews",
         "language": "English",
-        "region": "Japan",
-        "country": "Japan",
+        "region": "India",
+        "country": "India",
         "discovery_source": "seed_global",
         "validation_status": "passed",
         "validation_checks": {
@@ -95,8 +253,8 @@
         "url": "https://www.capterra.com",
         "type": "software_reviews",
         "language": "English",
-        "region": "Japan",
-        "country": "Japan",
+        "region": "India",
+        "country": "India",
         "discovery_source": "seed_global",
         "validation_status": "passed",
         "validation_checks": {
@@ -109,8 +267,8 @@
         "url": "https://www.producthunt.com",
         "type": "product_directory",
         "language": "English",
-        "region": "Japan",
-        "country": "Japan",
+        "region": "India",
+        "country": "India",
         "discovery_source": "seed_global",
         "validation_status": "passed",
         "validation_checks": {
@@ -123,8 +281,8 @@
         "url": "https://alternativeto.net",
         "type": "software_alternatives",
         "language": "English",
-        "region": "Japan",
-        "country": "Japan",
+        "region": "India",
+        "country": "India",
         "discovery_source": "seed_global",
         "validation_status": "passed",
         "validation_checks": {
@@ -137,8 +295,8 @@
         "url": "https://www.trustpilot.com",
         "type": "business_reviews",
         "language": "English",
-        "region": "Japan",
-        "country": "Japan",
+        "region": "India",
+        "country": "India",
         "discovery_source": "seed_global",
         "validation_status": "passed",
         "validation_checks": {
@@ -161,14 +319,14 @@
         }
       }
     ],
-    "Japan": [
+    "Poland": [
       {
         "name": "G2",
         "url": "https://www.g2.com",
         "type": "software_reviews",
         "language": "English",
-        "region": "Japan",
-        "country": "Japan",
+        "region": "India",
+        "country": "India",
         "discovery_source": "seed_global",
         "validation_status": "passed",
         "validation_checks": {
@@ -181,8 +339,8 @@
         "url": "https://www.capterra.com",
         "type": "software_reviews",
         "language": "English",
-        "region": "Japan",
-        "country": "Japan",
+        "region": "India",
+        "country": "India",
         "discovery_source": "seed_global",
         "validation_status": "passed",
         "validation_checks": {
@@ -195,8 +353,8 @@
         "url": "https://www.producthunt.com",
         "type": "product_directory",
         "language": "English",
-        "region": "Japan",
-        "country": "Japan",
+        "region": "India",
+        "country": "India",
         "discovery_source": "seed_global",
         "validation_status": "passed",
         "validation_checks": {
@@ -209,8 +367,8 @@
         "url": "https://alternativeto.net",
         "type": "software_alternatives",
         "language": "English",
-        "region": "Japan",
-        "country": "Japan",
+        "region": "India",
+        "country": "India",
         "discovery_source": "seed_global",
         "validation_status": "passed",
         "validation_checks": {
@@ -223,8 +381,224 @@
         "url": "https://www.trustpilot.com",
         "type": "business_reviews",
         "language": "English",
-        "region": "Japan",
-        "country": "Japan",
+        "region": "India",
+        "country": "India",
+        "discovery_source": "seed_global",
+        "validation_status": "passed",
+        "validation_checks": {
+          "is_seed": true,
+          "assumed_valid": true
+        }
+      }
+    ],
+    "Czech Republic": [
+      {
+        "name": "G2",
+        "url": "https://www.g2.com",
+        "type": "software_reviews",
+        "language": "English",
+        "region": "India",
+        "country": "India",
+        "discovery_source": "seed_global",
+        "validation_status": "passed",
+        "validation_checks": {
+          "is_seed": true,
+          "assumed_valid": true
+        }
+      },
+      {
+        "name": "Capterra",
+        "url": "https://www.capterra.com",
+        "type": "software_reviews",
+        "language": "English",
+        "region": "India",
+        "country": "India",
+        "discovery_source": "seed_global",
+        "validation_status": "passed",
+        "validation_checks": {
+          "is_seed": true,
+          "assumed_valid": true
+        }
+      },
+      {
+        "name": "Product Hunt",
+        "url": "https://www.producthunt.com",
+        "type": "product_directory",
+        "language": "English",
+        "region": "India",
+        "country": "India",
+        "discovery_source": "seed_global",
+        "validation_status": "passed",
+        "validation_checks": {
+          "is_seed": true,
+          "assumed_valid": true
+        }
+      },
+      {
+        "name": "AlternativeTo",
+        "url": "https://alternativeto.net",
+        "type": "software_alternatives",
+        "language": "English",
+        "region": "India",
+        "country": "India",
+        "discovery_source": "seed_global",
+        "validation_status": "passed",
+        "validation_checks": {
+          "is_seed": true,
+          "assumed_valid": true
+        }
+      },
+      {
+        "name": "Trustpilot",
+        "url": "https://www.trustpilot.com",
+        "type": "business_reviews",
+        "language": "English",
+        "region": "India",
+        "country": "India",
+        "discovery_source": "seed_global",
+        "validation_status": "passed",
+        "validation_checks": {
+          "is_seed": true,
+          "assumed_valid": true
+        }
+      }
+    ],
+    "Singapore": [
+      {
+        "name": "G2",
+        "url": "https://www.g2.com",
+        "type": "software_reviews",
+        "language": "English",
+        "region": "India",
+        "country": "India",
+        "discovery_source": "seed_global",
+        "validation_status": "passed",
+        "validation_checks": {
+          "is_seed": true,
+          "assumed_valid": true
+        }
+      },
+      {
+        "name": "Capterra",
+        "url": "https://www.capterra.com",
+        "type": "software_reviews",
+        "language": "English",
+        "region": "India",
+        "country": "India",
+        "discovery_source": "seed_global",
+        "validation_status": "passed",
+        "validation_checks": {
+          "is_seed": true,
+          "assumed_valid": true
+        }
+      },
+      {
+        "name": "Product Hunt",
+        "url": "https://www.producthunt.com",
+        "type": "product_directory",
+        "language": "English",
+        "region": "India",
+        "country": "India",
+        "discovery_source": "seed_global",
+        "validation_status": "passed",
+        "validation_checks": {
+          "is_seed": true,
+          "assumed_valid": true
+        }
+      },
+      {
+        "name": "AlternativeTo",
+        "url": "https://alternativeto.net",
+        "type": "software_alternatives",
+        "language": "English",
+        "region": "India",
+        "country": "India",
+        "discovery_source": "seed_global",
+        "validation_status": "passed",
+        "validation_checks": {
+          "is_seed": true,
+          "assumed_valid": true
+        }
+      },
+      {
+        "name": "Trustpilot",
+        "url": "https://www.trustpilot.com",
+        "type": "business_reviews",
+        "language": "English",
+        "region": "India",
+        "country": "India",
+        "discovery_source": "seed_global",
+        "validation_status": "passed",
+        "validation_checks": {
+          "is_seed": true,
+          "assumed_valid": true
+        }
+      }
+    ],
+    "Japan": [
+      {
+        "name": "G2",
+        "url": "https://www.g2.com",
+        "type": "software_reviews",
+        "language": "English",
+        "region": "India",
+        "country": "India",
+        "discovery_source": "seed_global",
+        "validation_status": "passed",
+        "validation_checks": {
+          "is_seed": true,
+          "assumed_valid": true
+        }
+      },
+      {
+        "name": "Capterra",
+        "url": "https://www.capterra.com",
+        "type": "software_reviews",
+        "language": "English",
+        "region": "India",
+        "country": "India",
+        "discovery_source": "seed_global",
+        "validation_status": "passed",
+        "validation_checks": {
+          "is_seed": true,
+          "assumed_valid": true
+        }
+      },
+      {
+        "name": "Product Hunt",
+        "url": "https://www.producthunt.com",
+        "type": "product_directory",
+        "language": "English",
+        "region": "India",
+        "country": "India",
+        "discovery_source": "seed_global",
+        "validation_status": "passed",
+        "validation_checks": {
+          "is_seed": true,
+          "assumed_valid": true
+        }
+      },
+      {
+        "name": "AlternativeTo",
+        "url": "https://alternativeto.net",
+        "type": "software_alternatives",
+        "language": "English",
+        "region": "India",
+        "country": "India",
+        "discovery_source": "seed_global",
+        "validation_status": "passed",
+        "validation_checks": {
+          "is_seed": true,
+          "assumed_valid": true
+        }
+      },
+      {
+        "name": "Trustpilot",
+        "url": "https://www.trustpilot.com",
+        "type": "business_reviews",
+        "language": "English",
+        "region": "India",
+        "country": "India",
         "discovery_source": "seed_global",
         "validation_status": "passed",
         "validation_checks": {
@@ -254,6 +628,294 @@
         "region": "Japan",
         "country": "Japan",
         "discovery_source": "seed_regional",
+        "validation_status": "passed",
+        "validation_checks": {
+          "is_seed": true,
+          "assumed_valid": true
+        }
+      }
+    ],
+    "South Korea": [
+      {
+        "name": "G2",
+        "url": "https://www.g2.com",
+        "type": "software_reviews",
+        "language": "English",
+        "region": "India",
+        "country": "India",
+        "discovery_source": "seed_global",
+        "validation_status": "passed",
+        "validation_checks": {
+          "is_seed": true,
+          "assumed_valid": true
+        }
+      },
+      {
+        "name": "Capterra",
+        "url": "https://www.capterra.com",
+        "type": "software_reviews",
+        "language": "English",
+        "region": "India",
+        "country": "India",
+        "discovery_source": "seed_global",
+        "validation_status": "passed",
+        "validation_checks": {
+          "is_seed": true,
+          "assumed_valid": true
+        }
+      },
+      {
+        "name": "Product Hunt",
+        "url": "https://www.producthunt.com",
+        "type": "product_directory",
+        "language": "English",
+        "region": "India",
+        "country": "India",
+        "discovery_source": "seed_global",
+        "validation_status": "passed",
+        "validation_checks": {
+          "is_seed": true,
+          "assumed_valid": true
+        }
+      },
+      {
+        "name": "AlternativeTo",
+        "url": "https://alternativeto.net",
+        "type": "software_alternatives",
+        "language": "English",
+        "region": "India",
+        "country": "India",
+        "discovery_source": "seed_global",
+        "validation_status": "passed",
+        "validation_checks": {
+          "is_seed": true,
+          "assumed_valid": true
+        }
+      },
+      {
+        "name": "Trustpilot",
+        "url": "https://www.trustpilot.com",
+        "type": "business_reviews",
+        "language": "English",
+        "region": "India",
+        "country": "India",
+        "discovery_source": "seed_global",
+        "validation_status": "passed",
+        "validation_checks": {
+          "is_seed": true,
+          "assumed_valid": true
+        }
+      }
+    ],
+    "Thailand": [
+      {
+        "name": "G2",
+        "url": "https://www.g2.com",
+        "type": "software_reviews",
+        "language": "English",
+        "region": "India",
+        "country": "India",
+        "discovery_source": "seed_global",
+        "validation_status": "passed",
+        "validation_checks": {
+          "is_seed": true,
+          "assumed_valid": true
+        }
+      },
+      {
+        "name": "Capterra",
+        "url": "https://www.capterra.com",
+        "type": "software_reviews",
+        "language": "English",
+        "region": "India",
+        "country": "India",
+        "discovery_source": "seed_global",
+        "validation_status": "passed",
+        "validation_checks": {
+          "is_seed": true,
+          "assumed_valid": true
+        }
+      },
+      {
+        "name": "Product Hunt",
+        "url": "https://www.producthunt.com",
+        "type": "product_directory",
+        "language": "English",
+        "region": "India",
+        "country": "India",
+        "discovery_source": "seed_global",
+        "validation_status": "passed",
+        "validation_checks": {
+          "is_seed": true,
+          "assumed_valid": true
+        }
+      },
+      {
+        "name": "AlternativeTo",
+        "url": "https://alternativeto.net",
+        "type": "software_alternatives",
+        "language": "English",
+        "region": "India",
+        "country": "India",
+        "discovery_source": "seed_global",
+        "validation_status": "passed",
+        "validation_checks": {
+          "is_seed": true,
+          "assumed_valid": true
+        }
+      },
+      {
+        "name": "Trustpilot",
+        "url": "https://www.trustpilot.com",
+        "type": "business_reviews",
+        "language": "English",
+        "region": "India",
+        "country": "India",
+        "discovery_source": "seed_global",
+        "validation_status": "passed",
+        "validation_checks": {
+          "is_seed": true,
+          "assumed_valid": true
+        }
+      }
+    ],
+    "Indonesia": [
+      {
+        "name": "G2",
+        "url": "https://www.g2.com",
+        "type": "software_reviews",
+        "language": "English",
+        "region": "India",
+        "country": "India",
+        "discovery_source": "seed_global",
+        "validation_status": "passed",
+        "validation_checks": {
+          "is_seed": true,
+          "assumed_valid": true
+        }
+      },
+      {
+        "name": "Capterra",
+        "url": "https://www.capterra.com",
+        "type": "software_reviews",
+        "language": "English",
+        "region": "India",
+        "country": "India",
+        "discovery_source": "seed_global",
+        "validation_status": "passed",
+        "validation_checks": {
+          "is_seed": true,
+          "assumed_valid": true
+        }
+      },
+      {
+        "name": "Product Hunt",
+        "url": "https://www.producthunt.com",
+        "type": "product_directory",
+        "language": "English",
+        "region": "India",
+        "country": "India",
+        "discovery_source": "seed_global",
+        "validation_status": "passed",
+        "validation_checks": {
+          "is_seed": true,
+          "assumed_valid": true
+        }
+      },
+      {
+        "name": "AlternativeTo",
+        "url": "https://alternativeto.net",
+        "type": "software_alternatives",
+        "language": "English",
+        "region": "India",
+        "country": "India",
+        "discovery_source": "seed_global",
+        "validation_status": "passed",
+        "validation_checks": {
+          "is_seed": true,
+          "assumed_valid": true
+        }
+      },
+      {
+        "name": "Trustpilot",
+        "url": "https://www.trustpilot.com",
+        "type": "business_reviews",
+        "language": "English",
+        "region": "India",
+        "country": "India",
+        "discovery_source": "seed_global",
+        "validation_status": "passed",
+        "validation_checks": {
+          "is_seed": true,
+          "assumed_valid": true
+        }
+      }
+    ],
+    "India": [
+      {
+        "name": "G2",
+        "url": "https://www.g2.com",
+        "type": "software_reviews",
+        "language": "English",
+        "region": "India",
+        "country": "India",
+        "discovery_source": "seed_global",
+        "validation_status": "passed",
+        "validation_checks": {
+          "is_seed": true,
+          "assumed_valid": true
+        }
+      },
+      {
+        "name": "Capterra",
+        "url": "https://www.capterra.com",
+        "type": "software_reviews",
+        "language": "English",
+        "region": "India",
+        "country": "India",
+        "discovery_source": "seed_global",
+        "validation_status": "passed",
+        "validation_checks": {
+          "is_seed": true,
+          "assumed_valid": true
+        }
+      },
+      {
+        "name": "Product Hunt",
+        "url": "https://www.producthunt.com",
+        "type": "product_directory",
+        "language": "English",
+        "region": "India",
+        "country": "India",
+        "discovery_source": "seed_global",
+        "validation_status": "passed",
+        "validation_checks": {
+          "is_seed": true,
+          "assumed_valid": true
+        }
+      },
+      {
+        "name": "AlternativeTo",
+        "url": "https://alternativeto.net",
+        "type": "software_alternatives",
+        "language": "English",
+        "region": "India",
+        "country": "India",
+        "discovery_source": "seed_global",
+        "validation_status": "passed",
+        "validation_checks": {
+          "is_seed": true,
+          "assumed_valid": true
+        }
+      },
+      {
+        "name": "Trustpilot",
+        "url": "https://www.trustpilot.com",
+        "type": "business_reviews",
+        "language": "English",
+        "region": "India",
+        "country": "India",
+        "discovery_source": "seed_global",
         "validation_status": "passed",
         "validation_checks": {
           "is_seed": true,

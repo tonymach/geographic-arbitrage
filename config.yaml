@@ -332,9 +332,27 @@ execution:
 # Test mode (start with small subset)
 test_mode:
   enabled: true
+  # Global business arbitrage set - diverse digitalization stages
   test_regions:
-    - Romania
+    # Mature markets (source of proven software)
+    - United States
     - United Kingdom
+    - Germany
+
+    # Emerging Europe (lag opportunities)
+    - Poland
+    - Romania
+    - Czech Republic
+
+    # Fast-growing Asia
+    - Singapore
+    - South Korea
     - Japan
-  max_companies_per_region: 50
-  max_products_per_category: 20
+
+    # High-potential markets
+    - India
+    - Thailand
+    - Indonesia
+
+  max_companies_per_region: 100
+  max_products_per_category: 30

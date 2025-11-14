@@ -1,5 +1,6 @@
 2025-11-14 19:28:16,132 - __main__ - INFO - Loading config from: config.yaml
 2025-11-14 19:28:16,148 - __main__ - INFO - TEST MODE ENABLED
+✅ Database schema initialized successfully
 2025-11-14 19:28:16,278 - agents.platform_discovery_agent - INFO - Platform Discovery Agent initialized (max: 15 per region)
 2025-11-14 19:28:16,278 - agents.company_mapper_agent - INFO - Company Mapper Agent initialized (max companies: 100)
 2025-11-14 19:28:16,278 - agents.software_mapper_agent - INFO - Software Mapper Agent initialized (25 categories)
@@ -865,6 +866,168 @@
 2025-11-14 19:28:16,390 - agents.platform_discovery_agent - INFO - Discovered 5 platforms for India
 2025-11-14 19:28:16,392 - agents.platform_discovery_agent - INFO - 
 ✅ Platform map exported to: data/discovered_platforms.json
+
+================================================================================
+PLATFORM DISCOVERY SUMMARY
+================================================================================
+
+Total Regions: 12
+Total Platforms: 64
+
+United States (5 platforms):
+  • G2 (software_reviews) - English
+    https://www.g2.com
+  • Capterra (software_reviews) - English
+    https://www.capterra.com
+  • Product Hunt (product_directory) - English
+    https://www.producthunt.com
+  • AlternativeTo (software_alternatives) - English
+    https://alternativeto.net
+  • Trustpilot (business_reviews) - English
+    https://www.trustpilot.com
+
+United Kingdom (5 platforms):
+  • G2 (software_reviews) - English
+    https://www.g2.com
+  • Capterra (software_reviews) - English
+    https://www.capterra.com
+  • Product Hunt (product_directory) - English
+    https://www.producthunt.com
+  • AlternativeTo (software_alternatives) - English
+    https://alternativeto.net
+  • Trustpilot (business_reviews) - English
+    https://www.trustpilot.com
+
+Germany (6 platforms):
+  • G2 (software_reviews) - English
+    https://www.g2.com
+  • Capterra (software_reviews) - English
+    https://www.capterra.com
+  • Product Hunt (product_directory) - English
+    https://www.producthunt.com
+  • AlternativeTo (software_alternatives) - English
+    https://alternativeto.net
+  • Trustpilot (business_reviews) - English
+    https://www.trustpilot.com
+  • OMR Reviews (software_reviews) - German/English
+    https://www.omr.com/en/reviews
+
+Romania (6 platforms):
+  • G2 (software_reviews) - English
+    https://www.g2.com
+  • Capterra (software_reviews) - English
+    https://www.capterra.com
+  • Product Hunt (product_directory) - English
+    https://www.producthunt.com
+  • AlternativeTo (software_alternatives) - English
+    https://alternativeto.net
+  • Trustpilot (business_reviews) - English
+    https://www.trustpilot.com
+  • Lista Firmelor (business_directory) - Romanian
+    https://www.listafirme.ro
+
+Poland (5 platforms):
+  • G2 (software_reviews) - English
+    https://www.g2.com
+  • Capterra (software_reviews) - English
+    https://www.capterra.com
+  • Product Hunt (product_directory) - English
+    https://www.producthunt.com
+  • AlternativeTo (software_alternatives) - English
+    https://alternativeto.net
+  • Trustpilot (business_reviews) - English
+    https://www.trustpilot.com
+
+Czech Republic (5 platforms):
+  • G2 (software_reviews) - English
+    https://www.g2.com
+  • Capterra (software_reviews) - English
+    https://www.capterra.com
+  • Product Hunt (product_directory) - English
+    https://www.producthunt.com
+  • AlternativeTo (software_alternatives) - English
+    https://alternativeto.net
+  • Trustpilot (business_reviews) - English
+    https://www.trustpilot.com
+
+Singapore (5 platforms):
+  • G2 (software_reviews) - English
+    https://www.g2.com
+  • Capterra (software_reviews) - English
+    https://www.capterra.com
+  • Product Hunt (product_directory) - English
+    https://www.producthunt.com
+  • AlternativeTo (software_alternatives) - English
+    https://alternativeto.net
+  • Trustpilot (business_reviews) - English
+    https://www.trustpilot.com
+
+Japan (7 platforms):
+  • G2 (software_reviews) - English
+    https://www.g2.com
+  • Capterra (software_reviews) - English
+    https://www.capterra.com
+  • Product Hunt (product_directory) - English
+    https://www.producthunt.com
+  • AlternativeTo (software_alternatives) - English
+    https://alternativeto.net
+  • Trustpilot (business_reviews) - English
+    https://www.trustpilot.com
+  • ITreview (software_reviews) - Japanese
+    https://www.itreview.jp
+  • Boxil (saas_comparison) - Japanese
+    https://boxil.jp
+
+South Korea (5 platforms):
+  • G2 (software_reviews) - English
+    https://www.g2.com
+  • Capterra (software_reviews) - English
+    https://www.capterra.com
+  • Product Hunt (product_directory) - English
+    https://www.producthunt.com
+  • AlternativeTo (software_alternatives) - English
+    https://alternativeto.net
+  • Trustpilot (business_reviews) - English
+    https://www.trustpilot.com
+
+Thailand (5 platforms):
+  • G2 (software_reviews) - English
+    https://www.g2.com
+  • Capterra (software_reviews) - English
+    https://www.capterra.com
+  • Product Hunt (product_directory) - English
+    https://www.producthunt.com
+  • AlternativeTo (software_alternatives) - English
+    https://alternativeto.net
+  • Trustpilot (business_reviews) - English
+    https://www.trustpilot.com
+
+Indonesia (5 platforms):
+  • G2 (software_reviews) - English
+    https://www.g2.com
+  • Capterra (software_reviews) - English
+    https://www.capterra.com
+  • Product Hunt (product_directory) - English
+    https://www.producthunt.com
+  • AlternativeTo (software_alternatives) - English
+    https://alternativeto.net
+  • Trustpilot (business_reviews) - English
+    https://www.trustpilot.com
+
+India (5 platforms):
+  • G2 (software_reviews) - English
+    https://www.g2.com
+  • Capterra (software_reviews) - English
+    https://www.capterra.com
+  • Product Hunt (product_directory) - English
+    https://www.producthunt.com
+  • AlternativeTo (software_alternatives) - English
+    https://alternativeto.net
+  • Trustpilot (business_reviews) - English
+    https://www.trustpilot.com
+
+================================================================================
+
 2025-11-14 19:28:16,394 - agents.orchestrator - INFO - 
 🏢 PHASE 1: Company Mapping
 2025-11-14 19:28:16,394 - agents.orchestrator - INFO - --------------------------------------------------------------------------------
@@ -2263,5 +2426,99 @@
 2025-11-14 19:28:16,561 - agents.orchestrator - INFO -   - Pain signals (Reddit, forums)
 2025-11-14 19:28:16,561 - agents.orchestrator - INFO -   - Company needs analysis
 2025-11-14 19:28:16,561 - agents.orchestrator - INFO -   - Job market signals
+
+================================================================================
+PIPELINE SUMMARY
+================================================================================
+
+PLATFORM_DISCOVERY...................... completed
+  Platforms discovered: 64
+COMPANY_MAPPING......................... completed
+  Companies mapped: 6
+SOFTWARE_MAPPING........................ completed
+  Products mapped: 27
+GAP_DETECTION........................... completed
+  Opportunities found: 159
+
+================================================================================
+TOP 10 OPPORTUNITIES
+================================================================================
+
+1. Asana (Project Management)
+   United States → United Kingdom
+   Opportunity Score: 9.0/10
+   Gap Score: 10/10
+   Competition Level: 0/5
+
+2. Monday.com (Project Management)
+   United States → United Kingdom
+   Opportunity Score: 9.0/10
+   Gap Score: 10/10
+   Competition Level: 0/5
+
+3. ClickUp (Project Management)
+   United States → United Kingdom
+   Opportunity Score: 9.0/10
+   Gap Score: 10/10
+   Competition Level: 0/5
+
+4. BambooHR (HR & Payroll)
+   United States → United Kingdom
+   Opportunity Score: 9.0/10
+   Gap Score: 10/10
+   Competition Level: 0/5
+
+5. Gusto (HR & Payroll)
+   United States → United Kingdom
+   Opportunity Score: 9.0/10
+   Gap Score: 10/10
+   Competition Level: 0/5
+
+6. Procore (Construction Management)
+   United States → United Kingdom
+   Opportunity Score: 9.0/10
+   Gap Score: 10/10
+   Competition Level: 0/5
+
+7. Buildertrend (Construction Management)
+   United States → United Kingdom
+   Opportunity Score: 9.0/10
+   Gap Score: 10/10
+   Competition Level: 0/5
+
+8. Asana (Project Management)
+   United States → Germany
+   Opportunity Score: 9.0/10
+   Gap Score: 10/10
+   Competition Level: 0/5
+
+9. Monday.com (Project Management)
+   United States → Germany
+   Opportunity Score: 9.0/10
+   Gap Score: 10/10
+   Competition Level: 0/5
+
+10. ClickUp (Project Management)
+   United States → Germany
+   Opportunity Score: 9.0/10
+   Gap Score: 10/10
+   Competition Level: 0/5
+
+================================================================================
+
 2025-11-14 19:28:16,563 - agents.orchestrator - INFO - 
 ✅ Pipeline summary exported to: data/results/pipeline_summary.json
+
+================================================================================
+✅ PIPELINE COMPLETED SUCCESSFULLY
+================================================================================
+Duration: 0.28 seconds
+Regions processed: 12
+Opportunities found: 159
+
+Results exported to:
+  - data/results/opportunities.json
+  - data/results/opportunities.txt
+  - data/results/pipeline_summary.json
+================================================================================
+
