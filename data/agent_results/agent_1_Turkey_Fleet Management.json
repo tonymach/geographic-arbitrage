@@ -1,0 +1,10 @@
+{
+  "agent_id": 1,
+  "region": "Turkey",
+  "category": "Fleet Management",
+  "status": "completed",
+  "products_found": 5,
+  "opportunities_found": 1,
+  "timestamp": "2025-11-14T22:12:28.069601",
+  "mock": true
+}

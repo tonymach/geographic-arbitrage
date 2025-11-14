@@ -1,0 +1,171 @@
+# Work Universe for Agent Distribution
+# Each agent gets ONE (region, category) combination
+
+regions:
+  # Eastern Europe (Emerging markets with high arbitrage potential)
+  - Poland
+  - Romania
+  - Czech Republic
+  - Hungary
+  - Bulgaria
+  - Slovakia
+  - Croatia
+  - Slovenia
+  - Lithuania
+  - Latvia
+  - Estonia
+  - Serbia
+
+  # Western Europe (Mature markets to learn from)
+  - Germany
+  - France
+  - Spain
+  - Italy
+  - Netherlands
+  - Belgium
+  - Portugal
+  - Austria
+  - Switzerland
+  - Sweden
+  - Norway
+  - Denmark
+  - Finland
+  - Ireland
+
+  # Americas
+  - United States
+  - Canada
+  - Mexico
+  - Brazil
+  - Argentina
+  - Chile
+  - Colombia
+
+  # Asia Pacific
+  - Japan
+  - South Korea
+  - Singapore
+  - Australia
+  - New Zealand
+  - Thailand
+  - Indonesia
+  - Malaysia
+  - Philippines
+  - Vietnam
+  - India
+  - Taiwan
+  - Hong Kong
+
+  # Middle East
+  - United Arab Emirates
+  - Israel
+  - Saudi Arabia
+  - Turkey
+
+categories:
+  # Construction & Real Estate
+  - Construction Management
+  - Project Management (Construction)
+  - BIM Software
+  - Estimating & Bidding
+  - Real Estate CRM
+  - Property Management
+  - Facility Management
+
+  # HR & Workforce
+  - HR Management (HRIS)
+  - Payroll Software
+  - Time & Attendance
+  - Applicant Tracking (ATS)
+  - Employee Onboarding
+  - Performance Management
+  - Learning Management (LMS)
+  - Workforce Management
+
+  # Field Services
+  - Field Service Management
+  - Route Optimization
+  - Dispatch Management
+  - Mobile Workforce
+  - Service Scheduling
+
+  # Sales & Marketing
+  - CRM Software
+  - Marketing Automation
+  - Email Marketing
+  - Social Media Management
+  - SEO Tools
+  - Lead Generation
+  - Sales Enablement
+
+  # Finance & Accounting
+  - Accounting Software
+  - Invoicing & Billing
+  - Expense Management
+  - Financial Planning (FP&A)
+  - Tax Software
+  - Bookkeeping
+  - Accounts Payable/Receivable
+
+  # Operations
+  - Inventory Management
+  - Warehouse Management (WMS)
+  - Supply Chain Management
+  - Manufacturing Software (MES)
+  - Quality Management (QMS)
+  - Maintenance Management (CMMS)
+
+  # Customer Service
+  - Help Desk Software
+  - Customer Support
+  - Live Chat Software
+  - Knowledge Base
+  - Ticketing Systems
+
+  # Collaboration
+  - Project Management
+  - Task Management
+  - Team Collaboration
+  - Document Management
+  - Workflow Automation
+
+  # Vertical SaaS
+  - Restaurant POS
+  - Salon Management
+  - Gym Management
+  - Medical Practice Management
+  - Dental Practice Management
+  - Legal Practice Management
+  - Veterinary Software
+  - Automotive Shop Management
+  - Retail POS
+  - E-commerce Platforms
+
+  # Industry Specific
+  - Transportation Management (TMS)
+  - Fleet Management
+  - Compliance Management
+  - Contract Management
+  - Asset Management
+  - Event Management
+  - Booking & Scheduling
+  - Membership Management
+
+  # Analytics & BI
+  - Business Intelligence
+  - Data Analytics
+  - Reporting Tools
+  - Dashboard Software
+
+  # Security & IT
+  - Cybersecurity Software
+  - Identity Management
+  - Endpoint Protection
+  - Network Monitoring
+  - IT Service Management (ITSM)
+
+# Total combinations: ~50 regions x ~90 categories = ~4,500 combinations
+# For 10,000 agents, we can:
+# 1. Run multiple passes on high-priority combos
+# 2. Add more granular categories
+# 3. Add sub-regions (cities)
