@@ -1,0 +1,205 @@
+{
+  "generated_at": "2025-11-14T19:23:02.837398",
+  "total_regions": 3,
+  "ecosystems": {
+    "United Kingdom": {
+      "region": "United Kingdom",
+      "popular_products": {
+        "Project Management": [],
+        "CRM & Sales": [],
+        "Accounting & Finance": [],
+        "HR & Payroll": [],
+        "Legal Tech": [],
+        "Coworking & Space Management": [
+          {
+            "name": "Nexudus",
+            "category": "Coworking & Space Management",
+            "region": "United Kingdom",
+            "country": "United Kingdom",
+            "platform_name": "G2",
+            "review_count": 847,
+            "rating": 4.6,
+            "pricing": "$99-$499/month",
+            "pricing_min": 99,
+            "pricing_max": 499,
+            "url": "https://www.g2.com/products/nexudus",
+            "language": "English",
+            "features": [
+              "Desk Booking",
+              "Member Management",
+              "Billing",
+              "Access Control"
+            ],
+            "adoption_score": 6.86
+          },
+          {
+            "name": "OfficeRnD",
+            "category": "Coworking & Space Management",
+            "region": "United Kingdom",
+            "country": "United Kingdom",
+            "platform_name": "G2",
+            "review_count": 234,
+            "rating": 4.5,
+            "pricing": "$79-$399/month",
+            "pricing_min": 79,
+            "pricing_max": 399,
+            "url": "https://www.g2.com/products/officernd",
+            "language": "English",
+            "adoption_score": 6.02
+          },
+          {
+            "name": "Cobot",
+            "category": "Coworking & Space Management",
+            "region": "United Kingdom",
+            "country": "United Kingdom",
+            "platform_name": "G2",
+            "review_count": 156,
+            "rating": 4.4,
+            "pricing": "$79-$299/month",
+            "pricing_min": 79,
+            "pricing_max": 299,
+            "url": "https://www.g2.com/products/cobot",
+            "language": "English",
+            "adoption_score": 5.71
+          }
+        ]
+      },
+      "company_tech_stacks": {},
+      "ecosystem_stats": {
+        "total_products": 3,
+        "total_reviews": 1237,
+        "categories_mapped": 6,
+        "avg_adoption_score": 6.2
+      }
+    },
+    "Romania": {
+      "region": "Romania",
+      "popular_products": {
+        "Project Management": [],
+        "CRM & Sales": [],
+        "Accounting & Finance": [],
+        "HR & Payroll": [],
+        "Legal Tech": [],
+        "Coworking & Space Management": [
+          {
+            "name": "Nexudus",
+            "category": "Coworking & Space Management",
+            "region": "Romania",
+            "country": "Romania",
+            "platform_name": "G2",
+            "review_count": 847,
+            "rating": 4.6,
+            "pricing": "$99-$499/month",
+            "pricing_min": 99,
+            "pricing_max": 499,
+            "url": "https://www.g2.com/products/nexudus",
+            "language": "English",
+            "features": [
+              "Desk Booking",
+              "Member Management",
+              "Billing",
+              "Access Control"
+            ],
+            "adoption_score": 6.86
+          },
+          {
+            "name": "OfficeRnD",
+            "category": "Coworking & Space Management",
+            "region": "Romania",
+            "country": "Romania",
+            "platform_name": "G2",
+            "review_count": 234,
+            "rating": 4.5,
+            "pricing": "$79-$399/month",
+            "pricing_min": 79,
+            "pricing_max": 399,
+            "url": "https://www.g2.com/products/officernd",
+            "language": "English",
+            "adoption_score": 6.02
+          },
+          {
+            "name": "Local Romanian Coworking Tool",
+            "category": "Coworking & Space Management",
+            "region": "Romania",
+            "country": "Romania",
+            "platform_name": "Lista Firmelor",
+            "review_count": 12,
+            "rating": 4.0,
+            "pricing": "$50/month",
+            "pricing_min": 50,
+            "pricing_max": 50,
+            "url": "https://example.ro",
+            "language": "Romanian",
+            "adoption_score": 3.96
+          }
+        ]
+      },
+      "company_tech_stacks": {
+        "frontend": [],
+        "backend": [],
+        "infrastructure": [],
+        "saas_tools": []
+      },
+      "ecosystem_stats": {
+        "total_products": 3,
+        "total_reviews": 1093,
+        "categories_mapped": 6,
+        "avg_adoption_score": 5.61
+      }
+    },
+    "Japan": {
+      "region": "Japan",
+      "popular_products": {
+        "Project Management": [
+          {
+            "name": "Backlog",
+            "category": "Project Management",
+            "region": "Japan",
+            "country": "Japan",
+            "platform_name": "ITreview",
+            "review_count": 1200,
+            "rating": 4.4,
+            "pricing": "$35-$175/month",
+            "pricing_min": 35,
+            "pricing_max": 175,
+            "url": "https://backlog.com",
+            "language": "Japanese",
+            "adoption_score": 6.95
+          },
+          {
+            "name": "Asana",
+            "category": "Project Management",
+            "region": "Japan",
+            "country": "Japan",
+            "platform_name": "G2",
+            "review_count": 890,
+            "rating": 4.3,
+            "pricing": "$10.99-$24.99/user/month",
+            "pricing_min": 10.99,
+            "pricing_max": 24.99,
+            "url": "https://www.asana.com",
+            "language": "English/Japanese",
+            "adoption_score": 6.71
+          }
+        ],
+        "CRM & Sales": [],
+        "Accounting & Finance": [],
+        "HR & Payroll": [],
+        "Legal Tech": [],
+        "Coworking & Space Management": []
+      },
+      "company_tech_stacks": {
+        "frontend": [],
+        "backend": [],
+        "infrastructure": [],
+        "saas_tools": []
+      },
+      "ecosystem_stats": {
+        "total_products": 2,
+        "total_reviews": 2090,
+        "categories_mapped": 6,
+        "avg_adoption_score": 6.83
+      }
+    }
+  }
+}

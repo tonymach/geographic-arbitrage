@@ -1,0 +1,265 @@
+{
+  "generated_at": "2025-11-14T19:23:02.790948",
+  "total_regions": 3,
+  "total_platforms": 18,
+  "platforms_by_region": {
+    "United Kingdom": [
+      {
+        "name": "G2",
+        "url": "https://www.g2.com",
+        "type": "software_reviews",
+        "language": "English",
+        "region": "Japan",
+        "country": "Japan",
+        "discovery_source": "seed_global",
+        "validation_status": "passed",
+        "validation_checks": {
+          "is_seed": true,
+          "assumed_valid": true
+        }
+      },
+      {
+        "name": "Capterra",
+        "url": "https://www.capterra.com",
+        "type": "software_reviews",
+        "language": "English",
+        "region": "Japan",
+        "country": "Japan",
+        "discovery_source": "seed_global",
+        "validation_status": "passed",
+        "validation_checks": {
+          "is_seed": true,
+          "assumed_valid": true
+        }
+      },
+      {
+        "name": "Product Hunt",
+        "url": "https://www.producthunt.com",
+        "type": "product_directory",
+        "language": "English",
+        "region": "Japan",
+        "country": "Japan",
+        "discovery_source": "seed_global",
+        "validation_status": "passed",
+        "validation_checks": {
+          "is_seed": true,
+          "assumed_valid": true
+        }
+      },
+      {
+        "name": "AlternativeTo",
+        "url": "https://alternativeto.net",
+        "type": "software_alternatives",
+        "language": "English",
+        "region": "Japan",
+        "country": "Japan",
+        "discovery_source": "seed_global",
+        "validation_status": "passed",
+        "validation_checks": {
+          "is_seed": true,
+          "assumed_valid": true
+        }
+      },
+      {
+        "name": "Trustpilot",
+        "url": "https://www.trustpilot.com",
+        "type": "business_reviews",
+        "language": "English",
+        "region": "Japan",
+        "country": "Japan",
+        "discovery_source": "seed_global",
+        "validation_status": "passed",
+        "validation_checks": {
+          "is_seed": true,
+          "assumed_valid": true
+        }
+      }
+    ],
+    "Romania": [
+      {
+        "name": "G2",
+        "url": "https://www.g2.com",
+        "type": "software_reviews",
+        "language": "English",
+        "region": "Japan",
+        "country": "Japan",
+        "discovery_source": "seed_global",
+        "validation_status": "passed",
+        "validation_checks": {
+          "is_seed": true,
+          "assumed_valid": true
+        }
+      },
+      {
+        "name": "Capterra",
+        "url": "https://www.capterra.com",
+        "type": "software_reviews",
+        "language": "English",
+        "region": "Japan",
+        "country": "Japan",
+        "discovery_source": "seed_global",
+        "validation_status": "passed",
+        "validation_checks": {
+          "is_seed": true,
+          "assumed_valid": true
+        }
+      },
+      {
+        "name": "Product Hunt",
+        "url": "https://www.producthunt.com",
+        "type": "product_directory",
+        "language": "English",
+        "region": "Japan",
+        "country": "Japan",
+        "discovery_source": "seed_global",
+        "validation_status": "passed",
+        "validation_checks": {
+          "is_seed": true,
+          "assumed_valid": true
+        }
+      },
+      {
+        "name": "AlternativeTo",
+        "url": "https://alternativeto.net",
+        "type": "software_alternatives",
+        "language": "English",
+        "region": "Japan",
+        "country": "Japan",
+        "discovery_source": "seed_global",
+        "validation_status": "passed",
+        "validation_checks": {
+          "is_seed": true,
+          "assumed_valid": true
+        }
+      },
+      {
+        "name": "Trustpilot",
+        "url": "https://www.trustpilot.com",
+        "type": "business_reviews",
+        "language": "English",
+        "region": "Japan",
+        "country": "Japan",
+        "discovery_source": "seed_global",
+        "validation_status": "passed",
+        "validation_checks": {
+          "is_seed": true,
+          "assumed_valid": true
+        }
+      },
+      {
+        "name": "Lista Firmelor",
+        "url": "https://www.listafirme.ro",
+        "type": "business_directory",
+        "language": "Romanian",
+        "region": "Romania",
+        "country": "Romania",
+        "discovery_source": "seed_regional",
+        "validation_status": "passed",
+        "validation_checks": {
+          "is_seed": true,
+          "assumed_valid": true
+        }
+      }
+    ],
+    "Japan": [
+      {
+        "name": "G2",
+        "url": "https://www.g2.com",
+        "type": "software_reviews",
+        "language": "English",
+        "region": "Japan",
+        "country": "Japan",
+        "discovery_source": "seed_global",
+        "validation_status": "passed",
+        "validation_checks": {
+          "is_seed": true,
+          "assumed_valid": true
+        }
+      },
+      {
+        "name": "Capterra",
+        "url": "https://www.capterra.com",
+        "type": "software_reviews",
+        "language": "English",
+        "region": "Japan",
+        "country": "Japan",
+        "discovery_source": "seed_global",
+        "validation_status": "passed",
+        "validation_checks": {
+          "is_seed": true,
+          "assumed_valid": true
+        }
+      },
+      {
+        "name": "Product Hunt",
+        "url": "https://www.producthunt.com",
+        "type": "product_directory",
+        "language": "English",
+        "region": "Japan",
+        "country": "Japan",
+        "discovery_source": "seed_global",
+        "validation_status": "passed",
+        "validation_checks": {
+          "is_seed": true,
+          "assumed_valid": true
+        }
+      },
+      {
+        "name": "AlternativeTo",
+        "url": "https://alternativeto.net",
+        "type": "software_alternatives",
+        "language": "English",
+        "region": "Japan",
+        "country": "Japan",
+        "discovery_source": "seed_global",
+        "validation_status": "passed",
+        "validation_checks": {
+          "is_seed": true,
+          "assumed_valid": true
+        }
+      },
+      {
+        "name": "Trustpilot",
+        "url": "https://www.trustpilot.com",
+        "type": "business_reviews",
+        "language": "English",
+        "region": "Japan",
+        "country": "Japan",
+        "discovery_source": "seed_global",
+        "validation_status": "passed",
+        "validation_checks": {
+          "is_seed": true,
+          "assumed_valid": true
+        }
+      },
+      {
+        "name": "ITreview",
+        "url": "https://www.itreview.jp",
+        "type": "software_reviews",
+        "language": "Japanese",
+        "region": "Japan",
+        "country": "Japan",
+        "discovery_source": "seed_regional",
+        "validation_status": "passed",
+        "validation_checks": {
+          "is_seed": true,
+          "assumed_valid": true
+        }
+      },
+      {
+        "name": "Boxil",
+        "url": "https://boxil.jp",
+        "type": "saas_comparison",
+        "language": "Japanese",
+        "region": "Japan",
+        "country": "Japan",
+        "discovery_source": "seed_regional",
+        "validation_status": "passed",
+        "validation_checks": {
+          "is_seed": true,
+          "assumed_valid": true
+        }
+      }
+    ]
+  }
+}

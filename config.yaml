@@ -1,0 +1,340 @@
+# Global Software Arbitrage Configuration
+
+regions:
+  north_america:
+    - United States
+    - Canada
+
+  western_europe:
+    - United Kingdom
+    - Germany
+    - France
+    - Netherlands
+    - Spain
+    - Italy
+    - Ireland
+    - Switzerland
+    - Belgium
+    - Austria
+
+  eastern_europe:
+    - Romania
+    - Poland
+    - Czech Republic
+    - Hungary
+    - Bulgaria
+    - Croatia
+    - Serbia
+    - Ukraine
+    - Slovakia
+    - Slovenia
+
+  asia:
+    - Singapore
+    - Japan
+    - South Korea
+    - Hong Kong
+    - Taiwan
+    - Thailand
+    - Vietnam
+    - Indonesia
+    - India
+    - Malaysia
+    - Philippines
+
+  oceania:
+    - Australia
+    - New Zealand
+
+# Phase 0: Platform Discovery Settings
+platform_discovery:
+  enabled: true
+  max_platforms_per_region: 15
+  min_platforms_per_region: 3
+
+  required_validation_checks:
+    - active_content  # Has recent content/activity
+    - scrapeable_structure  # Can be scraped
+    - relevant_data  # Contains software/company data
+    - sufficient_size  # Minimum traffic/content threshold
+
+  # Known global platforms to seed with
+  seed_platforms:
+    global:
+      - name: "G2"
+        url: "https://www.g2.com"
+        type: "software_reviews"
+        language: "English"
+      - name: "Capterra"
+        url: "https://www.capterra.com"
+        type: "software_reviews"
+        language: "English"
+      - name: "Product Hunt"
+        url: "https://www.producthunt.com"
+        type: "product_directory"
+        language: "English"
+      - name: "AlternativeTo"
+        url: "https://alternativeto.net"
+        type: "software_alternatives"
+        language: "English"
+      - name: "Trustpilot"
+        url: "https://www.trustpilot.com"
+        type: "business_reviews"
+        language: "English"
+
+    # Known regional platforms (discovered platforms will be added here)
+    regional:
+      japan:
+        - name: "ITreview"
+          url: "https://www.itreview.jp"
+          type: "software_reviews"
+          language: "Japanese"
+        - name: "Boxil"
+          url: "https://boxil.jp"
+          type: "saas_comparison"
+          language: "Japanese"
+
+      germany:
+        - name: "OMR Reviews"
+          url: "https://www.omr.com/en/reviews"
+          type: "software_reviews"
+          language: "German/English"
+
+      france:
+        - name: "Appvizer"
+          url: "https://www.appvizer.fr"
+          type: "software_comparison"
+          language: "French"
+
+      romania:
+        - name: "Lista Firmelor"
+          url: "https://www.listafirme.ro"
+          type: "business_directory"
+          language: "Romanian"
+
+  # Language support
+  language_support:
+    - English
+    - Spanish
+    - French
+    - German
+    - Polish
+    - Romanian
+    - Japanese
+    - Korean
+    - Chinese (Simplified)
+    - Chinese (Traditional)
+    - Dutch
+    - Czech
+    - Portuguese
+    - Italian
+    - Russian
+    - Hungarian
+    - Thai
+    - Vietnamese
+    - Indonesian
+    - Malay
+
+# Scraper generation settings
+scraper_generation:
+  auto_generate: true  # Let Claude create scrapers for new platforms
+  fallback_to_manual: true
+  test_before_use: true
+  save_generated_scrapers: true
+  max_retries: 3
+
+# Data source priorities
+company_data_sources:
+  - crunchbase
+  - linkedin
+  - local_rankings
+  - stock_exchanges
+  - tech_media
+  - builtwith
+  - job_boards
+  - local_platforms  # Discovered platforms
+
+software_data_sources:
+  - g2
+  - capterra
+  - producthunt
+  - alternativeto
+  - trustpilot
+  - tech_stack_detectors
+  - local_platforms  # Critical: discovered platforms
+
+# Government contract sources
+contract_sources:
+  north_america:
+    united_states:
+      - name: "SAM.gov"
+        url: "https://sam.gov"
+        api_available: true
+    canada:
+      - name: "Buy and Sell"
+        url: "https://buyandsell.gc.ca"
+        api_available: false
+      - name: "MERX"
+        url: "https://www.merx.com"
+        api_available: false
+
+  western_europe:
+    eu_wide:
+      - name: "TED (Tenders Electronic Daily)"
+        url: "https://ted.europa.eu"
+        api_available: true
+    united_kingdom:
+      - name: "Contracts Finder"
+        url: "https://www.contractsfinder.service.gov.uk"
+        api_available: true
+    germany:
+      - name: "Bund.de"
+        url: "https://www.bund.de"
+        api_available: false
+    france:
+      - name: "BOAMP"
+        url: "https://www.boamp.fr"
+        api_available: false
+    netherlands:
+      - name: "TenderNed"
+        url: "https://www.tenderned.nl"
+        api_available: true
+
+  eastern_europe:
+    romania:
+      - name: "SEAP (Sistemul Electronic de Achizitii Publice)"
+        url: "http://www.e-licitatie.ro"
+        api_available: false
+    poland:
+      - name: "BZP (Biuletyn Zamówień Publicznych)"
+        url: "https://bzp.uzp.gov.pl"
+        api_available: false
+    czech_republic:
+      - name: "NEN (Národní elektronický nástroj)"
+        url: "https://www.nen.gov.cz"
+        api_available: true
+    bulgaria:
+      - name: "AOP (Agency for Public Procurement)"
+        url: "https://www.aop.bg"
+        api_available: false
+
+  asia:
+    singapore:
+      - name: "GeBIZ"
+        url: "https://www.gebiz.gov.sg"
+        api_available: true
+    japan:
+      - name: "Japan Procurement"
+        url: "https://www.jetro.go.jp/en/database/procurement/"
+        api_available: false
+    south_korea:
+      - name: "KONEPS"
+        url: "https://www.g2b.go.kr"
+        api_available: false
+    hong_kong:
+      - name: "GLD Tenders"
+        url: "https://www.gld.gov.hk"
+        api_available: false
+    australia:
+      - name: "AusTender"
+        url: "https://www.tenders.gov.au"
+        api_available: true
+
+# Software categories to track
+categories:
+  - "Project Management"
+  - "CRM & Sales"
+  - "Accounting & Finance"
+  - "HR & Payroll"
+  - "Legal Tech"
+  - "Construction Management"
+  - "Real Estate Management"
+  - "Manufacturing & Supply Chain"
+  - "Healthcare Management"
+  - "Education & Learning Management"
+  - "Coworking & Space Management"
+  - "Agriculture & Farm Management"
+  - "Logistics & Maritime"
+  - "Hospitality & Hotel Management"
+  - "Retail & E-commerce"
+  - "Marketing Automation"
+  - "Customer Support & Helpdesk"
+  - "Cybersecurity"
+  - "DevOps & Development Tools"
+  - "Business Intelligence & Analytics"
+  - "Document Management"
+  - "Workflow Automation"
+  - "Event Management"
+  - "Fleet Management"
+  - "Inventory Management"
+
+# Gap detection thresholds
+gap_detection:
+  min_source_reviews: 100  # Minimum reviews in source region to consider
+  min_gap_score: 6.0  # Minimum gap score (0-10) to flag as opportunity
+  max_target_competition_level: 3  # Max number of strong competitors in target
+
+  # Scoring weights
+  weights:
+    review_count_gap: 0.25
+    rating_difference: 0.15
+    competition_gap: 0.30
+    market_size: 0.20
+    digitalization_lag: 0.10
+
+# Validation settings
+validation:
+  contract_validation:
+    enabled: true
+    min_contract_value: 10000  # Minimum contract value to consider (USD)
+    max_contract_age_days: 730  # Only consider contracts from last 2 years
+
+  pain_signal_validation:
+    enabled: true
+    sources:
+      - reddit
+      - indie_hackers
+      - hacker_news
+      - regional_forums
+    min_mentions: 5  # Minimum pain mentions to validate
+
+  company_need_validation:
+    enabled: true
+    min_companies_in_vertical: 10  # Min companies in vertical to validate need
+
+# Rate limiting
+rate_limiting:
+  requests_per_minute: 30
+  requests_per_hour: 1000
+  backoff_strategy: "exponential"
+  max_retries: 3
+
+# Database settings
+database:
+  type: "sqlite"
+  path: "data/arbitrage.db"
+  backup_enabled: true
+  backup_frequency: "daily"
+
+# Logging
+logging:
+  level: "INFO"
+  file: "logs/arbitrage.log"
+  max_size_mb: 100
+  backup_count: 5
+
+# Parallel execution
+execution:
+  max_parallel_regions: 5
+  max_parallel_scrapers: 10
+  timeout_seconds: 300
+
+# Test mode (start with small subset)
+test_mode:
+  enabled: true
+  test_regions:
+    - Romania
+    - United Kingdom
+    - Japan
+  max_companies_per_region: 50
+  max_products_per_category: 20

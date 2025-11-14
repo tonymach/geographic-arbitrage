@@ -1,0 +1,177 @@
+{
+  "generated_at": "2025-11-14T19:23:02.810237",
+  "total_regions": 3,
+  "total_companies": 6,
+  "companies_by_region": {
+    "United Kingdom": [],
+    "Romania": [
+      {
+        "name": "UiPath",
+        "region": "Romania",
+        "country": "Romania",
+        "industry": "Software",
+        "vertical": "RPA (Robotic Process Automation)",
+        "website": "https://www.uipath.com",
+        "revenue": 1000000000,
+        "employee_count": 4000,
+        "growth_rate": 25.0,
+        "funding_total": 2000000000,
+        "data_sources": [
+          "web_search",
+          "crunchbase"
+        ],
+        "confidence_score": 0.9,
+        "tech_stack": {},
+        "inferred_software_needs": [
+          "DevOps & Development Tools",
+          "Customer Support & Helpdesk",
+          "Accounting & Finance",
+          "Workflow Automation",
+          "Cybersecurity",
+          "HR & Payroll",
+          "CRM & Sales",
+          "Project Management",
+          "Business Intelligence & Analytics"
+        ]
+      },
+      {
+        "name": "Bitdefender",
+        "region": "Romania",
+        "country": "Romania",
+        "industry": "Software",
+        "vertical": "Cybersecurity",
+        "website": "https://www.bitdefender.com",
+        "revenue": 800000000,
+        "employee_count": 1800,
+        "growth_rate": 15.0,
+        "data_sources": [
+          "web_search"
+        ],
+        "confidence_score": 0.85,
+        "tech_stack": {},
+        "inferred_software_needs": [
+          "DevOps & Development Tools",
+          "Customer Support & Helpdesk",
+          "Accounting & Finance",
+          "Workflow Automation",
+          "Cybersecurity",
+          "HR & Payroll",
+          "CRM & Sales",
+          "Project Management",
+          "Business Intelligence & Analytics"
+        ]
+      },
+      {
+        "name": "Siveco Romania",
+        "region": "Romania",
+        "country": "Romania",
+        "industry": "IT Services",
+        "vertical": "Enterprise Software",
+        "website": "https://www.siveco.ro",
+        "revenue": 50000000,
+        "employee_count": 600,
+        "growth_rate": 10.0,
+        "data_sources": [
+          "local_directory"
+        ],
+        "confidence_score": 0.7,
+        "tech_stack": {},
+        "inferred_software_needs": [
+          "Customer Support & Helpdesk",
+          "Accounting & Finance",
+          "Workflow Automation",
+          "HR & Payroll",
+          "CRM & Sales",
+          "Project Management",
+          "Business Intelligence & Analytics"
+        ]
+      }
+    ],
+    "Japan": [
+      {
+        "name": "Rakuten",
+        "region": "Japan",
+        "country": "Japan",
+        "industry": "E-commerce",
+        "vertical": "Marketplace",
+        "website": "https://www.rakuten.com",
+        "revenue": 15000000000,
+        "employee_count": 28000,
+        "growth_rate": 12.0,
+        "data_sources": [
+          "web_search"
+        ],
+        "confidence_score": 0.95,
+        "tech_stack": {},
+        "inferred_software_needs": [
+          "E-commerce Platform",
+          "Inventory Management",
+          "Customer Support & Helpdesk",
+          "Accounting & Finance",
+          "Workflow Automation",
+          "HR & Payroll",
+          "CRM & Sales",
+          "Project Management",
+          "Marketing Automation",
+          "Business Intelligence & Analytics"
+        ]
+      },
+      {
+        "name": "Mercari",
+        "region": "Japan",
+        "country": "Japan",
+        "industry": "E-commerce",
+        "vertical": "C2C Marketplace",
+        "website": "https://www.mercari.com",
+        "revenue": 500000000,
+        "employee_count": 2000,
+        "growth_rate": 20.0,
+        "data_sources": [
+          "web_search"
+        ],
+        "confidence_score": 0.9,
+        "tech_stack": {},
+        "inferred_software_needs": [
+          "E-commerce Platform",
+          "Inventory Management",
+          "Customer Support & Helpdesk",
+          "Accounting & Finance",
+          "Workflow Automation",
+          "HR & Payroll",
+          "CRM & Sales",
+          "Project Management",
+          "Marketing Automation",
+          "Business Intelligence & Analytics"
+        ]
+      },
+      {
+        "name": "SmartHR",
+        "region": "Japan",
+        "country": "Japan",
+        "industry": "Software",
+        "vertical": "HR Tech",
+        "website": "https://smarthr.jp",
+        "revenue": 100000000,
+        "employee_count": 800,
+        "growth_rate": 40.0,
+        "data_sources": [
+          "web_search",
+          "local_platform"
+        ],
+        "confidence_score": 0.85,
+        "tech_stack": {},
+        "inferred_software_needs": [
+          "DevOps & Development Tools",
+          "Customer Support & Helpdesk",
+          "Accounting & Finance",
+          "Workflow Automation",
+          "Cybersecurity",
+          "HR & Payroll",
+          "CRM & Sales",
+          "Project Management",
+          "Business Intelligence & Analytics"
+        ]
+      }
+    ]
+  }
+}

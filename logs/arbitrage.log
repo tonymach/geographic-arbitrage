@@ -1,0 +1,854 @@
+2025-11-14 19:21:58,550 - __main__ - INFO - Loading config from: config.yaml
+2025-11-14 19:21:58,569 - __main__ - INFO - TEST MODE ENABLED
+2025-11-14 19:21:58,702 - agents.platform_discovery_agent - INFO - Platform Discovery Agent initialized (max: 15 per region)
+2025-11-14 19:21:58,702 - agents.company_mapper_agent - INFO - Company Mapper Agent initialized (max companies: 50)
+2025-11-14 19:21:58,702 - agents.software_mapper_agent - INFO - Software Mapper Agent initialized (25 categories)
+2025-11-14 19:21:58,702 - agents.cross_reference_agent - INFO - Cross Reference Agent initialized
+2025-11-14 19:21:58,702 - agents.cross_reference_agent - INFO -   Min source reviews: 100
+2025-11-14 19:21:58,702 - agents.cross_reference_agent - INFO -   Min gap score: 6.0
+2025-11-14 19:21:58,703 - agents.orchestrator - INFO - TEST MODE: Using regions: ['Romania', 'Japan']
+2025-11-14 19:21:58,703 - agents.orchestrator - INFO - Master Orchestrator initialized
+2025-11-14 19:21:58,703 - agents.orchestrator - INFO -   Regions to process: 2
+2025-11-14 19:21:58,703 - agents.orchestrator - INFO -   Database: data/arbitrage.db
+2025-11-14 19:21:58,703 - __main__ - INFO - 
+🚀 Starting Global Software Arbitrage Pipeline
+
+2025-11-14 19:21:58,703 - agents.orchestrator - INFO - 
+================================================================================
+2025-11-14 19:21:58,703 - agents.orchestrator - INFO - STARTING GLOBAL SOFTWARE ARBITRAGE PIPELINE
+2025-11-14 19:21:58,703 - agents.orchestrator - INFO - ================================================================================
+
+2025-11-14 19:21:58,703 - agents.orchestrator - INFO - 
+🔍 PHASE 0: Platform Discovery
+2025-11-14 19:21:58,703 - agents.orchestrator - INFO - --------------------------------------------------------------------------------
+2025-11-14 19:21:58,703 - agents.platform_discovery_agent - INFO - Starting platform discovery for 2 regions
+2025-11-14 19:21:58,703 - agents.platform_discovery_agent - INFO - TEST MODE: Using limited regions
+2025-11-14 19:21:58,703 - agents.platform_discovery_agent - INFO - 
+================================================================================
+2025-11-14 19:21:58,703 - agents.platform_discovery_agent - INFO - Discovering platforms for: Romania
+2025-11-14 19:21:58,703 - agents.platform_discovery_agent - INFO - ================================================================================
+
+2025-11-14 19:21:58,704 - agents.platform_discovery_agent - INFO -   Country: Romania
+2025-11-14 19:21:58,704 - agents.platform_discovery_agent - INFO -   Language: Romanian
+2025-11-14 19:21:58,704 - agents.platform_discovery_agent - INFO -   Added 5 global seed platforms
+2025-11-14 19:21:58,704 - agents.platform_discovery_agent - INFO -   Added 1 regional seed platforms
+2025-11-14 19:21:58,704 - agents.platform_discovery_agent - INFO -   Searching for local platforms...
+2025-11-14 19:21:58,704 - agents.platform_discovery_agent - INFO -     Generated 31 search queries
+2025-11-14 19:21:58,704 - agents.platform_discovery_agent - INFO - 
+
+        📋 RESEARCH PROMPT FOR CLAUDE:
+        
+                Research and identify the TOP platforms used in Romania for:
+                - Software reviews and comparisons
+                - Business directories
+                - Startup ecosystems
+                - Technology news and reviews
+                - B2B software discovery
+
+                For each platform found:
+                1. Name and URL
+                2. Type (review site, directory, media, forum)
+                3. Primary language
+                4. Estimated popularity/traffic
+                5. Whether it has software/company data
+                6. Whether it appears scrapeable
+
+                Focus on platforms that LOCALS actually use, not just
+                international platforms with a regional section.
+
+                Use web search to validate these platforms exist and are active.
+                Return structured data.
+            
+
+        SEARCH QUERIES TO EXECUTE:
+          - best software review sites in Romania Romania
+  - Romania local software review sites popular
+  - where do Romania companies find software software review sites
+  - software review sites Romania Romanian
+  - best business directories in Romania Romania
+        ... and 26 more
+
+        Expected output structure:
+        [
+            {
+                "name": "Platform Name",
+                "url": "https://...",
+                "type": "software_reviews | business_directory | tech_media | forum",
+                "language": "Romanian",
+                "description": "What this platform does",
+                "estimated_traffic": "rank or monthly visitors",
+                "has_software_data": true/false,
+                "scrapeable": "easy | medium | hard | api_available",
+                "notes": "Additional context"
+            },
+            ...
+        ]
+        
+2025-11-14 19:21:58,704 - agents.platform_discovery_agent - INFO -   Discovered 3 new local platforms
+2025-11-14 19:21:58,704 - agents.platform_discovery_agent - INFO -   Validating 9 platforms...
+2025-11-14 19:21:58,704 - agents.platform_discovery_agent - INFO -   Storing 6 validated platforms...
+2025-11-14 19:21:58,713 - agents.platform_discovery_agent - INFO - 
+✅ Platform discovery complete for Romania
+2025-11-14 19:21:58,713 - agents.platform_discovery_agent - INFO -    Total platforms: 6
+2025-11-14 19:21:58,713 - agents.platform_discovery_agent - INFO -    Seed platforms: 6
+2025-11-14 19:21:58,713 - agents.platform_discovery_agent - INFO -    Discovered platforms: 3
+2025-11-14 19:21:58,713 - agents.platform_discovery_agent - INFO - 
+================================================================================
+2025-11-14 19:21:58,713 - agents.platform_discovery_agent - INFO - Discovering platforms for: Japan
+2025-11-14 19:21:58,713 - agents.platform_discovery_agent - INFO - ================================================================================
+
+2025-11-14 19:21:58,713 - agents.platform_discovery_agent - INFO -   Country: Japan
+2025-11-14 19:21:58,713 - agents.platform_discovery_agent - INFO -   Language: Japanese
+2025-11-14 19:21:58,714 - agents.platform_discovery_agent - INFO -   Added 5 global seed platforms
+2025-11-14 19:21:58,714 - agents.platform_discovery_agent - INFO -   Added 2 regional seed platforms
+2025-11-14 19:21:58,714 - agents.platform_discovery_agent - INFO -   Searching for local platforms...
+2025-11-14 19:21:58,714 - agents.platform_discovery_agent - INFO -     Generated 31 search queries
+2025-11-14 19:21:58,714 - agents.platform_discovery_agent - INFO - 
+
+        📋 RESEARCH PROMPT FOR CLAUDE:
+        
+                Research and identify the TOP platforms used in Japan for:
+                - Software reviews and comparisons
+                - Business directories
+                - Startup ecosystems
+                - Technology news and reviews
+                - B2B software discovery
+
+                For each platform found:
+                1. Name and URL
+                2. Type (review site, directory, media, forum)
+                3. Primary language
+                4. Estimated popularity/traffic
+                5. Whether it has software/company data
+                6. Whether it appears scrapeable
+
+                Focus on platforms that LOCALS actually use, not just
+                international platforms with a regional section.
+
+                Use web search to validate these platforms exist and are active.
+                Return structured data.
+            
+
+        SEARCH QUERIES TO EXECUTE:
+          - best software review sites in Japan Japan
+  - Japan local software review sites popular
+  - where do Japan companies find software software review sites
+  - software review sites Japan Japanese
+  - best business directories in Japan Japan
+        ... and 26 more
+
+        Expected output structure:
+        [
+            {
+                "name": "Platform Name",
+                "url": "https://...",
+                "type": "software_reviews | business_directory | tech_media | forum",
+                "language": "Japanese",
+                "description": "What this platform does",
+                "estimated_traffic": "rank or monthly visitors",
+                "has_software_data": true/false,
+                "scrapeable": "easy | medium | hard | api_available",
+                "notes": "Additional context"
+            },
+            ...
+        ]
+        
+2025-11-14 19:21:58,714 - agents.platform_discovery_agent - INFO -   Discovered 3 new local platforms
+2025-11-14 19:21:58,714 - agents.platform_discovery_agent - INFO -   Validating 10 platforms...
+2025-11-14 19:21:58,714 - agents.platform_discovery_agent - INFO -   Storing 7 validated platforms...
+2025-11-14 19:21:58,723 - agents.platform_discovery_agent - INFO - 
+✅ Platform discovery complete for Japan
+2025-11-14 19:21:58,723 - agents.platform_discovery_agent - INFO -    Total platforms: 7
+2025-11-14 19:21:58,723 - agents.platform_discovery_agent - INFO -    Seed platforms: 7
+2025-11-14 19:21:58,723 - agents.platform_discovery_agent - INFO -    Discovered platforms: 3
+2025-11-14 19:21:58,724 - agents.platform_discovery_agent - INFO - Discovered 6 platforms for Romania
+2025-11-14 19:21:58,724 - agents.platform_discovery_agent - INFO - Discovered 7 platforms for Japan
+2025-11-14 19:21:58,724 - agents.platform_discovery_agent - INFO - 
+✅ Platform map exported to: data/discovered_platforms.json
+2025-11-14 19:21:58,725 - agents.orchestrator - INFO - 
+🏢 PHASE 1: Company Mapping
+2025-11-14 19:21:58,725 - agents.orchestrator - INFO - --------------------------------------------------------------------------------
+2025-11-14 19:21:58,725 - agents.company_mapper_agent - INFO - Starting company mapping for 2 regions
+2025-11-14 19:21:58,725 - agents.company_mapper_agent - INFO - 
+================================================================================
+2025-11-14 19:21:58,725 - agents.company_mapper_agent - INFO - Mapping companies for: Romania
+2025-11-14 19:21:58,725 - agents.company_mapper_agent - INFO - ================================================================================
+
+2025-11-14 19:21:58,725 - agents.company_mapper_agent - INFO -   Searching for top companies...
+2025-11-14 19:21:58,725 - agents.company_mapper_agent - INFO -     Generated 16 search queries
+2025-11-14 19:21:58,725 - agents.company_mapper_agent - INFO - 
+
+        📋 RESEARCH PROMPT FOR CLAUDE:
+        
+                Find the top 50-200 most successful companies in Romania.
+
+                Look for:
+                - Revenue/funding data
+                - Growth rates
+                - Industry/vertical
+                - Company websites
+                - Employee counts
+
+                Use multiple sources:
+                - Local business rankings
+                - Tech company lists
+                - Stock exchange data
+                - Funding announcements
+                - Industry reports
+
+                Return structured data with sources cited.
+            
+
+        SEARCH QUERIES:
+          - top 100 companies Romania Romania
+  - fastest growing companies Romania
+  - largest companies Romania by revenue
+  - Romania unicorn startups
+  - Romania top tech companies
+        
+2025-11-14 19:21:58,725 - agents.company_mapper_agent - INFO -   Found 3 companies via web search
+2025-11-14 19:21:58,725 - agents.company_mapper_agent - INFO -   Checking local business directories...
+2025-11-14 19:21:58,726 - agents.company_mapper_agent - INFO -     Found 1 business directories
+2025-11-14 19:21:58,726 - agents.company_mapper_agent - INFO -   Found 0 companies from directories
+2025-11-14 19:21:58,726 - agents.company_mapper_agent - INFO -   Deduplicating and enriching data...
+2025-11-14 19:21:58,726 - agents.company_mapper_agent - INFO -   Analyzing industries and inferring software needs...
+2025-11-14 19:21:58,726 - agents.company_mapper_agent - INFO -   Storing 3 companies...
+2025-11-14 19:21:58,735 - agents.company_mapper_agent - INFO - 
+✅ Company mapping complete for Romania
+2025-11-14 19:21:58,735 - agents.company_mapper_agent - INFO -    Total companies: 3
+2025-11-14 19:21:58,735 - agents.company_mapper_agent - INFO - 
+================================================================================
+2025-11-14 19:21:58,735 - agents.company_mapper_agent - INFO - Mapping companies for: Japan
+2025-11-14 19:21:58,735 - agents.company_mapper_agent - INFO - ================================================================================
+
+2025-11-14 19:21:58,735 - agents.company_mapper_agent - INFO -   Searching for top companies...
+2025-11-14 19:21:58,735 - agents.company_mapper_agent - INFO -     Generated 16 search queries
+2025-11-14 19:21:58,735 - agents.company_mapper_agent - INFO - 
+
+        📋 RESEARCH PROMPT FOR CLAUDE:
+        
+                Find the top 50-200 most successful companies in Japan.
+
+                Look for:
+                - Revenue/funding data
+                - Growth rates
+                - Industry/vertical
+                - Company websites
+                - Employee counts
+
+                Use multiple sources:
+                - Local business rankings
+                - Tech company lists
+                - Stock exchange data
+                - Funding announcements
+                - Industry reports
+
+                Return structured data with sources cited.
+            
+
+        SEARCH QUERIES:
+          - top 100 companies Japan Japan
+  - fastest growing companies Japan
+  - largest companies Japan by revenue
+  - Japan unicorn startups
+  - Japan top tech companies
+        
+2025-11-14 19:21:58,736 - agents.company_mapper_agent - INFO -   Found 3 companies via web search
+2025-11-14 19:21:58,736 - agents.company_mapper_agent - INFO -   Checking local business directories...
+2025-11-14 19:21:58,736 - agents.company_mapper_agent - INFO -     Found 0 business directories
+2025-11-14 19:21:58,736 - agents.company_mapper_agent - INFO -   Found 0 companies from directories
+2025-11-14 19:21:58,736 - agents.company_mapper_agent - INFO -   Deduplicating and enriching data...
+2025-11-14 19:21:58,736 - agents.company_mapper_agent - INFO -   Analyzing industries and inferring software needs...
+2025-11-14 19:21:58,736 - agents.company_mapper_agent - INFO -   Storing 3 companies...
+2025-11-14 19:21:58,745 - agents.company_mapper_agent - INFO - 
+✅ Company mapping complete for Japan
+2025-11-14 19:21:58,745 - agents.company_mapper_agent - INFO -    Total companies: 3
+2025-11-14 19:21:58,746 - agents.company_mapper_agent - INFO - Mapped 3 companies for Romania
+2025-11-14 19:21:58,746 - agents.company_mapper_agent - INFO - Mapped 3 companies for Japan
+2025-11-14 19:21:58,746 - agents.company_mapper_agent - INFO - 
+✅ Company map exported to: data/companies/company_map.json
+2025-11-14 19:21:58,747 - agents.orchestrator - INFO - 
+💻 PHASE 2: Software Ecosystem Mapping
+2025-11-14 19:21:58,747 - agents.orchestrator - INFO - --------------------------------------------------------------------------------
+2025-11-14 19:21:58,747 - agents.software_mapper_agent - INFO - Starting software ecosystem mapping for 2 regions
+2025-11-14 19:21:58,747 - agents.software_mapper_agent - INFO - 
+================================================================================
+2025-11-14 19:21:58,747 - agents.software_mapper_agent - INFO - Mapping software ecosystem for: Romania
+2025-11-14 19:21:58,747 - agents.software_mapper_agent - INFO - ================================================================================
+
+2025-11-14 19:21:58,747 - agents.software_mapper_agent - INFO -   TEST MODE: Limited to 5 categories
+2025-11-14 19:21:58,747 - agents.software_mapper_agent - INFO -   Mapping category: Project Management
+2025-11-14 19:21:58,747 - agents.software_mapper_agent - INFO -     Found 0 products
+2025-11-14 19:21:58,747 - agents.software_mapper_agent - INFO -   Mapping category: CRM & Sales
+2025-11-14 19:21:58,747 - agents.software_mapper_agent - INFO -     Found 0 products
+2025-11-14 19:21:58,747 - agents.software_mapper_agent - INFO -   Mapping category: Accounting & Finance
+2025-11-14 19:21:58,747 - agents.software_mapper_agent - INFO -     Found 0 products
+2025-11-14 19:21:58,747 - agents.software_mapper_agent - INFO -   Mapping category: HR & Payroll
+2025-11-14 19:21:58,747 - agents.software_mapper_agent - INFO -     Found 0 products
+2025-11-14 19:21:58,747 - agents.software_mapper_agent - INFO -   Mapping category: Legal Tech
+2025-11-14 19:21:58,747 - agents.software_mapper_agent - INFO -     Found 0 products
+2025-11-14 19:21:58,747 - agents.software_mapper_agent - INFO -   Analyzing tech stacks from 3 companies...
+2025-11-14 19:21:58,747 - agents.software_mapper_agent - INFO -   Storing 0 products...
+2025-11-14 19:21:58,748 - agents.software_mapper_agent - INFO - 
+✅ Software ecosystem mapping complete for Romania
+2025-11-14 19:21:58,748 - agents.software_mapper_agent - INFO -    Total products: 0
+2025-11-14 19:21:58,748 - agents.software_mapper_agent - INFO -    Categories mapped: 5
+2025-11-14 19:21:58,748 - agents.software_mapper_agent - INFO - 
+================================================================================
+2025-11-14 19:21:58,748 - agents.software_mapper_agent - INFO - Mapping software ecosystem for: Japan
+2025-11-14 19:21:58,748 - agents.software_mapper_agent - INFO - ================================================================================
+
+2025-11-14 19:21:58,748 - agents.software_mapper_agent - INFO -   TEST MODE: Limited to 5 categories
+2025-11-14 19:21:58,748 - agents.software_mapper_agent - INFO -   Mapping category: Project Management
+2025-11-14 19:21:58,748 - agents.software_mapper_agent - INFO -     Found 2 products
+2025-11-14 19:21:58,748 - agents.software_mapper_agent - INFO -   Mapping category: CRM & Sales
+2025-11-14 19:21:58,748 - agents.software_mapper_agent - INFO -     Found 0 products
+2025-11-14 19:21:58,748 - agents.software_mapper_agent - INFO -   Mapping category: Accounting & Finance
+2025-11-14 19:21:58,748 - agents.software_mapper_agent - INFO -     Found 0 products
+2025-11-14 19:21:58,748 - agents.software_mapper_agent - INFO -   Mapping category: HR & Payroll
+2025-11-14 19:21:58,748 - agents.software_mapper_agent - INFO -     Found 0 products
+2025-11-14 19:21:58,748 - agents.software_mapper_agent - INFO -   Mapping category: Legal Tech
+2025-11-14 19:21:58,748 - agents.software_mapper_agent - INFO -     Found 0 products
+2025-11-14 19:21:58,748 - agents.software_mapper_agent - INFO -   Analyzing tech stacks from 3 companies...
+2025-11-14 19:21:58,748 - agents.software_mapper_agent - INFO -   Storing 2 products...
+2025-11-14 19:21:58,757 - agents.software_mapper_agent - INFO - 
+✅ Software ecosystem mapping complete for Japan
+2025-11-14 19:21:58,757 - agents.software_mapper_agent - INFO -    Total products: 2
+2025-11-14 19:21:58,757 - agents.software_mapper_agent - INFO -    Categories mapped: 5
+2025-11-14 19:21:58,758 - agents.software_mapper_agent - INFO - Mapped 0 products for Romania
+2025-11-14 19:21:58,758 - agents.software_mapper_agent - INFO - Mapped 2 products for Japan
+2025-11-14 19:21:58,758 - agents.software_mapper_agent - INFO - 
+✅ Ecosystem map exported to: data/software_ecosystems/ecosystem_map.json
+2025-11-14 19:21:58,758 - agents.orchestrator - INFO - 
+🎯 PHASE 3: Cross-Region Gap Detection
+2025-11-14 19:21:58,758 - agents.orchestrator - INFO - --------------------------------------------------------------------------------
+2025-11-14 19:21:58,759 - agents.cross_reference_agent - INFO - 
+================================================================================
+2025-11-14 19:21:58,759 - agents.cross_reference_agent - INFO - Finding arbitrage opportunities across 2 regions
+2025-11-14 19:21:58,759 - agents.cross_reference_agent - INFO - ================================================================================
+
+2025-11-14 19:21:58,759 - agents.cross_reference_agent - INFO - Total region pair comparisons: 1
+2025-11-14 19:21:58,759 - agents.cross_reference_agent - INFO -   Comparing: Romania → Japan
+2025-11-14 19:21:58,759 - agents.cross_reference_agent - INFO -     Found 0 gaps
+2025-11-14 19:21:58,759 - agents.cross_reference_agent - INFO - 
+✅ Found 0 opportunities (gap_score >= 6.0)
+2025-11-14 19:21:58,759 - agents.cross_reference_agent - INFO - 
+✅ Opportunities exported to: data/results/opportunities.json
+2025-11-14 19:21:58,760 - agents.cross_reference_agent - INFO - Human-readable summary exported to: data/results/opportunities.txt
+2025-11-14 19:21:58,760 - agents.orchestrator - INFO - 
+✅ PHASE 4: Validation (TODO)
+2025-11-14 19:21:58,760 - agents.orchestrator - INFO - --------------------------------------------------------------------------------
+2025-11-14 19:21:58,760 - agents.orchestrator - INFO - Would validate opportunities with:
+2025-11-14 19:21:58,760 - agents.orchestrator - INFO -   - Government contracts
+2025-11-14 19:21:58,760 - agents.orchestrator - INFO -   - Pain signals (Reddit, forums)
+2025-11-14 19:21:58,760 - agents.orchestrator - INFO -   - Company needs analysis
+2025-11-14 19:21:58,760 - agents.orchestrator - INFO -   - Job market signals
+2025-11-14 19:21:58,761 - agents.orchestrator - INFO - 
+✅ Pipeline summary exported to: data/results/pipeline_summary.json
+2025-11-14 19:23:02,624 - __main__ - INFO - Loading config from: config.yaml
+2025-11-14 19:23:02,638 - __main__ - INFO - TEST MODE ENABLED
+2025-11-14 19:23:02,760 - agents.platform_discovery_agent - INFO - Platform Discovery Agent initialized (max: 15 per region)
+2025-11-14 19:23:02,760 - agents.company_mapper_agent - INFO - Company Mapper Agent initialized (max companies: 50)
+2025-11-14 19:23:02,760 - agents.software_mapper_agent - INFO - Software Mapper Agent initialized (25 categories)
+2025-11-14 19:23:02,760 - agents.cross_reference_agent - INFO - Cross Reference Agent initialized
+2025-11-14 19:23:02,760 - agents.cross_reference_agent - INFO -   Min source reviews: 100
+2025-11-14 19:23:02,761 - agents.cross_reference_agent - INFO -   Min gap score: 6.0
+2025-11-14 19:23:02,761 - agents.orchestrator - INFO - TEST MODE: Using regions: ['United Kingdom', 'Romania', 'Japan']
+2025-11-14 19:23:02,761 - agents.orchestrator - INFO - Master Orchestrator initialized
+2025-11-14 19:23:02,761 - agents.orchestrator - INFO -   Regions to process: 3
+2025-11-14 19:23:02,761 - agents.orchestrator - INFO -   Database: data/arbitrage.db
+2025-11-14 19:23:02,761 - __main__ - INFO - 
+🚀 Starting Global Software Arbitrage Pipeline
+
+2025-11-14 19:23:02,761 - agents.orchestrator - INFO - 
+================================================================================
+2025-11-14 19:23:02,761 - agents.orchestrator - INFO - STARTING GLOBAL SOFTWARE ARBITRAGE PIPELINE
+2025-11-14 19:23:02,761 - agents.orchestrator - INFO - ================================================================================
+
+2025-11-14 19:23:02,761 - agents.orchestrator - INFO - 
+🔍 PHASE 0: Platform Discovery
+2025-11-14 19:23:02,761 - agents.orchestrator - INFO - --------------------------------------------------------------------------------
+2025-11-14 19:23:02,761 - agents.platform_discovery_agent - INFO - Starting platform discovery for 3 regions
+2025-11-14 19:23:02,761 - agents.platform_discovery_agent - INFO - TEST MODE: Using limited regions
+2025-11-14 19:23:02,762 - agents.platform_discovery_agent - INFO - 
+================================================================================
+2025-11-14 19:23:02,762 - agents.platform_discovery_agent - INFO - Discovering platforms for: United Kingdom
+2025-11-14 19:23:02,762 - agents.platform_discovery_agent - INFO - ================================================================================
+
+2025-11-14 19:23:02,762 - agents.platform_discovery_agent - INFO -   Country: United Kingdom
+2025-11-14 19:23:02,762 - agents.platform_discovery_agent - INFO -   Language: English
+2025-11-14 19:23:02,762 - agents.platform_discovery_agent - INFO -   Added 5 global seed platforms
+2025-11-14 19:23:02,762 - agents.platform_discovery_agent - INFO -   Added 0 regional seed platforms
+2025-11-14 19:23:02,762 - agents.platform_discovery_agent - INFO -   Searching for local platforms...
+2025-11-14 19:23:02,762 - agents.platform_discovery_agent - INFO -     Generated 25 search queries
+2025-11-14 19:23:02,762 - agents.platform_discovery_agent - INFO - 
+
+        📋 RESEARCH PROMPT FOR CLAUDE:
+        
+                Research and identify the TOP platforms used in United Kingdom for:
+                - Software reviews and comparisons
+                - Business directories
+                - Startup ecosystems
+                - Technology news and reviews
+                - B2B software discovery
+
+                For each platform found:
+                1. Name and URL
+                2. Type (review site, directory, media, forum)
+                3. Primary language
+                4. Estimated popularity/traffic
+                5. Whether it has software/company data
+                6. Whether it appears scrapeable
+
+                Focus on platforms that LOCALS actually use, not just
+                international platforms with a regional section.
+
+                Use web search to validate these platforms exist and are active.
+                Return structured data.
+            
+
+        SEARCH QUERIES TO EXECUTE:
+          - best software review sites in United Kingdom United Kingdom
+  - United Kingdom local software review sites popular
+  - where do United Kingdom companies find software software review sites
+  - best business directories in United Kingdom United Kingdom
+  - United Kingdom local business directories popular
+        ... and 20 more
+
+        Expected output structure:
+        [
+            {
+                "name": "Platform Name",
+                "url": "https://...",
+                "type": "software_reviews | business_directory | tech_media | forum",
+                "language": "English",
+                "description": "What this platform does",
+                "estimated_traffic": "rank or monthly visitors",
+                "has_software_data": true/false,
+                "scrapeable": "easy | medium | hard | api_available",
+                "notes": "Additional context"
+            },
+            ...
+        ]
+        
+2025-11-14 19:23:02,763 - agents.platform_discovery_agent - INFO -   Discovered 0 new local platforms
+2025-11-14 19:23:02,763 - agents.platform_discovery_agent - INFO -   Validating 5 platforms...
+2025-11-14 19:23:02,763 - agents.platform_discovery_agent - INFO -   Storing 5 validated platforms...
+2025-11-14 19:23:02,771 - agents.platform_discovery_agent - INFO - 
+✅ Platform discovery complete for United Kingdom
+2025-11-14 19:23:02,771 - agents.platform_discovery_agent - INFO -    Total platforms: 5
+2025-11-14 19:23:02,771 - agents.platform_discovery_agent - INFO -    Seed platforms: 5
+2025-11-14 19:23:02,771 - agents.platform_discovery_agent - INFO -    Discovered platforms: 0
+2025-11-14 19:23:02,771 - agents.platform_discovery_agent - INFO - 
+================================================================================
+2025-11-14 19:23:02,771 - agents.platform_discovery_agent - INFO - Discovering platforms for: Romania
+2025-11-14 19:23:02,771 - agents.platform_discovery_agent - INFO - ================================================================================
+
+2025-11-14 19:23:02,771 - agents.platform_discovery_agent - INFO -   Country: Romania
+2025-11-14 19:23:02,771 - agents.platform_discovery_agent - INFO -   Language: Romanian
+2025-11-14 19:23:02,771 - agents.platform_discovery_agent - INFO -   Added 5 global seed platforms
+2025-11-14 19:23:02,771 - agents.platform_discovery_agent - INFO -   Added 1 regional seed platforms
+2025-11-14 19:23:02,771 - agents.platform_discovery_agent - INFO -   Searching for local platforms...
+2025-11-14 19:23:02,772 - agents.platform_discovery_agent - INFO -     Generated 31 search queries
+2025-11-14 19:23:02,772 - agents.platform_discovery_agent - INFO - 
+
+        📋 RESEARCH PROMPT FOR CLAUDE:
+        
+                Research and identify the TOP platforms used in Romania for:
+                - Software reviews and comparisons
+                - Business directories
+                - Startup ecosystems
+                - Technology news and reviews
+                - B2B software discovery
+
+                For each platform found:
+                1. Name and URL
+                2. Type (review site, directory, media, forum)
+                3. Primary language
+                4. Estimated popularity/traffic
+                5. Whether it has software/company data
+                6. Whether it appears scrapeable
+
+                Focus on platforms that LOCALS actually use, not just
+                international platforms with a regional section.
+
+                Use web search to validate these platforms exist and are active.
+                Return structured data.
+            
+
+        SEARCH QUERIES TO EXECUTE:
+          - best software review sites in Romania Romania
+  - Romania local software review sites popular
+  - where do Romania companies find software software review sites
+  - software review sites Romania Romanian
+  - best business directories in Romania Romania
+        ... and 26 more
+
+        Expected output structure:
+        [
+            {
+                "name": "Platform Name",
+                "url": "https://...",
+                "type": "software_reviews | business_directory | tech_media | forum",
+                "language": "Romanian",
+                "description": "What this platform does",
+                "estimated_traffic": "rank or monthly visitors",
+                "has_software_data": true/false,
+                "scrapeable": "easy | medium | hard | api_available",
+                "notes": "Additional context"
+            },
+            ...
+        ]
+        
+2025-11-14 19:23:02,772 - agents.platform_discovery_agent - INFO -   Discovered 3 new local platforms
+2025-11-14 19:23:02,772 - agents.platform_discovery_agent - INFO -   Validating 9 platforms...
+2025-11-14 19:23:02,772 - agents.platform_discovery_agent - INFO -   Storing 6 validated platforms...
+2025-11-14 19:23:02,780 - agents.platform_discovery_agent - INFO - 
+✅ Platform discovery complete for Romania
+2025-11-14 19:23:02,780 - agents.platform_discovery_agent - INFO -    Total platforms: 6
+2025-11-14 19:23:02,780 - agents.platform_discovery_agent - INFO -    Seed platforms: 6
+2025-11-14 19:23:02,781 - agents.platform_discovery_agent - INFO -    Discovered platforms: 3
+2025-11-14 19:23:02,781 - agents.platform_discovery_agent - INFO - 
+================================================================================
+2025-11-14 19:23:02,781 - agents.platform_discovery_agent - INFO - Discovering platforms for: Japan
+2025-11-14 19:23:02,781 - agents.platform_discovery_agent - INFO - ================================================================================
+
+2025-11-14 19:23:02,781 - agents.platform_discovery_agent - INFO -   Country: Japan
+2025-11-14 19:23:02,781 - agents.platform_discovery_agent - INFO -   Language: Japanese
+2025-11-14 19:23:02,781 - agents.platform_discovery_agent - INFO -   Added 5 global seed platforms
+2025-11-14 19:23:02,781 - agents.platform_discovery_agent - INFO -   Added 2 regional seed platforms
+2025-11-14 19:23:02,781 - agents.platform_discovery_agent - INFO -   Searching for local platforms...
+2025-11-14 19:23:02,781 - agents.platform_discovery_agent - INFO -     Generated 31 search queries
+2025-11-14 19:23:02,781 - agents.platform_discovery_agent - INFO - 
+
+        📋 RESEARCH PROMPT FOR CLAUDE:
+        
+                Research and identify the TOP platforms used in Japan for:
+                - Software reviews and comparisons
+                - Business directories
+                - Startup ecosystems
+                - Technology news and reviews
+                - B2B software discovery
+
+                For each platform found:
+                1. Name and URL
+                2. Type (review site, directory, media, forum)
+                3. Primary language
+                4. Estimated popularity/traffic
+                5. Whether it has software/company data
+                6. Whether it appears scrapeable
+
+                Focus on platforms that LOCALS actually use, not just
+                international platforms with a regional section.
+
+                Use web search to validate these platforms exist and are active.
+                Return structured data.
+            
+
+        SEARCH QUERIES TO EXECUTE:
+          - best software review sites in Japan Japan
+  - Japan local software review sites popular
+  - where do Japan companies find software software review sites
+  - software review sites Japan Japanese
+  - best business directories in Japan Japan
+        ... and 26 more
+
+        Expected output structure:
+        [
+            {
+                "name": "Platform Name",
+                "url": "https://...",
+                "type": "software_reviews | business_directory | tech_media | forum",
+                "language": "Japanese",
+                "description": "What this platform does",
+                "estimated_traffic": "rank or monthly visitors",
+                "has_software_data": true/false,
+                "scrapeable": "easy | medium | hard | api_available",
+                "notes": "Additional context"
+            },
+            ...
+        ]
+        
+2025-11-14 19:23:02,782 - agents.platform_discovery_agent - INFO -   Discovered 3 new local platforms
+2025-11-14 19:23:02,782 - agents.platform_discovery_agent - INFO -   Validating 10 platforms...
+2025-11-14 19:23:02,782 - agents.platform_discovery_agent - INFO -   Storing 7 validated platforms...
+2025-11-14 19:23:02,790 - agents.platform_discovery_agent - INFO - 
+✅ Platform discovery complete for Japan
+2025-11-14 19:23:02,790 - agents.platform_discovery_agent - INFO -    Total platforms: 7
+2025-11-14 19:23:02,790 - agents.platform_discovery_agent - INFO -    Seed platforms: 7
+2025-11-14 19:23:02,790 - agents.platform_discovery_agent - INFO -    Discovered platforms: 3
+2025-11-14 19:23:02,790 - agents.platform_discovery_agent - INFO - Discovered 5 platforms for United Kingdom
+2025-11-14 19:23:02,790 - agents.platform_discovery_agent - INFO - Discovered 6 platforms for Romania
+2025-11-14 19:23:02,790 - agents.platform_discovery_agent - INFO - Discovered 7 platforms for Japan
+2025-11-14 19:23:02,791 - agents.platform_discovery_agent - INFO - 
+✅ Platform map exported to: data/discovered_platforms.json
+2025-11-14 19:23:02,791 - agents.orchestrator - INFO - 
+🏢 PHASE 1: Company Mapping
+2025-11-14 19:23:02,792 - agents.orchestrator - INFO - --------------------------------------------------------------------------------
+2025-11-14 19:23:02,792 - agents.company_mapper_agent - INFO - Starting company mapping for 3 regions
+2025-11-14 19:23:02,792 - agents.company_mapper_agent - INFO - 
+================================================================================
+2025-11-14 19:23:02,792 - agents.company_mapper_agent - INFO - Mapping companies for: United Kingdom
+2025-11-14 19:23:02,792 - agents.company_mapper_agent - INFO - ================================================================================
+
+2025-11-14 19:23:02,792 - agents.company_mapper_agent - INFO -   Searching for top companies...
+2025-11-14 19:23:02,792 - agents.company_mapper_agent - INFO -     Generated 15 search queries
+2025-11-14 19:23:02,792 - agents.company_mapper_agent - INFO - 
+
+        📋 RESEARCH PROMPT FOR CLAUDE:
+        
+                Find the top 50-200 most successful companies in United Kingdom.
+
+                Look for:
+                - Revenue/funding data
+                - Growth rates
+                - Industry/vertical
+                - Company websites
+                - Employee counts
+
+                Use multiple sources:
+                - Local business rankings
+                - Tech company lists
+                - Stock exchange data
+                - Funding announcements
+                - Industry reports
+
+                Return structured data with sources cited.
+            
+
+        SEARCH QUERIES:
+          - top 100 companies United Kingdom United Kingdom
+  - fastest growing companies United Kingdom
+  - largest companies United Kingdom by revenue
+  - United Kingdom unicorn startups
+  - United Kingdom top tech companies
+        
+2025-11-14 19:23:02,792 - agents.company_mapper_agent - INFO -   Found 0 companies via web search
+2025-11-14 19:23:02,792 - agents.company_mapper_agent - INFO -   Checking local business directories...
+2025-11-14 19:23:02,792 - agents.company_mapper_agent - INFO -     Found 0 business directories
+2025-11-14 19:23:02,792 - agents.company_mapper_agent - INFO -   Found 0 companies from directories
+2025-11-14 19:23:02,792 - agents.company_mapper_agent - INFO -   Deduplicating and enriching data...
+2025-11-14 19:23:02,792 - agents.company_mapper_agent - INFO -   Analyzing industries and inferring software needs...
+2025-11-14 19:23:02,792 - agents.company_mapper_agent - INFO -   Storing 0 companies...
+2025-11-14 19:23:02,792 - agents.company_mapper_agent - INFO - 
+✅ Company mapping complete for United Kingdom
+2025-11-14 19:23:02,792 - agents.company_mapper_agent - INFO -    Total companies: 0
+2025-11-14 19:23:02,792 - agents.company_mapper_agent - INFO - 
+================================================================================
+2025-11-14 19:23:02,793 - agents.company_mapper_agent - INFO - Mapping companies for: Romania
+2025-11-14 19:23:02,793 - agents.company_mapper_agent - INFO - ================================================================================
+
+2025-11-14 19:23:02,793 - agents.company_mapper_agent - INFO -   Searching for top companies...
+2025-11-14 19:23:02,793 - agents.company_mapper_agent - INFO -     Generated 16 search queries
+2025-11-14 19:23:02,793 - agents.company_mapper_agent - INFO - 
+
+        📋 RESEARCH PROMPT FOR CLAUDE:
+        
+                Find the top 50-200 most successful companies in Romania.
+
+                Look for:
+                - Revenue/funding data
+                - Growth rates
+                - Industry/vertical
+                - Company websites
+                - Employee counts
+
+                Use multiple sources:
+                - Local business rankings
+                - Tech company lists
+                - Stock exchange data
+                - Funding announcements
+                - Industry reports
+
+                Return structured data with sources cited.
+            
+
+        SEARCH QUERIES:
+          - top 100 companies Romania Romania
+  - fastest growing companies Romania
+  - largest companies Romania by revenue
+  - Romania unicorn startups
+  - Romania top tech companies
+        
+2025-11-14 19:23:02,793 - agents.company_mapper_agent - INFO -   Found 3 companies via web search
+2025-11-14 19:23:02,793 - agents.company_mapper_agent - INFO -   Checking local business directories...
+2025-11-14 19:23:02,793 - agents.company_mapper_agent - INFO -     Found 1 business directories
+2025-11-14 19:23:02,793 - agents.company_mapper_agent - INFO -   Found 0 companies from directories
+2025-11-14 19:23:02,793 - agents.company_mapper_agent - INFO -   Deduplicating and enriching data...
+2025-11-14 19:23:02,793 - agents.company_mapper_agent - INFO -   Analyzing industries and inferring software needs...
+2025-11-14 19:23:02,793 - agents.company_mapper_agent - INFO -   Storing 3 companies...
+2025-11-14 19:23:02,801 - agents.company_mapper_agent - INFO - 
+✅ Company mapping complete for Romania
+2025-11-14 19:23:02,801 - agents.company_mapper_agent - INFO -    Total companies: 3
+2025-11-14 19:23:02,801 - agents.company_mapper_agent - INFO - 
+================================================================================
+2025-11-14 19:23:02,801 - agents.company_mapper_agent - INFO - Mapping companies for: Japan
+2025-11-14 19:23:02,801 - agents.company_mapper_agent - INFO - ================================================================================
+
+2025-11-14 19:23:02,801 - agents.company_mapper_agent - INFO -   Searching for top companies...
+2025-11-14 19:23:02,801 - agents.company_mapper_agent - INFO -     Generated 16 search queries
+2025-11-14 19:23:02,801 - agents.company_mapper_agent - INFO - 
+
+        📋 RESEARCH PROMPT FOR CLAUDE:
+        
+                Find the top 50-200 most successful companies in Japan.
+
+                Look for:
+                - Revenue/funding data
+                - Growth rates
+                - Industry/vertical
+                - Company websites
+                - Employee counts
+
+                Use multiple sources:
+                - Local business rankings
+                - Tech company lists
+                - Stock exchange data
+                - Funding announcements
+                - Industry reports
+
+                Return structured data with sources cited.
+            
+
+        SEARCH QUERIES:
+          - top 100 companies Japan Japan
+  - fastest growing companies Japan
+  - largest companies Japan by revenue
+  - Japan unicorn startups
+  - Japan top tech companies
+        
+2025-11-14 19:23:02,801 - agents.company_mapper_agent - INFO -   Found 3 companies via web search
+2025-11-14 19:23:02,801 - agents.company_mapper_agent - INFO -   Checking local business directories...
+2025-11-14 19:23:02,802 - agents.company_mapper_agent - INFO -     Found 0 business directories
+2025-11-14 19:23:02,802 - agents.company_mapper_agent - INFO -   Found 0 companies from directories
+2025-11-14 19:23:02,802 - agents.company_mapper_agent - INFO -   Deduplicating and enriching data...
+2025-11-14 19:23:02,802 - agents.company_mapper_agent - INFO -   Analyzing industries and inferring software needs...
+2025-11-14 19:23:02,802 - agents.company_mapper_agent - INFO -   Storing 3 companies...
+2025-11-14 19:23:02,809 - agents.company_mapper_agent - INFO - 
+✅ Company mapping complete for Japan
+2025-11-14 19:23:02,809 - agents.company_mapper_agent - INFO -    Total companies: 3
+2025-11-14 19:23:02,809 - agents.company_mapper_agent - INFO - Mapped 0 companies for United Kingdom
+2025-11-14 19:23:02,810 - agents.company_mapper_agent - INFO - Mapped 3 companies for Romania
+2025-11-14 19:23:02,810 - agents.company_mapper_agent - INFO - Mapped 3 companies for Japan
+2025-11-14 19:23:02,810 - agents.company_mapper_agent - INFO - 
+✅ Company map exported to: data/companies/company_map.json
+2025-11-14 19:23:02,810 - agents.orchestrator - INFO - 
+💻 PHASE 2: Software Ecosystem Mapping
+2025-11-14 19:23:02,810 - agents.orchestrator - INFO - --------------------------------------------------------------------------------
+2025-11-14 19:23:02,810 - agents.software_mapper_agent - INFO - Starting software ecosystem mapping for 3 regions
+2025-11-14 19:23:02,811 - agents.software_mapper_agent - INFO - 
+================================================================================
+2025-11-14 19:23:02,811 - agents.software_mapper_agent - INFO - Mapping software ecosystem for: United Kingdom
+2025-11-14 19:23:02,811 - agents.software_mapper_agent - INFO - ================================================================================
+
+2025-11-14 19:23:02,811 - agents.software_mapper_agent - INFO -   TEST MODE: Testing 6 categories
+2025-11-14 19:23:02,811 - agents.software_mapper_agent - INFO -   Mapping category: Project Management
+2025-11-14 19:23:02,811 - agents.software_mapper_agent - INFO -     Found 0 products
+2025-11-14 19:23:02,811 - agents.software_mapper_agent - INFO -   Mapping category: CRM & Sales
+2025-11-14 19:23:02,811 - agents.software_mapper_agent - INFO -     Found 0 products
+2025-11-14 19:23:02,811 - agents.software_mapper_agent - INFO -   Mapping category: Accounting & Finance
+2025-11-14 19:23:02,811 - agents.software_mapper_agent - INFO -     Found 0 products
+2025-11-14 19:23:02,811 - agents.software_mapper_agent - INFO -   Mapping category: HR & Payroll
+2025-11-14 19:23:02,811 - agents.software_mapper_agent - INFO -     Found 0 products
+2025-11-14 19:23:02,811 - agents.software_mapper_agent - INFO -   Mapping category: Legal Tech
+2025-11-14 19:23:02,811 - agents.software_mapper_agent - INFO -     Found 0 products
+2025-11-14 19:23:02,811 - agents.software_mapper_agent - INFO -   Mapping category: Coworking & Space Management
+2025-11-14 19:23:02,811 - agents.software_mapper_agent - INFO -     Found 3 products
+2025-11-14 19:23:02,811 - agents.software_mapper_agent - INFO -   Storing 3 products...
+2025-11-14 19:23:02,818 - agents.software_mapper_agent - INFO - 
+✅ Software ecosystem mapping complete for United Kingdom
+2025-11-14 19:23:02,819 - agents.software_mapper_agent - INFO -    Total products: 3
+2025-11-14 19:23:02,819 - agents.software_mapper_agent - INFO -    Categories mapped: 6
+2025-11-14 19:23:02,819 - agents.software_mapper_agent - INFO - 
+================================================================================
+2025-11-14 19:23:02,819 - agents.software_mapper_agent - INFO - Mapping software ecosystem for: Romania
+2025-11-14 19:23:02,819 - agents.software_mapper_agent - INFO - ================================================================================
+
+2025-11-14 19:23:02,819 - agents.software_mapper_agent - INFO -   TEST MODE: Testing 6 categories
+2025-11-14 19:23:02,819 - agents.software_mapper_agent - INFO -   Mapping category: Project Management
+2025-11-14 19:23:02,819 - agents.software_mapper_agent - INFO -     Found 0 products
+2025-11-14 19:23:02,819 - agents.software_mapper_agent - INFO -   Mapping category: CRM & Sales
+2025-11-14 19:23:02,819 - agents.software_mapper_agent - INFO -     Found 0 products
+2025-11-14 19:23:02,819 - agents.software_mapper_agent - INFO -   Mapping category: Accounting & Finance
+2025-11-14 19:23:02,819 - agents.software_mapper_agent - INFO -     Found 0 products
+2025-11-14 19:23:02,819 - agents.software_mapper_agent - INFO -   Mapping category: HR & Payroll
+2025-11-14 19:23:02,820 - agents.software_mapper_agent - INFO -     Found 0 products
+2025-11-14 19:23:02,820 - agents.software_mapper_agent - INFO -   Mapping category: Legal Tech
+2025-11-14 19:23:02,820 - agents.software_mapper_agent - INFO -     Found 0 products
+2025-11-14 19:23:02,820 - agents.software_mapper_agent - INFO -   Mapping category: Coworking & Space Management
+2025-11-14 19:23:02,820 - agents.software_mapper_agent - INFO -     Found 3 products
+2025-11-14 19:23:02,820 - agents.software_mapper_agent - INFO -   Analyzing tech stacks from 3 companies...
+2025-11-14 19:23:02,820 - agents.software_mapper_agent - INFO -   Storing 3 products...
+2025-11-14 19:23:02,827 - agents.software_mapper_agent - INFO - 
+✅ Software ecosystem mapping complete for Romania
+2025-11-14 19:23:02,827 - agents.software_mapper_agent - INFO -    Total products: 3
+2025-11-14 19:23:02,827 - agents.software_mapper_agent - INFO -    Categories mapped: 6
+2025-11-14 19:23:02,827 - agents.software_mapper_agent - INFO - 
+================================================================================
+2025-11-14 19:23:02,827 - agents.software_mapper_agent - INFO - Mapping software ecosystem for: Japan
+2025-11-14 19:23:02,828 - agents.software_mapper_agent - INFO - ================================================================================
+
+2025-11-14 19:23:02,828 - agents.software_mapper_agent - INFO -   TEST MODE: Testing 6 categories
+2025-11-14 19:23:02,828 - agents.software_mapper_agent - INFO -   Mapping category: Project Management
+2025-11-14 19:23:02,828 - agents.software_mapper_agent - INFO -     Found 2 products
+2025-11-14 19:23:02,828 - agents.software_mapper_agent - INFO -   Mapping category: CRM & Sales
+2025-11-14 19:23:02,828 - agents.software_mapper_agent - INFO -     Found 0 products
+2025-11-14 19:23:02,828 - agents.software_mapper_agent - INFO -   Mapping category: Accounting & Finance
+2025-11-14 19:23:02,828 - agents.software_mapper_agent - INFO -     Found 0 products
+2025-11-14 19:23:02,828 - agents.software_mapper_agent - INFO -   Mapping category: HR & Payroll
+2025-11-14 19:23:02,828 - agents.software_mapper_agent - INFO -     Found 0 products
+2025-11-14 19:23:02,828 - agents.software_mapper_agent - INFO -   Mapping category: Legal Tech
+2025-11-14 19:23:02,828 - agents.software_mapper_agent - INFO -     Found 0 products
+2025-11-14 19:23:02,828 - agents.software_mapper_agent - INFO -   Mapping category: Coworking & Space Management
+2025-11-14 19:23:02,828 - agents.software_mapper_agent - INFO -     Found 0 products
+2025-11-14 19:23:02,828 - agents.software_mapper_agent - INFO -   Analyzing tech stacks from 3 companies...
+2025-11-14 19:23:02,828 - agents.software_mapper_agent - INFO -   Storing 2 products...
+2025-11-14 19:23:02,836 - agents.software_mapper_agent - INFO - 
+✅ Software ecosystem mapping complete for Japan
+2025-11-14 19:23:02,836 - agents.software_mapper_agent - INFO -    Total products: 2
+2025-11-14 19:23:02,836 - agents.software_mapper_agent - INFO -    Categories mapped: 6
+2025-11-14 19:23:02,837 - agents.software_mapper_agent - INFO - Mapped 3 products for United Kingdom
+2025-11-14 19:23:02,837 - agents.software_mapper_agent - INFO - Mapped 3 products for Romania
+2025-11-14 19:23:02,837 - agents.software_mapper_agent - INFO - Mapped 2 products for Japan
+2025-11-14 19:23:02,837 - agents.software_mapper_agent - INFO - 
+✅ Ecosystem map exported to: data/software_ecosystems/ecosystem_map.json
+2025-11-14 19:23:02,837 - agents.orchestrator - INFO - 
+🎯 PHASE 3: Cross-Region Gap Detection
+2025-11-14 19:23:02,838 - agents.orchestrator - INFO - --------------------------------------------------------------------------------
+2025-11-14 19:23:02,838 - agents.cross_reference_agent - INFO - 
+================================================================================
+2025-11-14 19:23:02,838 - agents.cross_reference_agent - INFO - Finding arbitrage opportunities across 3 regions
+2025-11-14 19:23:02,838 - agents.cross_reference_agent - INFO - ================================================================================
+
+2025-11-14 19:23:02,838 - agents.cross_reference_agent - INFO - Total region pair comparisons: 3
+2025-11-14 19:23:02,838 - agents.cross_reference_agent - INFO -   Comparing: United Kingdom → Romania
+2025-11-14 19:23:02,838 - agents.cross_reference_agent - INFO -     Found 0 gaps
+2025-11-14 19:23:02,838 - agents.cross_reference_agent - INFO -   Comparing: United Kingdom → Japan
+2025-11-14 19:23:02,838 - agents.cross_reference_agent - INFO -     🎯 GAP FOUND: Coworking & Space Management - Nexudus
+2025-11-14 19:23:02,838 - agents.cross_reference_agent - INFO -        Gap score: 10
+2025-11-14 19:23:02,838 - agents.cross_reference_agent - INFO -     🎯 GAP FOUND: Coworking & Space Management - OfficeRnD
+2025-11-14 19:23:02,838 - agents.cross_reference_agent - INFO -        Gap score: 10
+2025-11-14 19:23:02,838 - agents.cross_reference_agent - INFO -     🎯 GAP FOUND: Coworking & Space Management - Cobot
+2025-11-14 19:23:02,838 - agents.cross_reference_agent - INFO -        Gap score: 10
+2025-11-14 19:23:02,838 - agents.cross_reference_agent - INFO -     Found 3 gaps
+2025-11-14 19:23:02,838 - agents.cross_reference_agent - INFO -   Comparing: Romania → Japan
+2025-11-14 19:23:02,838 - agents.cross_reference_agent - INFO -     🎯 GAP FOUND: Coworking & Space Management - Nexudus
+2025-11-14 19:23:02,838 - agents.cross_reference_agent - INFO -        Gap score: 10
+2025-11-14 19:23:02,839 - agents.cross_reference_agent - INFO -     🎯 GAP FOUND: Coworking & Space Management - OfficeRnD
+2025-11-14 19:23:02,839 - agents.cross_reference_agent - INFO -        Gap score: 10
+2025-11-14 19:23:02,839 - agents.cross_reference_agent - INFO -     Found 2 gaps
+2025-11-14 19:23:02,839 - agents.cross_reference_agent - INFO - 
+✅ Found 5 opportunities (gap_score >= 6.0)
+2025-11-14 19:23:02,839 - agents.cross_reference_agent - INFO - 
+✅ Opportunities exported to: data/results/opportunities.json
+2025-11-14 19:23:02,840 - agents.cross_reference_agent - INFO - Human-readable summary exported to: data/results/opportunities.txt
+2025-11-14 19:23:02,840 - agents.orchestrator - INFO - 
+✅ PHASE 4: Validation (TODO)
+2025-11-14 19:23:02,840 - agents.orchestrator - INFO - --------------------------------------------------------------------------------
+2025-11-14 19:23:02,840 - agents.orchestrator - INFO - Would validate opportunities with:
+2025-11-14 19:23:02,840 - agents.orchestrator - INFO -   - Government contracts
+2025-11-14 19:23:02,840 - agents.orchestrator - INFO -   - Pain signals (Reddit, forums)
+2025-11-14 19:23:02,840 - agents.orchestrator - INFO -   - Company needs analysis
+2025-11-14 19:23:02,840 - agents.orchestrator - INFO -   - Job market signals
+2025-11-14 19:23:02,841 - agents.orchestrator - INFO - 
+✅ Pipeline summary exported to: data/results/pipeline_summary.json
