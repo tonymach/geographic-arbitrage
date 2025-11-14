@@ -1,11 +1,8 @@
 {
-  "generated_at": "2025-11-14T19:28:16.418301",
-  "total_regions": 12,
-  "total_companies": 6,
+  "generated_at": "2025-11-14T19:35:02.204945",
+  "total_regions": 4,
+  "total_companies": 3,
   "companies_by_region": {
-    "United States": [],
-    "United Kingdom": [],
-    "Germany": [],
     "Romania": [
       {
         "name": "UiPath",
@@ -25,15 +22,15 @@
         "confidence_score": 0.9,
         "tech_stack": {},
         "inferred_software_needs": [
-          "Cybersecurity",
           "HR & Payroll",
-          "Customer Support & Helpdesk",
-          "Workflow Automation",
-          "Project Management",
-          "DevOps & Development Tools",
           "CRM & Sales",
+          "Business Intelligence & Analytics",
+          "Workflow Automation",
+          "Customer Support & Helpdesk",
           "Accounting & Finance",
-          "Business Intelligence & Analytics"
+          "Cybersecurity",
+          "DevOps & Development Tools",
+          "Project Management"
         ]
       },
       {
@@ -52,15 +49,15 @@
         "confidence_score": 0.85,
         "tech_stack": {},
         "inferred_software_needs": [
-          "Cybersecurity",
           "HR & Payroll",
-          "Customer Support & Helpdesk",
-          "Workflow Automation",
-          "Project Management",
-          "DevOps & Development Tools",
           "CRM & Sales",
+          "Business Intelligence & Analytics",
+          "Workflow Automation",
+          "Customer Support & Helpdesk",
           "Accounting & Finance",
-          "Business Intelligence & Analytics"
+          "Cybersecurity",
+          "DevOps & Development Tools",
+          "Project Management"
         ]
       },
       {
@@ -80,107 +77,17 @@
         "tech_stack": {},
         "inferred_software_needs": [
           "HR & Payroll",
-          "Customer Support & Helpdesk",
-          "Workflow Automation",
-          "Project Management",
           "CRM & Sales",
+          "Business Intelligence & Analytics",
+          "Workflow Automation",
+          "Customer Support & Helpdesk",
           "Accounting & Finance",
-          "Business Intelligence & Analytics"
+          "Project Management"
         ]
       }
     ],
     "Poland": [],
-    "Czech Republic": [],
-    "Singapore": [],
-    "Japan": [
-      {
-        "name": "Rakuten",
-        "region": "Japan",
-        "country": "Japan",
-        "industry": "E-commerce",
-        "vertical": "Marketplace",
-        "website": "https://www.rakuten.com",
-        "revenue": 15000000000,
-        "employee_count": 28000,
-        "growth_rate": 12.0,
-        "data_sources": [
-          "web_search"
-        ],
-        "confidence_score": 0.95,
-        "tech_stack": {},
-        "inferred_software_needs": [
-          "E-commerce Platform",
-          "HR & Payroll",
-          "Customer Support & Helpdesk",
-          "Workflow Automation",
-          "Project Management",
-          "Inventory Management",
-          "CRM & Sales",
-          "Accounting & Finance",
-          "Business Intelligence & Analytics",
-          "Marketing Automation"
-        ]
-      },
-      {
-        "name": "Mercari",
-        "region": "Japan",
-        "country": "Japan",
-        "industry": "E-commerce",
-        "vertical": "C2C Marketplace",
-        "website": "https://www.mercari.com",
-        "revenue": 500000000,
-        "employee_count": 2000,
-        "growth_rate": 20.0,
-        "data_sources": [
-          "web_search"
-        ],
-        "confidence_score": 0.9,
-        "tech_stack": {},
-        "inferred_software_needs": [
-          "E-commerce Platform",
-          "HR & Payroll",
-          "Customer Support & Helpdesk",
-          "Workflow Automation",
-          "Project Management",
-          "Inventory Management",
-          "CRM & Sales",
-          "Accounting & Finance",
-          "Business Intelligence & Analytics",
-          "Marketing Automation"
-        ]
-      },
-      {
-        "name": "SmartHR",
-        "region": "Japan",
-        "country": "Japan",
-        "industry": "Software",
-        "vertical": "HR Tech",
-        "website": "https://smarthr.jp",
-        "revenue": 100000000,
-        "employee_count": 800,
-        "growth_rate": 40.0,
-        "data_sources": [
-          "web_search",
-          "local_platform"
-        ],
-        "confidence_score": 0.85,
-        "tech_stack": {},
-        "inferred_software_needs": [
-          "Cybersecurity",
-          "HR & Payroll",
-          "Customer Support & Helpdesk",
-          "Workflow Automation",
-          "Project Management",
-          "DevOps & Development Tools",
-          "CRM & Sales",
-          "Accounting & Finance",
-          "Business Intelligence & Analytics"
-        ]
-      }
-    ],
-    "South Korea": [],
     "Thailand": [],
-    "Indonesia": [],
     "India": []
   }
 }

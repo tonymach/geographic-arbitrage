@@ -28,6 +28,7 @@ from agents.platform_discovery_agent import PlatformDiscoveryAgent
 from agents.company_mapper_agent import CompanyMapperAgent
 from agents.software_mapper_agent import SoftwareMapperAgent
 from agents.cross_reference_agent import CrossReferenceAgent
+from agents.pain_validator_agent import PainValidatorAgent
 
 logger = logging.getLogger(__name__)
 
@@ -51,6 +52,7 @@ class MasterOrchestrator:
         self.company_mapper = CompanyMapperAgent(config, self.db)
         self.software_mapper = SoftwareMapperAgent(config, self.db)
         self.cross_reference = CrossReferenceAgent(config, self.db)
+        self.pain_validator = PainValidatorAgent(config, self.db)
 
         # Get regions from config
         all_regions = []
@@ -161,17 +163,27 @@ class MasterOrchestrator:
                 'opportunities_found': len(opportunities)
             }
 
-            # Export opportunities
-            self.cross_reference.export_opportunities(opportunities)
-
-            # PHASE 4: Validation (TODO - placeholder)
-            logger.info("\n✅ PHASE 4: Validation (TODO)")
+            # PHASE 4: Deep Market Validation
+            logger.info("\n✅ PHASE 4: Deep Market Validation")
             logger.info("-" * 80)
-            logger.info("Would validate opportunities with:")
-            logger.info("  - Government contracts")
-            logger.info("  - Pain signals (Reddit, forums)")
-            logger.info("  - Company needs analysis")
-            logger.info("  - Job market signals")
+
+            validated_opportunities = await self.pain_validator.validate_all_opportunities(
+                opportunities=opportunities
+            )
+
+            results['phases']['validation'] = {
+                'status': 'completed',
+                'opportunities_validated': len(validated_opportunities),
+                'high_confidence': sum(1 for o in validated_opportunities if o.get('need_validated_score', 0) >= 8.0),
+                'medium_confidence': sum(1 for o in validated_opportunities if 6.0 <= o.get('need_validated_score', 0) < 8.0),
+                'low_confidence': sum(1 for o in validated_opportunities if o.get('need_validated_score', 0) < 6.0)
+            }
+
+            # Replace opportunities with validated ones
+            opportunities = validated_opportunities
+
+            # Export validated opportunities
+            self.cross_reference.export_opportunities(opportunities)
 
             # Print final summary
             self._print_final_summary(results, opportunities)
