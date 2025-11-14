@@ -8,24 +8,33 @@ This script:
 3. Verifies migration success
 """
 
-import asyncio
 import sqlite3
-from libsql_client import create_client_sync
+import subprocess
+import json
 
-# Turso credentials
-TURSO_URL = "libsql://geographic-arbitrage-tonymach.aws-us-east-1.turso.io"
-TURSO_TOKEN = "eyJhbGciOiJFZERTQSIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE3NjMxNTIzOTIsImlkIjoiZGMzMjZiMGItY2RlZS00YzU4LWJkNTEtMWZiYTFmMDViMjE1IiwicmlkIjoiOGVlODQxM2ItOWVlYy00MTFjLWJhNjktOWQwOWNkODJlNmFhIn0.GLgYbi9KunMPoTCuMiR7Ce-SI7I_z_Ggwt4dJPXnYVHb2oAk697DNyUq-znMnA-htrSZesNjetUwX8CjSUw0Bw"
-
+DB_NAME = "geographic-arbitrage"
 LOCAL_DB = "data/arbitrage.db"
 
 
-def create_turso_schema(client):
+def run_turso_sql(sql):
+    """Execute SQL via turso CLI"""
+    result = subprocess.run(
+        ["turso", "db", "shell", DB_NAME, sql],
+        capture_output=True,
+        text=True
+    )
+    if result.returncode != 0:
+        raise Exception(f"Turso error: {result.stderr}")
+    return result.stdout
+
+
+def create_turso_schema():
     """Create tables in Turso"""
 
     print("📋 Creating schema in Turso...")
 
     # local_platforms table
-    client.execute("""
+    run_turso_sql("""
         CREATE TABLE IF NOT EXISTS local_platforms (
             id INTEGER PRIMARY KEY AUTOINCREMENT,
             region TEXT NOT NULL,
@@ -42,11 +51,11 @@ def create_turso_schema(client):
             notes TEXT,
             discovered_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
             data_source TEXT DEFAULT 'claude_agent'
-        )
+        );
     """)
 
     # arbitrage_opportunities table
-    client.execute("""
+    run_turso_sql("""
         CREATE TABLE IF NOT EXISTS arbitrage_opportunities (
             id INTEGER PRIMARY KEY AUTOINCREMENT,
             source_region TEXT NOT NULL,
@@ -61,11 +70,11 @@ def create_turso_schema(client):
             reasoning TEXT,
             validated BOOLEAN DEFAULT 0,
             created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-        )
+        );
     """)
 
     # pain_signals table (for future)
-    client.execute("""
+    run_turso_sql("""
         CREATE TABLE IF NOT EXISTS pain_signals (
             id INTEGER PRIMARY KEY AUTOINCREMENT,
             opportunity_id INTEGER,
@@ -82,13 +91,20 @@ def create_turso_schema(client):
             engagement_comments INTEGER,
             discovered_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
             FOREIGN KEY (opportunity_id) REFERENCES arbitrage_opportunities(id)
-        )
+        );
     """)
 
     print("✅ Schema created successfully!")
 
 
-def migrate_platforms(local_conn, turso_client):
+def escape_sql_string(s):
+    """Escape single quotes for SQL"""
+    if s is None:
+        return "NULL"
+    return "'" + str(s).replace("'", "''") + "'"
+
+
+def migrate_platforms(local_conn):
     """Migrate platform data from local SQLite to Turso"""
 
     print("\n📤 Migrating platforms from local DB...")
@@ -109,28 +125,30 @@ def migrate_platforms(local_conn, turso_client):
         # Convert row to dict
         data = dict(zip(columns, row))
 
-        # Insert (skip id, let Turso auto-generate)
-        turso_client.execute("""
+        # Build INSERT statement
+        sql = f"""
             INSERT INTO local_platforms
             (region, country, name, url, type, language, description,
              estimated_users, has_software_discussions, accessibility,
              activity_level, notes, data_source)
-            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
-        """, [
-            data.get('region'),
-            data.get('country'),
-            data.get('name'),
-            data.get('url'),
-            data.get('type'),
-            data.get('language'),
-            data.get('description'),
-            data.get('estimated_users'),
-            data.get('has_software_discussions', 1),
-            data.get('accessibility'),
-            data.get('activity_level'),
-            data.get('notes'),
-            'migrated_from_local'
-        ])
+            VALUES (
+                {escape_sql_string(data.get('region'))},
+                {escape_sql_string(data.get('country'))},
+                {escape_sql_string(data.get('name'))},
+                {escape_sql_string(data.get('url'))},
+                {escape_sql_string(data.get('type'))},
+                {escape_sql_string(data.get('language'))},
+                {escape_sql_string(data.get('description'))},
+                {escape_sql_string(data.get('estimated_users'))},
+                {data.get('has_software_discussions', 1)},
+                {escape_sql_string(data.get('accessibility'))},
+                {escape_sql_string(data.get('activity_level'))},
+                {escape_sql_string(data.get('notes'))},
+                'migrated_from_local'
+            );
+        """
+
+        run_turso_sql(sql)
 
         migrated += 1
         print(f"   ✓ Migrated: {data.get('name')} ({data.get('region')})")
@@ -139,13 +157,14 @@ def migrate_platforms(local_conn, turso_client):
     return migrated
 
 
-def verify_migration(turso_client, expected_count):
+def verify_migration(expected_count):
     """Verify migration was successful"""
 
     print("\n🔍 Verifying migration...")
 
-    result = turso_client.execute("SELECT COUNT(*) FROM local_platforms")
-    count = result.rows[0][0]
+    result = run_turso_sql("SELECT COUNT(*) FROM local_platforms;")
+    # Parse the count from output
+    count = int(result.strip().split('\n')[-1])
 
     print(f"   Expected: {expected_count}")
     print(f"   Found: {count}")
@@ -158,19 +177,22 @@ def verify_migration(turso_client, expected_count):
         return False
 
 
-def show_sample_data(turso_client):
+def show_sample_data():
     """Show sample data from Turso"""
 
     print("\n📊 Sample data from Turso:")
 
-    result = turso_client.execute("""
+    result = run_turso_sql("""
         SELECT region, name, language
         FROM local_platforms
-        LIMIT 10
+        LIMIT 10;
     """)
 
-    for row in result.rows:
-        print(f"   • {row[0]}: {row[1]} ({row[2]})")
+    # Parse and display results
+    lines = result.strip().split('\n')
+    for line in lines[2:]:  # Skip header rows
+        if line.strip():
+            print(f"   • {line}")
 
 
 def main():
@@ -179,31 +201,24 @@ def main():
     print("=" * 80)
     print()
     print(f"Source: {LOCAL_DB}")
-    print(f"Target: {TURSO_URL}")
+    print(f"Target: {DB_NAME}")
     print()
 
     # Connect to local SQLite
     print("🔌 Connecting to local SQLite...")
     local_conn = sqlite3.connect(LOCAL_DB)
 
-    # Connect to Turso
-    print("🔌 Connecting to Turso...")
-    turso_client = create_client_sync(
-        url=TURSO_URL,
-        auth_token=TURSO_TOKEN
-    )
-
     # Create schema
-    create_turso_schema(turso_client)
+    create_turso_schema()
 
     # Migrate data
-    migrated_count = migrate_platforms(local_conn, turso_client)
+    migrated_count = migrate_platforms(local_conn)
 
     # Verify migration
-    verify_migration(turso_client, migrated_count)
+    verify_migration(migrated_count)
 
     # Show sample data
-    show_sample_data(turso_client)
+    show_sample_data()
 
     # Close connections
     local_conn.close()
