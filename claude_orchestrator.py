@@ -14,6 +14,7 @@ Each phase uses Claude's intelligence, not hardcoded scripts.
 import asyncio
 import json
 import yaml
+import sqlite3
 from pathlib import Path
 from datetime import datetime
 import logging
@@ -28,19 +29,58 @@ class ClaudeOrchestrator:
     Each agent is a TRUE Claude instance with full reasoning capabilities
     """
 
-    def __init__(self, config_path: str = 'config.yaml'):
+    def __init__(self, config_path: str = 'config.yaml', db_path: str = 'data/arbitrage.db'):
         with open(config_path) as f:
             self.config = yaml.safe_load(f)
 
         self.test_mode = self.config.get('test_mode', {}).get('enabled', False)
         self.test_regions = self.config.get('test_mode', {}).get('test_regions', [])
 
+        # Database connection
+        self.db_path = db_path
+        self._init_database()
+
         # Results tracking
         self.results_dir = Path('data/claude_results')
         self.results_dir.mkdir(parents=True, exist_ok=True)
 
         logger.info("Claude Orchestrator initialized")
+        logger.info(f"Database: {self.db_path}")
         logger.info(f"Test mode: {self.test_mode}")
+
+    def _init_database(self):
+        """Initialize database if needed"""
+        Path(self.db_path).parent.mkdir(parents=True, exist_ok=True)
+        conn = sqlite3.connect(self.db_path)
+        # Database already has tables from our earlier script
+        conn.close()
+
+    def _save_platform_to_db(self, platform_data: dict):
+        """Save a platform discovery to the database"""
+        conn = sqlite3.connect(self.db_path)
+        cursor = conn.cursor()
+
+        try:
+            cursor.execute("""
+                INSERT OR REPLACE INTO local_platforms
+                (region, country, name, url, type, language, description, data_source)
+                VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+            """, (
+                platform_data.get('region'),
+                platform_data.get('country'),
+                platform_data.get('name'),
+                platform_data.get('url'),
+                platform_data.get('type'),
+                platform_data.get('language'),
+                platform_data.get('description', ''),
+                'claude_agent_live'
+            ))
+            conn.commit()
+            logger.debug(f"Saved platform to DB: {platform_data.get('name')}")
+        except Exception as e:
+            logger.error(f"Failed to save platform to DB: {e}")
+        finally:
+            conn.close()
 
     async def discover_opportunities(self, regions: list = None, target_count: int = 100):
         """
