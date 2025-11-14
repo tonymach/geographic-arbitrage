@@ -1,18 +1,26 @@
 {
-  "last_updated": "2025-11-14T22:12:29.128573",
-  "total_completed": 19,
+  "last_updated": "2025-11-14T22:51:05.465280",
+  "total_completed": 20,
   "completed": [
     [
-      "Serbia",
-      "Warehouse Management (WMS)"
+      "Turkey",
+      "Fleet Management"
     ],
     [
       "India",
       "Accounting Software"
     ],
     [
-      "Austria",
-      "Performance Management"
+      "Serbia",
+      "Warehouse Management (WMS)"
+    ],
+    [
+      "South Korea",
+      "Applicant Tracking (ATS)"
+    ],
+    [
+      "Serbia",
+      "Business Intelligence"
     ],
     [
       "Philippines",
@@ -23,10 +31,6 @@
       "Invoicing & Billing"
     ],
     [
-      "South Korea",
-      "Applicant Tracking (ATS)"
-    ],
-    [
       "Colombia",
       "Help Desk Software"
     ],
@@ -35,48 +39,48 @@
       "Invoicing & Billing"
     ],
     [
-      "Czech Republic",
-      "Identity Management"
+      "Croatia",
+      "Maintenance Management (CMMS)"
+    ],
+    [
+      "Austria",
+      "Performance Management"
     ],
     [
       "Germany",
       "Manufacturing Software (MES)"
     ],
     [
-      "Croatia",
-      "Maintenance Management (CMMS)"
-    ],
-    [
-      "Norway",
-      "Reporting Tools"
+      "United States",
+      "Salon Management"
     ],
     [
       "Colombia",
       "CRM Software"
     ],
     [
-      "Lithuania",
-      "Warehouse Management (WMS)"
+      "Czech Republic",
+      "Identity Management"
+    ],
+    [
+      "Norway",
+      "Reporting Tools"
     ],
     [
       "South Korea",
       "Lead Generation"
     ],
     [
-      "Serbia",
-      "Business Intelligence"
-    ],
-    [
-      "Turkey",
-      "Fleet Management"
-    ],
-    [
-      "United States",
-      "Salon Management"
-    ],
-    [
       "Japan",
       "Facility Management"
+    ],
+    [
+      "Lithuania",
+      "Warehouse Management (WMS)"
+    ],
+    [
+      "Poland",
+      "Construction Management"
     ]
   ]
 }

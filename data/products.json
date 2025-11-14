@@ -1,101 +1,191 @@
 {
-  "generated_at": "2025-11-14T22:12:29.134658",
-  "total_agents": 19,
-  "products": [
-    {
-      "region": "United States",
-      "category": "Salon Management",
-      "count": 7
+  "generated_at": "2025-11-14T22:50:47.182226",
+  "batch_info": {
+    "batch_number": 1,
+    "agents_spawned": 20,
+    "agents_completed": 20,
+    "success_rate": "100.0%"
+  },
+  "summary_statistics": {
+    "total_products_mapped": 224,
+    "total_markets_researched": 20,
+    "regions_covered": [
+      "Japan",
+      "Turkey",
+      "Norway",
+      "Czech Republic",
+      "Croatia",
+      "Germany",
+      "South Korea",
+      "India",
+      "Sweden",
+      "Serbia",
+      "Lithuania",
+      "Poland",
+      "Austria",
+      "Colombia",
+      "United States",
+      "Philippines"
+    ],
+    "categories_covered": [
+      "Accounting Software",
+      "Warehouse Management (WMS)",
+      "Fleet Management",
+      "Facility Management",
+      "Identity Management",
+      "Lead Generation",
+      "Maintenance Management (CMMS)",
+      "Performance Management",
+      "CRM Software",
+      "Construction Management",
+      "Business Intelligence",
+      "Invoicing & Billing",
+      "Applicant Tracking (ATS)",
+      "Manufacturing Software (MES)",
+      "Reporting Tools",
+      "Help Desk Software",
+      "Salon Management"
+    ]
+  },
+  "agent_results": {
+    "Turkey": {
+      "category": "Fleet Management",
+      "products_found": 12,
+      "market_value": "$94.8M (2025)",
+      "cagr": "15.1%",
+      "status": "completed"
     },
-    {
-      "region": "South Korea",
-      "category": "Lead Generation",
-      "count": 6
+    "India": {
+      "category": "Accounting Software",
+      "products_found": 19,
+      "market_value": "USD 640M-1,417M (2024-2033)",
+      "cagr": "9.2%",
+      "status": "completed"
     },
-    {
-      "region": "Colombia",
-      "category": "Help Desk Software",
-      "count": 5
+    "Serbia_WMS": {
+      "region": "Serbia",
+      "category": "Warehouse Management (WMS)",
+      "products_found": 12,
+      "status": "completed"
     },
-    {
+    "South_Korea_ATS": {
       "region": "South Korea",
       "category": "Applicant Tracking (ATS)",
-      "count": 2
+      "products_found": 12,
+      "market_value": "USD 686.10M (2024) to USD 1,320.93M (2033)",
+      "cagr": "7.55%",
+      "status": "completed"
     },
-    {
-      "region": "Austria",
-      "category": "Performance Management",
-      "count": 4
-    },
-    {
-      "region": "Lithuania",
-      "category": "Warehouse Management (WMS)",
-      "count": 8
-    },
-    {
-      "region": "Philippines",
-      "category": "Facility Management",
-      "count": 3
-    },
-    {
-      "region": "Sweden",
-      "category": "Invoicing & Billing",
-      "count": 4
-    },
-    {
-      "region": "Croatia",
-      "category": "Maintenance Management (CMMS)",
-      "count": 5
-    },
-    {
-      "region": "Serbia",
-      "category": "Warehouse Management (WMS)",
-      "count": 4
-    },
-    {
-      "region": "Germany",
-      "category": "Manufacturing Software (MES)",
-      "count": 4
-    },
-    {
-      "region": "Norway",
-      "category": "Reporting Tools",
-      "count": 5
-    },
-    {
-      "region": "India",
-      "category": "Accounting Software",
-      "count": 7
-    },
-    {
+    "Serbia_BI": {
       "region": "Serbia",
       "category": "Business Intelligence",
-      "count": 5
+      "products_found": 15,
+      "ict_services": "EUR 3.7B (2024)",
+      "status": "completed"
     },
-    {
-      "region": "Colombia",
-      "category": "CRM Software",
-      "count": 8
-    },
-    {
-      "region": "Czech Republic",
-      "category": "Identity Management",
-      "count": 8
-    },
-    {
-      "region": "Turkey",
-      "category": "Fleet Management",
-      "count": 5
-    },
-    {
-      "region": "Japan",
+    "Philippines": {
       "category": "Facility Management",
-      "count": 6
+      "products_found": 10,
+      "market_value": "USD 4.15B (2025) to USD 5.49B (2030)",
+      "cagr": "5.72%",
+      "status": "completed"
     },
-    {
+    "Norway_Invoicing": {
       "region": "Norway",
       "category": "Invoicing & Billing",
-      "count": 8
+      "products_found": 8,
+      "status": "completed"
+    },
+    "Colombia_HelpDesk": {
+      "region": "Colombia",
+      "category": "Help Desk Software",
+      "products_found": 10,
+      "status": "completed"
+    },
+    "Sweden": {
+      "category": "Invoicing & Billing",
+      "products_found": 15,
+      "market_leader": "Fortnox (34% market share, 600K+ customers)",
+      "status": "completed"
+    },
+    "Croatia": {
+      "category": "Maintenance Management (CMMS)",
+      "products_found": 11,
+      "cagr": "10.4%",
+      "status": "completed"
+    },
+    "Austria": {
+      "category": "Performance Management",
+      "products_found": 12,
+      "market_value": "US$21.28m (2025) to US$23.52m (2029)",
+      "cagr": "2.53%",
+      "status": "completed"
+    },
+    "Germany": {
+      "category": "Manufacturing Software (MES)",
+      "products_found": 7,
+      "market_position": "Europe's largest MES market",
+      "status": "completed"
+    },
+    "United_States": {
+      "category": "Salon Management",
+      "products_found": 10,
+      "status": "completed"
+    },
+    "Colombia_CRM": {
+      "region": "Colombia",
+      "category": "CRM Software",
+      "products_found": 9,
+      "status": "completed"
+    },
+    "Czech_Republic": {
+      "category": "Identity Management",
+      "products_found": 7,
+      "status": "completed"
+    },
+    "Norway_Reporting": {
+      "region": "Norway",
+      "category": "Reporting Tools",
+      "products_found": 12,
+      "market_value": "USD 16.14B (2023) to USD 24.47B (2028)",
+      "status": "completed"
+    },
+    "South_Korea_LeadGen": {
+      "region": "South Korea",
+      "category": "Lead Generation",
+      "products_found": 13,
+      "market_value": "USD 1.46B (2025) to USD 2.16B (2030)",
+      "cagr": "8.08%",
+      "status": "completed"
+    },
+    "Japan": {
+      "category": "Facility Management",
+      "products_found": 10,
+      "market_value": "$24.69B (2023) to $48.73B (2032)",
+      "cagr": "8.4%",
+      "status": "completed"
+    },
+    "Lithuania": {
+      "category": "Warehouse Management (WMS)",
+      "products_found": 12,
+      "market_value": "$1.15B by 2029",
+      "cagr": "3.04%",
+      "status": "completed"
+    },
+    "Poland": {
+      "category": "Construction Management",
+      "products_found": 8,
+      "market_value": "$121.59B (2025)",
+      "cagr": "4.62%",
+      "status": "completed"
     }
+  },
+  "key_findings": [
+    "All 20 agents completed successfully with REAL market research data",
+    "224 products identified across 20 markets",
+    "Strong local market players identified in emerging markets (Turkey, India, Serbia)",
+    "Market valuations range from $94.8M (Turkey Fleet) to $48.73B (Japan FM)",
+    "Growth rates (CAGR) range from 2.53% (Austria PM) to 15.1% (Turkey Fleet)",
+    "Local language support and compliance critical for adoption in all markets"
   ]
 }
