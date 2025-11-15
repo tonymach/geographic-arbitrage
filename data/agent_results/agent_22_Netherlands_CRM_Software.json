@@ -1,0 +1,15 @@
+{
+  "region": "Netherlands",
+  "category": "CRM Software",
+  "research_summary": "The Netherlands CRM market is valued at US$1.83bn projected for 2029 with 8.51% growth (2025-2029). Five providers (Salesforce, Microsoft Dynamics, Pipedrive, Exact CRM, Teamleader) cover 84% of the market. Average spend per employee is projected at US$128.40 in 2025.",
+  "total_products_found": 8,
+  "market_value": "USD 1.83B by 2029, 8.51% CAGR",
+  "key_players": [
+    "Teamleader (€25-40/month, 20K+ customers Benelux)",
+    "AFAS Software (€350/month, Dutch leader)",
+    "Exact Online (550K+ entrepreneurs, #1 in NL)",
+    "Salesforce (20.7% global share, #1 employer NL)",
+    "HubSpot (Free tier, strong adoption)"
+  ],
+  "market_observations": "Top 5 control 84% market share. Local providers (AFAS, Exact, Teamleader) dominate SME segment with Dutch business practice understanding. International platforms (Salesforce, Microsoft) serve multinationals. Strong GDPR compliance focus."
+}

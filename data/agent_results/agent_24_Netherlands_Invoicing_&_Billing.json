@@ -1,0 +1,14 @@
+{
+  "region": "Netherlands",
+  "category": "Invoicing & Billing",
+  "research_summary": "The Netherlands has a mature and highly competitive invoicing & billing software market with strong emphasis on Dutch tax compliance (BTW/VAT) and e-invoicing standards (Peppol). 70%+ SME penetration with cloud-based solutions accounting for 67% market share.",
+  "total_products_found": 9,
+  "key_players": [
+    "Exact Online (400K SMEs, €52/month, market leader)",
+    "Factuursturen.nl (427K users, €0.65/document pay-per-use)",
+    "SnelStart (€10/month, popular)",
+    "Moneybird (150K users, €14-35/month)",
+    "InformerOnline (€12-39/month, free 1st year)"
+  ],
+  "market_observations": "All major platforms support mandatory BTW calculation, MT940 banking, Peppol e-invoicing (mandatory B2G since 2017). Pricing ranges €10-99/month subscription or €0.65/document. Cloud adoption at 67%. Strong preference for Dutch providers."
+}

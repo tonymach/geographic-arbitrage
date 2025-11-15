@@ -1,0 +1,15 @@
+{
+  "region": "Netherlands",
+  "category": "Project Management",
+  "research_summary": "The Netherlands project management software market shows strong cloud adoption (75% market share), emphasis on GDPR compliance, and preference for customizable solutions. Market size projected at USD 9.76 billion in 2025, growing at 15.65% CAGR to USD 20.20 billion by 2030.",
+  "total_products_found": 8,
+  "market_value": "USD 9.76B (2025) → USD 20.20B (2030), 15.65% CAGR",
+  "key_players": [
+    "Unit4 (Dutch HQ, €49/month, public sector specialist)",
+    "Monday.com ($9/month, AI Vision 2025)",
+    "Asana ($10.99/month, 100K+ orgs)",
+    "Jira ($6.80/month, dev teams)",
+    "Microsoft Project ($10-55/month)"
+  ],
+  "market_observations": "75% cloud adoption. Unit4 is key Dutch local player specializing in public sector and professional services. SaaS growing 18.59% (2024-2029). Dutch businesses prioritize GDPR compliance, EU data residency, customization."
+}

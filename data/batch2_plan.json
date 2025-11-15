@@ -1,0 +1,406 @@
+{
+  "batch_number": 2,
+  "agent_count": 100,
+  "combinations": [
+    [
+      "Romania",
+      "Project Management (Construction)"
+    ],
+    [
+      "Czech Republic",
+      "BIM Software"
+    ],
+    [
+      "Hungary",
+      "Estimating & Bidding"
+    ],
+    [
+      "Bulgaria",
+      "Real Estate CRM"
+    ],
+    [
+      "Slovakia",
+      "Property Management"
+    ],
+    [
+      "Croatia",
+      "Facility Management"
+    ],
+    [
+      "Slovenia",
+      "HR Management (HRIS)"
+    ],
+    [
+      "Lithuania",
+      "Payroll Software"
+    ],
+    [
+      "Latvia",
+      "Time & Attendance"
+    ],
+    [
+      "Estonia",
+      "Applicant Tracking (ATS)"
+    ],
+    [
+      "Serbia",
+      "Employee Onboarding"
+    ],
+    [
+      "Germany",
+      "Performance Management"
+    ],
+    [
+      "France",
+      "Learning Management (LMS)"
+    ],
+    [
+      "Spain",
+      "Workforce Management"
+    ],
+    [
+      "Italy",
+      "Field Service Management"
+    ],
+    [
+      "Netherlands",
+      "Route Optimization"
+    ],
+    [
+      "Belgium",
+      "Dispatch Management"
+    ],
+    [
+      "Portugal",
+      "Mobile Workforce"
+    ],
+    [
+      "Austria",
+      "Service Scheduling"
+    ],
+    [
+      "Switzerland",
+      "CRM Software"
+    ],
+    [
+      "Sweden",
+      "Marketing Automation"
+    ],
+    [
+      "Norway",
+      "Email Marketing"
+    ],
+    [
+      "Denmark",
+      "Social Media Management"
+    ],
+    [
+      "Finland",
+      "SEO Tools"
+    ],
+    [
+      "Ireland",
+      "Lead Generation"
+    ],
+    [
+      "United States",
+      "Sales Enablement"
+    ],
+    [
+      "Canada",
+      "Accounting Software"
+    ],
+    [
+      "Mexico",
+      "Invoicing & Billing"
+    ],
+    [
+      "Brazil",
+      "Expense Management"
+    ],
+    [
+      "Argentina",
+      "Financial Planning (FP&A)"
+    ],
+    [
+      "Chile",
+      "Tax Software"
+    ],
+    [
+      "Colombia",
+      "Bookkeeping"
+    ],
+    [
+      "Japan",
+      "Accounts Payable/Receivable"
+    ],
+    [
+      "South Korea",
+      "Inventory Management"
+    ],
+    [
+      "Singapore",
+      "Warehouse Management (WMS)"
+    ],
+    [
+      "Australia",
+      "Supply Chain Management"
+    ],
+    [
+      "New Zealand",
+      "Manufacturing Software (MES)"
+    ],
+    [
+      "Thailand",
+      "Quality Management (QMS)"
+    ],
+    [
+      "Indonesia",
+      "Maintenance Management (CMMS)"
+    ],
+    [
+      "Malaysia",
+      "Help Desk Software"
+    ],
+    [
+      "Philippines",
+      "Customer Support"
+    ],
+    [
+      "Vietnam",
+      "Live Chat Software"
+    ],
+    [
+      "India",
+      "Knowledge Base"
+    ],
+    [
+      "Taiwan",
+      "Ticketing Systems"
+    ],
+    [
+      "Hong Kong",
+      "Project Management"
+    ],
+    [
+      "United Arab Emirates",
+      "Task Management"
+    ],
+    [
+      "Israel",
+      "Team Collaboration"
+    ],
+    [
+      "Saudi Arabia",
+      "Document Management"
+    ],
+    [
+      "Turkey",
+      "Workflow Automation"
+    ],
+    [
+      "Poland",
+      "Restaurant POS"
+    ],
+    [
+      "Romania",
+      "Salon Management"
+    ],
+    [
+      "Czech Republic",
+      "Gym Management"
+    ],
+    [
+      "Hungary",
+      "Medical Practice Management"
+    ],
+    [
+      "Bulgaria",
+      "Dental Practice Management"
+    ],
+    [
+      "Slovakia",
+      "Legal Practice Management"
+    ],
+    [
+      "Croatia",
+      "Veterinary Software"
+    ],
+    [
+      "Slovenia",
+      "Automotive Shop Management"
+    ],
+    [
+      "Lithuania",
+      "Retail POS"
+    ],
+    [
+      "Latvia",
+      "E-commerce Platforms"
+    ],
+    [
+      "Estonia",
+      "Transportation Management (TMS)"
+    ],
+    [
+      "Serbia",
+      "Fleet Management"
+    ],
+    [
+      "Germany",
+      "Compliance Management"
+    ],
+    [
+      "France",
+      "Contract Management"
+    ],
+    [
+      "Spain",
+      "Asset Management"
+    ],
+    [
+      "Italy",
+      "Event Management"
+    ],
+    [
+      "Netherlands",
+      "Booking & Scheduling"
+    ],
+    [
+      "Belgium",
+      "Membership Management"
+    ],
+    [
+      "Portugal",
+      "Business Intelligence"
+    ],
+    [
+      "Austria",
+      "Data Analytics"
+    ],
+    [
+      "Switzerland",
+      "Reporting Tools"
+    ],
+    [
+      "Sweden",
+      "Dashboard Software"
+    ],
+    [
+      "Norway",
+      "Cybersecurity Software"
+    ],
+    [
+      "Denmark",
+      "Identity Management"
+    ],
+    [
+      "Finland",
+      "Endpoint Protection"
+    ],
+    [
+      "Ireland",
+      "Network Monitoring"
+    ],
+    [
+      "United States",
+      "IT Service Management (ITSM)"
+    ],
+    [
+      "Canada",
+      "Construction Management"
+    ],
+    [
+      "Mexico",
+      "Project Management (Construction)"
+    ],
+    [
+      "Brazil",
+      "BIM Software"
+    ],
+    [
+      "Argentina",
+      "Estimating & Bidding"
+    ],
+    [
+      "Chile",
+      "Real Estate CRM"
+    ],
+    [
+      "Colombia",
+      "Property Management"
+    ],
+    [
+      "South Korea",
+      "HR Management (HRIS)"
+    ],
+    [
+      "Singapore",
+      "Payroll Software"
+    ],
+    [
+      "Australia",
+      "Time & Attendance"
+    ],
+    [
+      "New Zealand",
+      "Applicant Tracking (ATS)"
+    ],
+    [
+      "Thailand",
+      "Employee Onboarding"
+    ],
+    [
+      "Indonesia",
+      "Performance Management"
+    ],
+    [
+      "Malaysia",
+      "Learning Management (LMS)"
+    ],
+    [
+      "Philippines",
+      "Workforce Management"
+    ],
+    [
+      "Vietnam",
+      "Field Service Management"
+    ],
+    [
+      "India",
+      "Route Optimization"
+    ],
+    [
+      "Taiwan",
+      "Dispatch Management"
+    ],
+    [
+      "Hong Kong",
+      "Mobile Workforce"
+    ],
+    [
+      "United Arab Emirates",
+      "Service Scheduling"
+    ],
+    [
+      "Israel",
+      "CRM Software"
+    ],
+    [
+      "Saudi Arabia",
+      "Marketing Automation"
+    ],
+    [
+      "Turkey",
+      "Email Marketing"
+    ],
+    [
+      "Poland",
+      "Social Media Management"
+    ],
+    [
+      "Romania",
+      "SEO Tools"
+    ]
+  ]
+}

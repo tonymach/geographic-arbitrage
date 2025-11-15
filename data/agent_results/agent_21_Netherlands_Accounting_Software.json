@@ -1,0 +1,15 @@
+{
+  "region": "Netherlands",
+  "category": "Accounting Software",
+  "research_summary": "The Dutch accounting software market is dominated by local providers tailored to Dutch tax requirements (BTW/VAT, UBL invoicing), with Exact Online leading at ~400,000 users. Strong preference for cloud-based solutions among 500,000+ ZZP (freelancers) and SMEs, with pricing typically €8-€40/month for local solutions.",
+  "total_products_found": 15,
+  "market_value": "Highly mature, 70%+ SME adoption",
+  "key_players": [
+    "Exact Online (400K users, €25/month)",
+    "e-Boekhouden.nl (500K users, €9.50/month)",
+    "SnelStart (150K users, €8.50/month)",
+    "Moneybird (150K users, €29/month)",
+    "Twinfield (18K users, €52/month)"
+  ],
+  "market_observations": "Strong local provider dominance due to Dutch GAAP, BTW/VAT automation, UBL/Peppol e-invoicing requirements. International players (Xero, FreshBooks, QuickBooks) have lower adoption due to less Dutch-specific compliance features and higher pricing."
+}

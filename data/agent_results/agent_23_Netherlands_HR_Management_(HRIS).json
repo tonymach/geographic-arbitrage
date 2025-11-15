@@ -1,0 +1,14 @@
+{
+  "region": "Netherlands",
+  "category": "HR Management (HRIS)",
+  "research_summary": "The Netherlands HRIS market is dominated by local Dutch providers with strong compliance capabilities for Dutch labor law, payroll regulations, and pension systems. Key players include AFAS Software, Visma Raet, Nmbrs, and Loket.nl. Pricing ranges €69-350/month for SMEs.",
+  "total_products_found": 7,
+  "key_players": [
+    "AFAS Software (€350/month, 15K+ orgs)",
+    "Visma Raet/Youforce (500K+ users, market leader)",
+    "Nmbrs (€69/month for <10 employees, Amsterdam HQ)",
+    "Loket.nl (Dutch payroll leader)",
+    "Personio (German, struggles with Dutch features)"
+  ],
+  "market_observations": "5 of 7 top solutions are Netherlands-headquartered. Dutch market compliance is non-negotiable: Belastingdienst integration, vakantiegeld automation, Dutch pension integration required. International providers struggle with local features."
+}
