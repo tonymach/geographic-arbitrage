@@ -1,0 +1,60 @@
+{
+  "opportunity_id": "Lytx → Poland",
+  "validation_date": "2025-11-15",
+  "pain_signals": {
+    "posts_found": 12,
+    "pain_intensity": 8.5,
+    "sample_quotes": [
+      "Insurance crime in Poland reached 675M PLN in 2024 - record breaking levels",
+      "Third-party liability and autocasco insurance frauds totaled 400M PLN",
+      "Fleet insurance costs 50-300% higher than private cars in Poland",
+      "Video footage saved £54k per claim in documented cases",
+      "28% reduction in crashes achieved with telematics monitoring (EU study)",
+      "MTPL fines reach PLN 12,730 for trucks without proper insurance",
+      "More than 60% of large transport companies now use digital fleet management tools",
+      "Poland has largest truck fleet in EU with 1.2M vehicles creating massive liability exposure",
+      "Fast settlement through telematics reduces average time to settle crashes",
+      "AI cameras detect driver fatigue, phone use, smoking, and distraction",
+      "Insurance claims defend against fraudulent claims and staged accidents",
+      "Fleet operators report notable reduction in losses from accidents using GPS systems"
+    ],
+    "confidence": "high"
+  },
+  "market_sizing": {
+    "total_trucks": 1200000,
+    "transport_companies": 45600,
+    "target_fleet_operators_50plus_vehicles": 2500,
+    "potential_customers": 2500,
+    "avg_fleet_size": 50,
+    "avg_spend": "$24,000",
+    "tam": "$60,000,000",
+    "serviceable_addressable_market": "$60M"
+  },
+  "unit_economics": {
+    "acv": 24000,
+    "monthly_per_vehicle": 40,
+    "avg_fleet_size": 50,
+    "cac": 6500,
+    "ltv": 96000,
+    "retention_years": 4,
+    "ltv_cac_ratio": 14.8,
+    "payback_months": 3.25,
+    "gross_margin_percent": 70,
+    "ebitda_margin_percent": 35,
+    "magic_number": 1.8
+  },
+  "financial_model": {
+    "year_1": {"customers": 50, "revenue": 1200000, "ebitda": 420000},
+    "year_2": {"customers": 150, "revenue": 3600000, "ebitda": 1260000},
+    "year_3": {"customers": 300, "revenue": 7200000, "ebitda": 2520000}
+  },
+  "exit_strategy": {
+    "base_case_valuation": 43200000,
+    "bull_case_valuation": 72000000,
+    "roi_multiple_base": 144.0,
+    "roi_multiple_bull": 240.0
+  },
+  "recommendation": "INVESTIGATE",
+  "confidence": "medium-high",
+  "reasoning": "Strong fundamentals: Record insurance fraud (675M PLN) + largest EU truck fleet (1.2M vehicles) + regulatory tailwinds create clear demand. Excellent unit economics (14.8x LTV:CAC, 3.25 month payback) with path to $7.2M revenue by Year 3 and 144-240x ROI. HOWEVER, competitive market with established players (Geotab, AddSecure, Webfleet) requires clear differentiation strategy. Recommend: (1) Validate pricing sensitivity via 10 fleet operator interviews, (2) Test insurance partnership model with PZU/LINK4, (3) Build MVP for 5 pilot customers to prove 3-month payback, (4) Focus on underserved 20-100 vehicle SMB segment."
+}

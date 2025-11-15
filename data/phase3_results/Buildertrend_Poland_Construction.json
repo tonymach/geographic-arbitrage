@@ -1,0 +1,50 @@
+{
+  "opportunity_id": "Buildertrend → Poland",
+  "validation_date": "2025-11-15",
+  "pain_signals": {
+    "posts_found": 12,
+    "pain_intensity": 7.5,
+    "sample_quotes": [
+      "Brak klarownej komunikacji między Inwestorem, Wykonawcami prowadzi do nieporozumień, błędów, dodatkowych kosztów",
+      "Wybór wykonawcy często decyduje czy budowa będzie miłym wspomnieniem, czy trudnym przeżyciem",
+      "Late detection of budget overruns, dispersed information across different systems",
+      "Lack of automation requiring manual document processing",
+      "Software incompatibility - WinBud and Norma files don't properly transfer data",
+      "Empty construction diaries despite active projects",
+      "Choosing unprofessional contractor causes problems, delays and additional costs"
+    ],
+    "confidence": "medium-high"
+  },
+  "market_sizing": {
+    "total_construction_companies": 1076994,
+    "residential_completions_2023": 99170,
+    "individual_permits_annual": 80000,
+    "target_professional_builders": 8500,
+    "potential_customers": 8500,
+    "avg_spend": 4000,
+    "tam": "$34M"
+  },
+  "unit_economics": {
+    "acv": 4000,
+    "cac": 2500,
+    "ltv": 16000,
+    "ltv_cac_ratio": 6.4,
+    "payback_months": 7.5,
+    "gross_margin_pct": 85,
+    "magic_number": 1.2
+  },
+  "financial_model": {
+    "year_1": {"customers": 80, "revenue": 320000, "ebitda": 96000},
+    "year_2": {"customers": 250, "revenue": 1000000, "ebitda": 300000},
+    "year_3": {"customers": 550, "revenue": 2200000, "ebitda": 660000}
+  },
+  "exit_strategy": {
+    "base_case_valuation": 11000000,
+    "bull_case_valuation": 17600000,
+    "roi_multiple_base": 36.7,
+    "roi_multiple_bull": 58.7
+  },
+  "recommendation": "INVESTIGATE",
+  "confidence": "medium",
+  "reasoning": "Mixed signals. POSITIVES: Clear pain points exist (communication chaos, documentation issues, budget tracking), highly fragmented market (1M+ companies), zero localized residential SMB solutions, excellent unit economics (6.4x LTV:CAC, 7.5mo payback). NEGATIVES: Very low current software adoption among Polish SME builders (Excel/manual dominant), high price sensitivity requires $200-350/month vs Buildertrend's $299-799, user resistance to change. Need pilot with 10-15 builders to validate willingness to pay before full build."
+}

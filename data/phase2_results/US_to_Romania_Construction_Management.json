@@ -1,0 +1,54 @@
+{
+  "mature_region": "United States",
+  "emerging_region": "Romania",
+  "category": "Construction Management",
+  "comparison_date": "2025-11-15",
+  "opportunities": [
+    {
+      "source_product": "Buildertrend",
+      "source_region": "United States",
+      "source_revenue": "$750M ARR",
+      "source_adoption": "high",
+      "target_region": "Romania",
+      "target_competition": "weak - no residential-focused construction software, all local players are general ERPs (TotalSoft, Wizrom, BITSoftware)",
+      "gap_score": 7.5,
+      "reasoning": "Buildertrend dominates US residential construction with $750M ARR. Romania has NO residential-focused construction software - all local players (TotalSoft, Wizrom, BITSoftware) are general ERPs serving multiple industries. Clear gap for specialized residential builder tools. However, Romania's total market is tiny ($5.95M vs $2.49B US), limiting absolute opportunity size.",
+      "localization_complexity": "medium-high",
+      "localization_requirements": "Romanian language, local tax/regulatory compliance, RON pricing, integration with local accounting systems",
+      "estimated_tam": "$1-2M in Romania (residential construction segment, ~20-30% of total market)",
+      "pricing_strategy": "Price below local ERPs (which charge 300-600 RON/user/month) to gain market share",
+      "next_steps": "Validate with Phase 3 - interview Romanian residential builders about pain points, willingness to pay, current workflow gaps"
+    },
+    {
+      "source_product": "Fieldwire",
+      "source_region": "United States",
+      "source_revenue": "$300M acquisition value",
+      "source_adoption": "medium-high",
+      "target_region": "Romania",
+      "target_competition": "weak - no specialized field management tool, only general ERPs with limited mobile/field capabilities",
+      "gap_score": 7.0,
+      "reasoning": "Fieldwire acquired for $300M with strong US adoption as specialized field management tool. Romania lacks any dedicated field management software - teams rely on general ERPs with poor mobile capabilities. Fieldwire's $39/user/month (~180 RON) is 40-70% cheaper than local ERPs (280-600 RON/month), creating significant pricing advantage despite small market.",
+      "localization_complexity": "medium",
+      "localization_requirements": "Romanian language, mobile app localization, local support, RON pricing",
+      "estimated_tam": "$800K-1.5M in Romania (field operations segment, ~15-25% of total market)",
+      "pricing_advantage": "Strong - $39/user/month (~180 RON) vs local ERPs at 280-600 RON/month, 40-70% cheaper",
+      "next_steps": "Validate with Phase 3 - assess field worker pain points with current ERP mobile solutions, test price sensitivity"
+    }
+  ],
+  "total_opportunities": 2,
+  "market_size_context": {
+    "us_market": "$2.49B",
+    "romania_market": "$5.95M",
+    "romania_as_percent_of_us": "0.24%",
+    "comparison_to_poland": "Romania market (~$5.95M) is 6-8x smaller than Poland (~$35-45M)"
+  },
+  "summary": "Identified 2 arbitrage opportunities with gap_score >= 7.0. Buildertrend (residential-focused) and Fieldwire (field management) are proven US winners but absent in Romania. Romania dominated by general ERPs (TotalSoft, Wizrom) lacking construction specialization. Critical constraint: Romania market ($5.95M) is 25x smaller than Poland and only 0.24% of US market. Procore's low adoption (~$400K despite $1.15B US revenue) signals high price sensitivity - its 46,000-276,000 RON/year pricing appears too expensive for market.",
+  "key_insights": [
+    "Romania market dominated by local general ERPs, not specialized construction tools",
+    "Procore present but low adoption - pricing too high for market (46K-276K RON/year)",
+    "No residential-focused construction software (Buildertrend opportunity)",
+    "No specialized field management tools (Fieldwire opportunity)",
+    "Market size is major constraint - only $5.95M total, 6-8x smaller than Poland",
+    "Price sensitivity high - Fieldwire's 40-70% discount vs local ERPs could be key advantage"
+  ]
+}

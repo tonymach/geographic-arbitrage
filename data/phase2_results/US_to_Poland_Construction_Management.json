@@ -1,0 +1,62 @@
+{
+  "mature_region": "United States",
+  "emerging_region": "Poland",
+  "category": "Construction Management",
+  "comparison_date": "2025-11-15",
+  "opportunities": [
+    {
+      "source_product": "Oracle Aconex",
+      "source_region": "United States",
+      "source_revenue": "$1.2B acquisition value",
+      "source_adoption": "high",
+      "target_region": "Poland",
+      "target_competition": "absent - no enterprise project collaboration equivalent. Local players (Kotrak $10-15M, ArCADiasoft $5-8M) focus on different segments. PlanRadar ($60M global) is closest but smaller scale.",
+      "gap_score": 9.5,
+      "reasoning": "Oracle Aconex dominates enterprise construction project collaboration in US (acquired for $1.2B). Poland has NO equivalent enterprise-grade document management/collaboration platform. Largest local players are <$15M ARR and serve different niches. Clear gap for large infrastructure and commercial projects requiring enterprise-level collaboration.",
+      "localization_complexity": "medium",
+      "estimated_tam": "$17-20M in Poland (enterprise construction segment, 1.4-1.8% of US market)",
+      "next_steps": "Validate with Phase 3 - check pain signals in Polish enterprise construction market for document management and collaboration needs on large projects"
+    },
+    {
+      "source_product": "Buildertrend",
+      "source_region": "United States",
+      "source_revenue": "$750M ARR",
+      "source_adoption": "high",
+      "target_region": "Poland",
+      "target_competition": "absent - no residential construction management equivalent. Kotrak ($10-15M ARR) is largest local player but not residential-focused. PlanRadar serves general construction, not residential-specific.",
+      "gap_score": 9.0,
+      "reasoning": "Buildertrend dominates US residential construction management with $750M ARR and high adoption. Poland has NO residential-focused construction software. Local competitors serve general construction or commercial segments. Massive gap for residential builders, remodelers, and custom home builders.",
+      "localization_complexity": "medium",
+      "estimated_tam": "$10-13M in Poland (residential construction segment, 1.4-1.8% of US market)",
+      "next_steps": "Validate with Phase 3 - check pain signals in Polish residential construction and renovation market for project management tools"
+    },
+    {
+      "source_product": "Fieldwire",
+      "source_region": "United States",
+      "source_revenue": "$300M acquisition value",
+      "source_adoption": "medium-high",
+      "target_region": "Poland",
+      "target_competition": "weak - no dedicated field management solution. PlanRadar offers some field features but different focus. Local players lack strong mobile-first field solutions.",
+      "gap_score": 8.0,
+      "reasoning": "Fieldwire acquired for $300M, proven mobile-first field management model. Poland lacks dedicated field management tools - existing solutions (PlanRadar, Procore) include field features but aren't specialized. Gap for contractors needing simple, mobile-optimized task and punch list management.",
+      "localization_complexity": "low-medium",
+      "estimated_tam": "$4-7M in Poland (field management segment, 1.4-1.8% of US market)",
+      "next_steps": "Validate with Phase 3 - check pain signals in Polish construction for field coordination, task management, and mobile punch lists"
+    },
+    {
+      "source_product": "Procore",
+      "source_region": "United States",
+      "source_revenue": "$1.152B ARR",
+      "source_adoption": "high",
+      "target_region": "Poland",
+      "target_competition": "moderate - Procore exists but only medium adoption (vs high in US). Room for growth or for competitor to capture market Procore hasn't yet dominated.",
+      "gap_score": 7.5,
+      "reasoning": "Procore is the dominant US player ($1.15B ARR, high adoption) but only has medium adoption in Poland despite being present. This indicates either Procore hasn't fully localized/penetrated the market, or there's room for a localized competitor to capture the segment Procore is missing. The gap is between current medium adoption and potential high adoption.",
+      "localization_complexity": "medium",
+      "estimated_tam": "$16-20M in Poland (general construction management, 1.4-1.8% of US market)",
+      "next_steps": "Validate with Phase 3 - identify why Procore has only medium adoption in Poland. Are there localization, pricing, or feature gaps a local competitor could exploit?"
+    }
+  ],
+  "total_opportunities": 4,
+  "summary": "Found 4 high-potential arbitrage gaps. Three US winners (Oracle Aconex $1.2B, Buildertrend $750M, Fieldwire $300M) are completely absent from Poland despite strong US validation. Procore dominates US but only has medium adoption in Poland, indicating penetration gap. Poland's largest local player is only $10-15M ARR, creating clear opportunity for US-proven models."
+}

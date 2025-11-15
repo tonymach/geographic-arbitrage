@@ -1,0 +1,44 @@
+{
+  "opportunity_id": "Fieldwire → Poland",
+  "validation_date": "2025-11-15",
+  "pain_signals": {
+    "posts_found": 6,
+    "pain_intensity": 6.5,
+    "sample_quotes": [
+      "Teams working 2 days then disappearing for a week with no warning",
+      "Coordinating dozens of subcontractors without centralized systems leads to delays and miscommunication",
+      "Day-to-day project management remains analog - spreadsheets, phone calls, handwritten logs",
+      "Plumbers arrived early causing panic to determine fixture locations",
+      "User resistance especially among older, less tech-savvy crews",
+      "Workers still default to paper, spreadsheets, email threads for coordination"
+    ],
+    "confidence": "medium"
+  },
+  "market_sizing": {
+    "potential_customers": 1500,
+    "avg_spend": "$4,680",
+    "tam": "$7M"
+  },
+  "unit_economics": {
+    "acv": 4680,
+    "cac": 2200,
+    "ltv": 14040,
+    "ltv_cac_ratio": 6.4,
+    "payback_months": 5.6,
+    "magic_number": 1.1
+  },
+  "financial_model": {
+    "year_1": {"customers": 125, "revenue": 585000, "ebitda": 204750},
+    "year_2": {"customers": 310, "revenue": 1450800, "ebitda": 507780},
+    "year_3": {"customers": 625, "revenue": 2925000, "ebitda": 1023750}
+  },
+  "exit_strategy": {
+    "base_case_valuation": 14625000,
+    "bull_case_valuation": 23400000,
+    "roi_multiple_base": 48.8,
+    "roi_multiple_bull": 78.0
+  },
+  "recommendation": "INVESTIGATE",
+  "confidence": "medium",
+  "reasoning": "Pain exists but isn't acute (6.5/10 intensity). PlanRadar already in market since 2020 at similar pricing creates competitive headwind. Digital resistance among aging workforce is real barrier. HOWEVER: Unit economics are excellent (6.4x LTV:CAC, 5.6mo payback). Move to BUILD NOW only if: (1) PlanRadar market share is <20%, (2) clear differentiation identified, (3) specific underserved segment validated."
+}

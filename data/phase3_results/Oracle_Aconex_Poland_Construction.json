@@ -1,0 +1,46 @@
+{
+  "opportunity_id": "Oracle Aconex → Poland",
+  "validation_date": "2025-11-15",
+  "pain_signals": {
+    "posts_found": 8,
+    "pain_intensity": 7.0,
+    "sample_quotes": [
+      "52% of construction rework is due to poor project data and miscommunication",
+      "15% of project budget lost due to poor document management",
+      "Documentation volumes now reach tens of gigabytes stored in hundreds of files - risk of loss when printed",
+      "Problems with data download and memory storage - downloading whole document packages worth multiple gigabytes",
+      "Version control issues causing discrepancies, conflicting changes, and difficulty tracking current iterations",
+      "App fatigue: over 15 disconnected tools with no single source of truth",
+      "Steep learning curve and expensive - everyone loves Procore but hard to justify cost",
+      "Digital transformation ongoing in Poland - still paper-electronic hybrid mode, goal is full digitalization"
+    ],
+    "confidence": "medium"
+  },
+  "market_sizing": {
+    "potential_customers": 80,
+    "avg_spend": "$12,600",
+    "tam": "$1,008,000"
+  },
+  "unit_economics": {
+    "acv": 12600,
+    "cac": 22000,
+    "ltv": 56700,
+    "ltv_cac_ratio": 2.58,
+    "payback_months": 21,
+    "magic_number": 0.65
+  },
+  "financial_model": {
+    "year_1": {"customers": 5, "revenue": 63000, "ebitda": 22050},
+    "year_2": {"customers": 15, "revenue": 189000, "ebitda": 75600},
+    "year_3": {"customers": 30, "revenue": 378000, "ebitda": 170100}
+  },
+  "exit_strategy": {
+    "base_case_valuation": 1512000,
+    "bull_case_valuation": 2268000,
+    "roi_multiple_base": 5.0,
+    "roi_multiple_bull": 7.6
+  },
+  "recommendation": "INVESTIGATE",
+  "confidence": "medium-low",
+  "reasoning": "TAM severely overestimated at $1M (not $17-20M claimed). Poland construction software market is only $34M total. Real pain exists (7/10 intensity): 52% rework due to poor data, 15% budget waste. However, critical barriers: (1) BIM not mandatory until 2030, (2) LTV:CAC of 2.58 below 3.0 benchmark, (3) Only 80 addressable enterprise customers, (4) 5-8x ROI is modest. Needs deeper investigation of localization costs and sales cycle validation before committing $300K."
+}

@@ -1,0 +1,160 @@
+{
+  "region": "United States",
+  "category": "Construction Management",
+  "research_date": "2025-11-15",
+  "products": [
+    {
+      "product_name": "Procore",
+      "url": "https://www.procore.com",
+      "reviews_mentions": 3944,
+      "rating": 4.6,
+      "pricing": "$375-1000+/month based on construction volume",
+      "adoption_level": "high",
+      "is_local": false,
+      "revenue_estimate": "$1.152B (2024)",
+      "key_features": "Project management, financials, field operations, RFIs, drawings, scheduling, quality & safety",
+      "source": "G2, Capterra, company investor reports"
+    },
+    {
+      "product_name": "Buildertrend",
+      "url": "https://buildertrend.com",
+      "reviews_mentions": 1577,
+      "rating": 4.2,
+      "pricing": "$299-799/month (Core to Premium tiers)",
+      "adoption_level": "high",
+      "is_local": true,
+      "revenue_estimate": "$750M ARR (2025)",
+      "key_features": "Residential construction, client portal, scheduling, budgeting, change orders, selections",
+      "source": "G2, company website, Growjo"
+    },
+    {
+      "product_name": "Autodesk Construction Cloud",
+      "url": "https://construction.autodesk.com",
+      "reviews_mentions": "1000+",
+      "rating": 4.4,
+      "pricing": "$135-165/user/month",
+      "adoption_level": "high",
+      "is_local": false,
+      "revenue_estimate": "Part of $5.5B Autodesk revenue (FY2024)",
+      "key_features": "BIM 360, design-build collaboration, document management, model coordination, field management",
+      "source": "G2, Autodesk investor reports, Capterra"
+    },
+    {
+      "product_name": "Fieldwire",
+      "url": "https://www.fieldwire.com",
+      "reviews_mentions": 459,
+      "rating": 4.5,
+      "pricing": "Free tier + paid plans starting $39/user/month",
+      "adoption_level": "medium-high",
+      "is_local": false,
+      "revenue_estimate": "Acquired by Hilti for $300M (2021)",
+      "key_features": "Jobsite task management, blueprint viewing, punch lists, daily reports, plan markup",
+      "source": "G2, Hilti acquisition announcement"
+    },
+    {
+      "product_name": "Oracle Aconex",
+      "url": "https://www.oracle.com/construction-engineering/aconex/",
+      "reviews_mentions": "400+",
+      "rating": 4.0,
+      "pricing": "$29-49/user/month (volume-based)",
+      "adoption_level": "high",
+      "is_local": false,
+      "revenue_estimate": "Acquired by Oracle for $1.2B (2018)",
+      "key_features": "Document management, collaboration, project controls, BIM integration, large-scale enterprise projects",
+      "source": "G2, 6sense market share data, Oracle"
+    },
+    {
+      "product_name": "Contractor Foreman",
+      "url": "https://contractorforeman.com",
+      "reviews_mentions": "300+",
+      "rating": 4.5,
+      "pricing": "$49/month (whole company, unlimited users)",
+      "adoption_level": "medium",
+      "is_local": true,
+      "revenue_estimate": "Not disclosed",
+      "key_features": "All-in-one budget software, estimates, scheduling, invoicing, time tracking, QuickBooks integration",
+      "source": "Software Advice, Research.com, company website"
+    },
+    {
+      "product_name": "CMiC",
+      "url": "https://cmicglobal.com",
+      "reviews_mentions": "200+",
+      "rating": 4.2,
+      "pricing": "$100+/user/month (enterprise custom pricing)",
+      "adoption_level": "medium-high",
+      "is_local": false,
+      "revenue_estimate": "Handles $100B+ construction revenue annually",
+      "key_features": "Enterprise ERP, financials, project management, single database platform, serves ENR Top 400",
+      "source": "ERP Focus, Apps Run The World, company website"
+    },
+    {
+      "product_name": "Raken",
+      "url": "https://www.rakenapp.com",
+      "reviews_mentions": 381,
+      "rating": 4.6,
+      "pricing": "$15-100/user/month",
+      "adoption_level": "medium",
+      "is_local": true,
+      "revenue_estimate": "Not disclosed",
+      "key_features": "Daily reports, time tracking, toolbox talks, photo management, production tracking, safety documentation",
+      "source": "G2, SelectHub, Capterra"
+    },
+    {
+      "product_name": "CoConstruct",
+      "url": "https://coconstruct.com",
+      "reviews_mentions": "250+",
+      "rating": 4.4,
+      "pricing": "$99-399/month",
+      "adoption_level": "medium",
+      "is_local": true,
+      "revenue_estimate": "Not disclosed",
+      "key_features": "Custom home builder focus, project budgeting, change orders, client selections, estimating",
+      "source": "G2, Capterra, company website"
+    },
+    {
+      "product_name": "JobTread",
+      "url": "https://www.jobtread.com",
+      "reviews_mentions": "200+",
+      "rating": 4.7,
+      "pricing": "$159-199/month",
+      "adoption_level": "medium",
+      "is_local": true,
+      "revenue_estimate": "7,500+ customers (2025)",
+      "key_features": "Small business construction CRM, estimating, job costing, scheduling, mobile-first design",
+      "source": "G2, company announcements, Capterra"
+    },
+    {
+      "product_name": "Trimble Viewpoint",
+      "url": "https://www.trimble.com/en/products/viewpoint",
+      "reviews_mentions": "300+",
+      "rating": 4.1,
+      "pricing": "$15-500/user/month (tiered enterprise)",
+      "adoption_level": "high",
+      "is_local": false,
+      "revenue_estimate": "Part of Trimble Construction division",
+      "key_features": "Construction ERP, accounting, project management, field operations, analytics, enterprise scale",
+      "source": "TrustRadius, TEC, company website"
+    },
+    {
+      "product_name": "monday.com",
+      "url": "https://monday.com",
+      "reviews_mentions": "10000+",
+      "rating": 4.6,
+      "pricing": "$13-26/user/month (3 user minimum)",
+      "adoption_level": "medium",
+      "is_local": false,
+      "revenue_estimate": "245K+ customers globally (cross-industry)",
+      "key_features": "Adaptable project management, construction templates, workflows, dashboards, team collaboration",
+      "source": "G2, company website, SelectHub"
+    }
+  ],
+  "market_size": "$2.49B (US 2025), growing to $7.1B by various measures",
+  "market_growth": "9-10% CAGR (2025-2032)",
+  "total_products_found": 12,
+  "market_context": {
+    "us_market_share_global": "37-38% of global construction software market",
+    "dominant_players": "Procore (9% market share), Autodesk, Oracle, Trimble",
+    "adoption_trends": "72% of US construction firms use collaboration software, 68% of large firms deployed integrated platforms",
+    "key_drivers": "Cloud adoption, labor shortages, infrastructure spending (Bipartisan Infrastructure Law $1.2T), digital transformation"
+  }
+}
