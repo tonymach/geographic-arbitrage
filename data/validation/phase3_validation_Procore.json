@@ -1,0 +1,30 @@
+{
+  "phase": 3,
+  "opportunity": {
+    "source_product": "Procore",
+    "source_region": "United States",
+    "target_region": "Poland",
+    "gap_score": 9.2
+  },
+  "prompt": "You are a validation and unit economics agent.\n\n**Your Mission**: Validate this arbitrage opportunity with PE-grade financial analysis.\n\n**Opportunity to Validate**:\n```json\n{\n  \"source_product\": \"Procore\",\n  \"source_region\": \"United States\",\n  \"target_region\": \"Poland\",\n  \"gap_score\": 9.2\n}\n```\n\n**Research Tasks**:\n\n1. **Pain Signal Validation**:\n   - Search forums, Reddit, local sites in Poland\n   - Find 10+ posts/complaints about needing Procore-like solution\n   - Rate pain intensity (0-10)\n\n2. **Market Sizing**:\n   - Potential customers in Poland\n   - Average spend per customer\n   - TAM = customers \u00d7 spend\n\n3. **Unit Economics**:\n   - ACV (Annual Contract Value): Based on Poland pricing\n   - CAC (Customer Acquisition Cost): Estimate for local market\n   - LTV (Lifetime Value): 3-year retention assumption\n   - LTV:CAC ratio (should be >3.0)\n   - Payback period in months\n\n4. **3-Year Financial Model**:\n   - Year 1: Conservative customer count\n   - Year 2: 3x growth\n   - Year 3: 6x from Year 1\n   - Revenue = customers \u00d7 ACV\n   - EBITDA = Revenue \u00d7 30% margin\n\n5. **Exit Strategy**:\n   - Base case: 5x Year 3 revenue\n   - Bull case: 10x Year 3 revenue\n   - ROI multiple on $300K initial investment\n\n6. **Final Recommendation**:\n   - BUILD NOW: High confidence, strong economics\n   - INVESTIGATE: Promising but needs more validation\n   - SKIP: Weak signals or poor economics\n\n**Output Format** (JSON):\n\n```json\n{\n  \"opportunity_id\": \"Procore \u2192 Poland\",\n  \"validation_date\": \"2025-01-15\",\n  \"pain_signals\": {\n    \"posts_found\": 12,\n    \"pain_intensity\": 8.5,\n    \"sample_quotes\": [\"We desperately need this\", \"Why doesn't this exist here?\"],\n    \"confidence\": \"high\"\n  },\n  \"market_sizing\": {\n    \"potential_customers\": 5000,\n    \"avg_spend\": \"$3,000\",\n    \"tam\": \"$15M\"\n  },\n  \"unit_economics\": {\n    \"acv\": 3000,\n    \"cac\": 900,\n    \"ltv\": 12750,\n    \"ltv_cac_ratio\": 14.2,\n    \"payback_months\": 3.6,\n    \"magic_number\": 1.2\n  },\n  \"financial_model\": {\n    \"year_1\": {\"customers\": 60, \"revenue\": 180000, \"ebitda\": 54000},\n    \"year_2\": {\"customers\": 180, \"revenue\": 540000, \"ebitda\": 162000},\n    \"year_3\": {\"customers\": 360, \"revenue\": 1080000, \"ebitda\": 324000}\n  },\n  \"exit_strategy\": {\n    \"base_case_valuation\": 5400000,\n    \"bull_case_valuation\": 10800000,\n    \"roi_multiple_base\": 18.0,\n    \"roi_multiple_bull\": 36.0\n  },\n  \"recommendation\": \"BUILD NOW\",\n  \"confidence\": \"high\",\n  \"reasoning\": \"Strong pain signals (8.5/10), excellent unit economics (14.2x LTV:CAC), clear path to $1M+ revenue in 3 years with 18-36x ROI potential.\"\n}\n```\n\n**Important**: Be realistic. Don't fabricate pain signals. Use real web searches.\n\nReturn ONLY the JSON, no other text.\n",
+  "expected_output": {
+    "pain_signals": {
+      "posts_found": ">10",
+      "pain_intensity": "7.0-10.0"
+    },
+    "unit_economics": {
+      "ltv_cac_ratio": ">3.0",
+      "payback_months": "<12"
+    },
+    "financial_model": {
+      "year_3_revenue": "$XXX,XXX+"
+    },
+    "exit_strategy": {
+      "roi_multiple": ">10x"
+    },
+    "recommendation": "BUILD NOW / INVESTIGATE / SKIP"
+  },
+  "requires_phase2_data": true,
+  "cost_estimate": "$5-10 per agent (more research intensive)",
+  "validates": "Opportunity is financially viable with PE-grade metrics"
+}

@@ -1,0 +1,22 @@
+{
+  "phase": 2,
+  "mature_region": "United States",
+  "emerging_region": "Poland",
+  "category": "Construction Management",
+  "prompt": "You are a geographic arbitrage detection agent.\n\n**Your Mission**: Compare Construction Management markets in United States vs Poland to find arbitrage opportunities.\n\n**Input Data** (you'll receive Phase 1 results for both regions):\n- United States Construction Management products (from Phase 1)\n- Poland Construction Management products (from Phase 1)\n\n**Analysis Steps**:\n\n1. **Identify Winners in United States**:\n   - Which products have highest revenue?\n   - Which have strongest adoption?\n   - Which are proven business models?\n\n2. **Check Presence in Poland**:\n   - Does this winning product exist there?\n   - Is there a local equivalent?\n   - How strong is the competition?\n\n3. **Calculate Gap Score** (0-10) for each missing winner:\n   - Mature market strength (revenue, adoption)\n   - Emerging market gap (weak/no alternatives)\n   - Localization feasibility\n   - Market size potential\n\n4. **Rank Opportunities**:\n   - Only return gaps with score >= 7.0\n   - Sort by gap_score descending\n\n**Output Format** (JSON):\n\n```json\n{\n  \"mature_region\": \"United States\",\n  \"emerging_region\": \"Poland\",\n  \"category\": \"Construction Management\",\n  \"comparison_date\": \"2025-01-15\",\n  \"opportunities\": [\n    {\n      \"source_product\": \"Procore\",\n      \"source_region\": \"United States\",\n      \"source_revenue\": \"$600M ARR\",\n      \"source_adoption\": \"high\",\n      \"target_region\": \"Poland\",\n      \"target_competition\": \"weak - largest competitor $5M ARR\",\n      \"gap_score\": 9.2,\n      \"reasoning\": \"Procore dominates US with $600M ARR. Poland has only 3 local players under $5M each. Clear gap for premium construction PM software.\",\n      \"localization_complexity\": \"medium\",\n      \"estimated_tam\": \"$50M in Poland\",\n      \"next_steps\": \"Validate with Phase 3 - check pain signals and unit economics\"\n    }\n  ],\n  \"total_opportunities\": 3,\n  \"summary\": \"Found 3 high-potential arbitrage gaps\"\n}\n```\n\n**Critical**: Only include opportunities with gap_score >= 7.0. Focus on revenue gaps.\n\nReturn ONLY the JSON, no other text.\n",
+  "expected_output": {
+    "opportunities": [
+      {
+        "source_product": "Winner from mature market",
+        "source_revenue": "$XXM ARR",
+        "target_competition": "weak/none",
+        "gap_score": "7.0-10.0",
+        "reasoning": "WHY this is an opportunity"
+      }
+    ],
+    "total_opportunities": "1-5"
+  },
+  "requires_phase1_data": true,
+  "cost_estimate": "$3-5 per agent",
+  "validates": "We find GAPS (missing winners) not just catalog markets"
+}

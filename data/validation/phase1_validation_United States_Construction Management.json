@@ -1,0 +1,22 @@
+{
+  "phase": 1,
+  "region": "United States",
+  "category": "Construction Management",
+  "prompt": "You are a software ecosystem research agent analyzing the Construction Management market in United States.\n\n**Your Mission**: Map ALL Construction Management software products in United States.\n\n**Research Steps**:\n\n1. **Web Search** for Construction Management software in United States:\n   - Search in both English and local language\n   - Look for review sites, comparisons, \"best Construction Management software in United States\"\n   - Find local players AND international players operating there\n\n2. **For Each Product** found:\n   - Product name\n   - Website URL\n   - Reviews/mentions count\n   - Rating (if available)\n   - Pricing (in local currency)\n   - Adoption level (high/medium/low)\n   - Is it local or international?\n   - Key features\n   - Annual revenue estimate (if available)\n\n3. **Market Context**:\n   - Market size estimate\n   - Growth rate\n   - Dominant players\n\n**Output Format** (JSON):\n\n```json\n{\n  \"region\": \"United States\",\n  \"category\": \"Construction Management\",\n  \"research_date\": \"2025-01-15\",\n  \"products\": [\n    {\n      \"product_name\": \"Procore\",\n      \"url\": \"https://procore.com\",\n      \"reviews_mentions\": 15000,\n      \"rating\": 4.5,\n      \"pricing\": \"$100-500/month\",\n      \"adoption_level\": \"high\",\n      \"is_local\": false,\n      \"revenue_estimate\": \"$600M ARR\",\n      \"key_features\": \"Project management, budgeting, RFIs\",\n      \"source\": \"G2, Capterra, company website\"\n    }\n  ],\n  \"market_size\": \"$10B\",\n  \"market_growth\": \"15% CAGR\",\n  \"total_products_found\": 8\n}\n```\n\n**Important**: Find 5-10 products minimum. Include revenue data when available.\n\nReturn ONLY the JSON, no other text.\n",
+  "expected_output": {
+    "region": "United States",
+    "category": "Construction Management",
+    "products": [
+      {
+        "product_name": "Example Product",
+        "revenue_estimate": "$XXM ARR",
+        "adoption_level": "high/medium/low",
+        "is_local": "true/false"
+      }
+    ],
+    "market_size": "$XXB",
+    "total_products_found": "5-10"
+  },
+  "cost_estimate": "$3-5 per agent",
+  "validates": "We get complete product catalog for ONE market"
+}

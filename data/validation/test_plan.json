@@ -1,0 +1,78 @@
+{
+  "total_agents": 15,
+  "estimated_cost": "$15-25",
+  "phases": {
+    "phase_1_ecosystem_mapping": {
+      "agent_count": 5,
+      "targets": [
+        {
+          "region": "United States",
+          "category": "Construction Management"
+        },
+        {
+          "region": "United States",
+          "category": "Fleet Management"
+        },
+        {
+          "region": "Poland",
+          "category": "Construction Management"
+        },
+        {
+          "region": "Poland",
+          "category": "Fleet Management"
+        },
+        {
+          "region": "Romania",
+          "category": "Construction Management"
+        }
+      ],
+      "expected_output": "5 complete product catalogs",
+      "validates": "We can map products accurately"
+    },
+    "phase_2_gap_detection": {
+      "agent_count": 5,
+      "targets": [
+        {
+          "mature": "United States",
+          "emerging": "Poland",
+          "category": "Construction Management"
+        },
+        {
+          "mature": "United States",
+          "emerging": "Romania",
+          "category": "Construction Management"
+        },
+        {
+          "mature": "United States",
+          "emerging": "Poland",
+          "category": "Fleet Management"
+        },
+        {
+          "mature": "Germany",
+          "emerging": "Poland",
+          "category": "Construction Management"
+        },
+        {
+          "mature": "United Kingdom",
+          "emerging": "Poland",
+          "category": "Construction Management"
+        }
+      ],
+      "expected_output": "10-20 arbitrage opportunities with gap_score >= 7.0",
+      "validates": "We find real gaps, not just catalog markets"
+    },
+    "phase_3_validation": {
+      "agent_count": 5,
+      "targets": "Top 5 opportunities from Phase 2 (highest gap_scores)",
+      "expected_output": "5 validated opportunities with BUILD NOW/INVESTIGATE/SKIP",
+      "validates": "We get actionable PE-grade analysis"
+    }
+  },
+  "success_criteria": {
+    "phase_1": "5/5 agents return 5-10 products each",
+    "phase_2": "5/5 agents find 2-4 gaps each (gap_score >= 7.0)",
+    "phase_3": "3/5 opportunities get BUILD NOW recommendation"
+  },
+  "if_successful": "Scale to 100 agents (Phase 1), then 50 (Phase 2), then 25 (Phase 3)",
+  "if_failed": "Fix prompts and retry with 5 agents before scaling"
+}
